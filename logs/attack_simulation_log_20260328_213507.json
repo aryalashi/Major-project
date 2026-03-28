@@ -1,0 +1,14 @@
+[
+  {
+    "sim_arg": "xss",
+    "rule_name": "XSS Attack",
+    "detected": true,
+    "det_time": 0.5041112899780273,
+    "log_line": "2026-03-28 21:35:17,578 [NIDS] WARNING: [ALERT] Payload Signature: TCP PSH-ACK Flood | Payload Attack | src=192.168.1.77 -> dst=192.168.1.77 | severity=HIGH",
+    "packets": 5,
+    "duration": 15,
+    "attack_started_at": "2026-03-28T21:35:17.573465",
+    "elapsed_time": 0.5117638111114502,
+    "logged_at": "2026-03-28T21:35:18.085245"
+  }
+]

@@ -1,0 +1,28 @@
+==============================================================
+NIDS ATTACK SIMULATOR - TEST REPORT
+==============================================================
+
+Generated: 2026-03-28 21:33:02
+Total attacks: 1
+Detection rate: 1/1 (100%)
+
+--------------------------------------------------------------
+DETAILED RESULTS
+--------------------------------------------------------------
+Rule Name                           Result       Time    
+------------------------------------------------------------
+SQL Injection Attack                DETECTED     0.5s    
+
+--------------------------------------------------------------
+CONFUSION MATRIX
+--------------------------------------------------------------
+True Positive  (TP)  : 1  (correctly detected)
+False Negative (FN)  : 0  (missed / not detected)
+False Positive (FP)  : 0  (N/A in single-attack mode)
+True Negative  (TN)  : 0  (N/A in single-attack mode)
+
+Performance Metrics:
+  Sensitivity/Recall : 100.0%  (TP / (TP+FN))
+  Accuracy           : 100.0%  (Correct / Total)
+
+==============================================================

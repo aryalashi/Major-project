@@ -24478,3 +24478,403 @@ Auto-Tuner: Signature-based threshold tuning
 2026-03-28 21:18:31,770 [vuln_scanner] ERROR: Gemini API error: 429 Client Error: Too Many Requests for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=AIzaSyASLjKdd1fM6m7eJ3AR4I7A-STgBsl9uPE
 2026-03-28 21:18:31,861 [vuln_scanner] ERROR: Gemini API error: 429 Client Error: Too Many Requests for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=AIzaSyASLjKdd1fM6m7eJ3AR4I7A-STgBsl9uPE
 2026-03-28 21:18:31,864 [vuln_scanner] ERROR: [AutoScanner] Scan failed for 127.0.0.1: 'charmap' codec can't encode characters in position 109-110: character maps to <undefined>
+2026-03-28 21:24:59,896 [NIDS] INFO: ============================================================
+2026-03-28 21:24:59,897 [NIDS] INFO: NIDS Starting - Signature-Based Intrusion Detection System
+2026-03-28 21:24:59,899 [NIDS] INFO: ============================================================
+2026-03-28 21:24:59,900 [RuleEngine] INFO: Loaded 30 rules from rules.json
+2026-03-28 21:24:59,901 [RuleEngine] WARNING: Found 1 invalid rules:
+2026-03-28 21:24:59,901 [RuleEngine] WARNING:   ICMP Flood: ["ICMP rule must specify 'icmp_type'"]
+2026-03-28 21:24:59,902 [RuleEngine] INFO: Proceeding with 29 valid rules
+2026-03-28 21:24:59,903 [NIDS] INFO: Rules loaded: 29 total
+2026-03-28 21:24:59,904 [NIDS] INFO:   Protocols: {'TCP': 25, 'UDP': 4}
+2026-03-28 21:24:59,904 [NIDS] INFO:   Severity breakdown: {'HIGH': 15, 'MEDIUM': 11, 'LOW': 1, 'CRITICAL': 2}
+2026-03-28 21:24:59,905 [SignatureBasedThresholds] INFO: Loaded 10 default threshold signatures
+2026-03-28 21:24:59,906 [DetectionEngine] INFO: ======================================================================
+2026-03-28 21:24:59,907 [DetectionEngine] INFO: DetectionEngine Initialized
+2026-03-28 21:24:59,908 [DetectionEngine] INFO: ======================================================================
+2026-03-28 21:24:59,909 [DetectionEngine] INFO: Rules Loaded: 29
+2026-03-28 21:24:59,910 [DetectionEngine] INFO:   By Protocol: {'TCP': 25, 'UDP': 4}
+2026-03-28 21:24:59,912 [DetectionEngine] INFO:   By Severity: {'HIGH': 15, 'MEDIUM': 11, 'LOW': 1, 'CRITICAL': 2}
+2026-03-28 21:24:59,913 [DetectionEngine] INFO: 
+Auto-Tuner: Signature-based threshold tuning
+2026-03-28 21:24:59,914 [DetectionEngine] INFO: ======================================================================
+2026-03-28 21:24:59,915 [AdvancedPayloadDetection] INFO: SignatureDetector initialized with 15 signatures
+2026-03-28 21:24:59,916 [AdvancedPayloadDetection] INFO: AdvancedPayloadDetector initialized (Signature-based detection only)
+2026-03-28 21:24:59,916 [NIDS] INFO: Detection Engine initialized with signature-based threshold tuning
+2026-03-28 21:24:59,917 [NIDS] INFO:   Tuner algorithm: Signature-based threshold tuning | signatures=10
+2026-03-28 21:24:59,918 [NIDS] INFO: Detection engine ready with 29 active rules
+2026-03-28 21:24:59,919 [NIDS] INFO: ------------------------------------------------------------
+2026-03-28 21:24:59,919 [Notifications] INFO: ✓ Desktop Notifications: ENABLED (Plyer)
+2026-03-28 21:24:59,920 [AlertEngine] INFO: ✓ Desktop notifications: ENABLED
+2026-03-28 21:24:59,921 [AlertEngine] INFO: AlertEngine initialized
+2026-03-28 21:24:59,922 [AlertEngine] INFO:   Enabled channels: telegram, discord
+2026-03-28 21:24:59,923 [AlertEngine] INFO: Evidence Logger initialized. Directory: attacks
+2026-03-28 21:24:59,924 [vuln_scanner] INFO: AutoScanner initialized (cooldown=60s)
+2026-03-28 21:24:59,925 [HotspotMonitor] INFO: HotspotMonitor initialized
+2026-03-28 21:24:59,979 [NIDS] INFO: Available interfaces: ['[Hotspot]  Local Area Connection* 10', '[Hotspot]  Local Area Connection* 9', '[Hotspot]  Local Area Connection* 8', '[WiFi]     WiFi (192.168.1.77)', '[Hotspot]  Local Area Connection* 2', '[Hotspot]  Local Area Connection* 1', '[Ethernet] Ethernet 2 (169.254.14.166)', '[Loopback] Npcap Loopback Adapter (127.0.0.1)', '[Ethernet] Ethernet (169.254.14.166)']
+2026-03-28 21:24:59,980 [NIDS] INFO: Best interface detected: [Hotspot]  Local Area Connection* 10
+2026-03-28 21:24:59,981 [NIDS] INFO:   Interface: [Hotspot]  Local Area Connection* 10 -> \Device\NPF_{A423811C-46C9-42F1-8D1C-C6CBA50973BE}
+2026-03-28 21:24:59,982 [NIDS] INFO:   Interface: [Hotspot]  Local Area Connection* 9 -> \Device\NPF_{952C03EB-1FA3-4454-8294-F2B74BC50A67}
+2026-03-28 21:24:59,982 [NIDS] INFO:   Interface: [Hotspot]  Local Area Connection* 8 -> \Device\NPF_{0341EC7D-2449-4A27-A56F-1A9CAC0698EA}
+2026-03-28 21:24:59,983 [NIDS] INFO:   Interface: [WiFi]     WiFi (192.168.1.77) -> \Device\NPF_{987610F9-9E02-404A-B0FE-637C80B0DE5D}
+2026-03-28 21:24:59,984 [NIDS] INFO:   Interface: [Hotspot]  Local Area Connection* 2 -> \Device\NPF_{9D027F6C-3007-4EDD-9E79-062DB4648A15}
+2026-03-28 21:24:59,984 [NIDS] INFO:   Interface: [Hotspot]  Local Area Connection* 1 -> \Device\NPF_{D8E75DCC-51C9-4C63-B0C3-01101D39D36B}
+2026-03-28 21:24:59,985 [NIDS] INFO:   Interface: [Ethernet] Ethernet 2 (169.254.14.166) -> \Device\NPF_{D00CE2EF-A43D-4E14-AE44-E7A26EAB3EBC}
+2026-03-28 21:24:59,986 [NIDS] INFO:   Interface: [Loopback] Npcap Loopback Adapter (127.0.0.1) -> \Device\NPF_Loopback
+2026-03-28 21:24:59,986 [NIDS] INFO:   Interface: [Ethernet] Ethernet (169.254.14.166) -> \Device\NPF_{6BC1616E-85F7-4191-AF10-7E8DCAC4E930}
+2026-03-28 21:28:31,839 [AdvancedPayloadDetection] INFO: SignatureDetector initialized with 15 signatures
+2026-03-28 21:28:31,840 [AdvancedPayloadDetection] INFO: AdvancedPayloadDetector initialized (Signature-based detection only)
+2026-03-28 21:32:50,982 [NIDS] INFO: ============================================================
+2026-03-28 21:32:50,983 [NIDS] INFO: NIDS Starting - Signature-Based Intrusion Detection System
+2026-03-28 21:32:50,984 [NIDS] INFO: ============================================================
+2026-03-28 21:32:50,985 [RuleEngine] INFO: Loaded 30 rules from rules.json
+2026-03-28 21:32:50,986 [RuleEngine] WARNING: Found 1 invalid rules:
+2026-03-28 21:32:50,987 [RuleEngine] WARNING:   ICMP Flood: ["ICMP rule must specify 'icmp_type'"]
+2026-03-28 21:32:50,987 [RuleEngine] INFO: Proceeding with 29 valid rules
+2026-03-28 21:32:50,988 [NIDS] INFO: Rules loaded: 29 total
+2026-03-28 21:32:50,989 [NIDS] INFO:   Protocols: {'TCP': 25, 'UDP': 4}
+2026-03-28 21:32:50,990 [NIDS] INFO:   Severity breakdown: {'HIGH': 15, 'MEDIUM': 11, 'LOW': 1, 'CRITICAL': 2}
+2026-03-28 21:32:50,990 [SignatureBasedThresholds] INFO: Loaded 10 default threshold signatures
+2026-03-28 21:32:50,991 [DetectionEngine] INFO: ======================================================================
+2026-03-28 21:32:50,992 [DetectionEngine] INFO: DetectionEngine Initialized
+2026-03-28 21:32:50,992 [DetectionEngine] INFO: ======================================================================
+2026-03-28 21:32:50,993 [DetectionEngine] INFO: Rules Loaded: 29
+2026-03-28 21:32:50,993 [DetectionEngine] INFO:   By Protocol: {'TCP': 25, 'UDP': 4}
+2026-03-28 21:32:50,994 [DetectionEngine] INFO:   By Severity: {'HIGH': 15, 'MEDIUM': 11, 'LOW': 1, 'CRITICAL': 2}
+2026-03-28 21:32:50,995 [DetectionEngine] INFO: 
+Auto-Tuner: Signature-based threshold tuning
+2026-03-28 21:32:50,996 [DetectionEngine] INFO: ======================================================================
+2026-03-28 21:32:50,997 [AdvancedPayloadDetection] INFO: SignatureDetector initialized with 15 signatures
+2026-03-28 21:32:50,997 [AdvancedPayloadDetection] INFO: AdvancedPayloadDetector initialized (Signature-based detection only)
+2026-03-28 21:32:50,998 [NIDS] INFO: Detection Engine initialized with signature-based threshold tuning
+2026-03-28 21:32:50,998 [NIDS] INFO:   Tuner algorithm: Signature-based threshold tuning | signatures=10
+2026-03-28 21:32:50,999 [NIDS] INFO: Detection engine ready with 29 active rules
+2026-03-28 21:32:51,000 [NIDS] INFO: ------------------------------------------------------------
+2026-03-28 21:32:51,000 [Notifications] INFO: ✓ Desktop Notifications: ENABLED (Plyer)
+2026-03-28 21:32:51,001 [AlertEngine] INFO: ✓ Desktop notifications: ENABLED
+2026-03-28 21:32:51,001 [AlertEngine] INFO: AlertEngine initialized
+2026-03-28 21:32:51,002 [AlertEngine] INFO:   Enabled channels: telegram, discord
+2026-03-28 21:32:51,003 [AlertEngine] INFO: Evidence Logger initialized. Directory: attacks
+2026-03-28 21:32:51,003 [vuln_scanner] INFO: AutoScanner initialized (cooldown=60s)
+2026-03-28 21:32:51,004 [HotspotMonitor] INFO: HotspotMonitor initialized
+2026-03-28 21:32:51,044 [NIDS] INFO: Available interfaces: ['[Hotspot]  Local Area Connection* 10', '[Hotspot]  Local Area Connection* 9', '[Hotspot]  Local Area Connection* 8', '[WiFi]     WiFi (192.168.1.77)', '[Hotspot]  Local Area Connection* 2', '[Hotspot]  Local Area Connection* 1', '[Ethernet] Ethernet 2 (169.254.14.166)', '[Loopback] Npcap Loopback Adapter (127.0.0.1)', '[Ethernet] Ethernet (169.254.14.166)']
+2026-03-28 21:32:51,045 [NIDS] INFO: Best interface detected: [Hotspot]  Local Area Connection* 10
+2026-03-28 21:32:51,046 [NIDS] INFO:   Interface: [Hotspot]  Local Area Connection* 10 -> \Device\NPF_{A423811C-46C9-42F1-8D1C-C6CBA50973BE}
+2026-03-28 21:32:51,046 [NIDS] INFO:   Interface: [Hotspot]  Local Area Connection* 9 -> \Device\NPF_{952C03EB-1FA3-4454-8294-F2B74BC50A67}
+2026-03-28 21:32:51,047 [NIDS] INFO:   Interface: [Hotspot]  Local Area Connection* 8 -> \Device\NPF_{0341EC7D-2449-4A27-A56F-1A9CAC0698EA}
+2026-03-28 21:32:51,047 [NIDS] INFO:   Interface: [WiFi]     WiFi (192.168.1.77) -> \Device\NPF_{987610F9-9E02-404A-B0FE-637C80B0DE5D}
+2026-03-28 21:32:51,048 [NIDS] INFO:   Interface: [Hotspot]  Local Area Connection* 2 -> \Device\NPF_{9D027F6C-3007-4EDD-9E79-062DB4648A15}
+2026-03-28 21:32:51,049 [NIDS] INFO:   Interface: [Hotspot]  Local Area Connection* 1 -> \Device\NPF_{D8E75DCC-51C9-4C63-B0C3-01101D39D36B}
+2026-03-28 21:32:51,049 [NIDS] INFO:   Interface: [Ethernet] Ethernet 2 (169.254.14.166) -> \Device\NPF_{D00CE2EF-A43D-4E14-AE44-E7A26EAB3EBC}
+2026-03-28 21:32:51,050 [NIDS] INFO:   Interface: [Loopback] Npcap Loopback Adapter (127.0.0.1) -> \Device\NPF_Loopback
+2026-03-28 21:32:51,050 [NIDS] INFO:   Interface: [Ethernet] Ethernet (169.254.14.166) -> \Device\NPF_{6BC1616E-85F7-4191-AF10-7E8DCAC4E930}
+2026-03-28 21:32:54,791 [PacketCapture] INFO: PacketCapture initialized
+2026-03-28 21:32:54,793 [PacketCapture] INFO: Sniff loop starting on \Device\NPF_Loopback
+2026-03-28 21:32:54,793 [PacketCapture] INFO: Capture thread started on \Device\NPF_Loopback
+2026-03-28 21:32:54,796 [NIDS] INFO: Capture started on interface: \Device\NPF_Loopback
+2026-03-28 21:33:02,357 [NIDS] WARNING: [ALERT] Payload Signature: TCP PSH-ACK Flood | Payload Attack | src=192.168.1.77 -> dst=192.168.1.77 | severity=HIGH
+2026-03-28 21:33:02,362 [AlertEngine] INFO: [EVIDENCE] Saved: attacks\Payload_Attack\2026-03-28_21-33-02_Payload_Attack.json
+2026-03-28 21:33:02,368 [AlertEngine] INFO: [PCAP] Saved: attacks\Payload_Attack\2026-03-28_21-33-02_Payload_Attack.pcap
+2026-03-28 21:33:02,369 [vuln_scanner] INFO: [SCAN] Triggering vulnerability scan on 192.168.1.77 (severity=HIGH)
+2026-03-28 21:33:02,384 [vuln_scanner] INFO: [AutoScanner] Starting scan workflow for 192.168.1.77
+2026-03-28 21:33:02,385 [vuln_scanner] INFO: Parsed 1 targets
+2026-03-28 21:33:02,386 [vuln_scanner] INFO: Scanning 1 target(s)...
+2026-03-28 21:33:02,390 [vuln_scanner] INFO: Running Nmap command: nmap -T4 -sV -sC --script=banner,vulners -iL C:\Users\ashish\AppData\Local\Temp\tmps0htslm8.txt -oX C:\Users\ashish\AppData\Local\Temp\tmplas4o_i5.xml -p 21,22,23,25,53,80,135,139,443,445,902,1433,3268,3306,3389,5432,5985,5986,8080,8443
+2026-03-28 21:33:02,459 [NIDS] WARNING: [ALERT] Payload Signature: TCP PSH-ACK Flood | Payload Attack | src=192.168.1.77 -> dst=192.168.1.77 | severity=CRITICAL
+2026-03-28 21:33:02,461 [AlertEngine] INFO: [EVIDENCE] Saved: attacks\Payload_Attack\2026-03-28_21-33-02_Payload_Attack.json
+2026-03-28 21:33:02,467 [AlertEngine] INFO: [PCAP] Saved: attacks\Payload_Attack\2026-03-28_21-33-02_Payload_Attack.pcap
+2026-03-28 21:33:02,562 [NIDS] WARNING: [ALERT] Payload Signature: TCP PSH-ACK Flood | Payload Attack | src=192.168.1.77 -> dst=192.168.1.77 | severity=CRITICAL
+2026-03-28 21:33:02,564 [AlertEngine] INFO: [EVIDENCE] Saved: attacks\Payload_Attack\2026-03-28_21-33-02_Payload_Attack.json
+2026-03-28 21:33:02,571 [AlertEngine] INFO: [PCAP] Saved: attacks\Payload_Attack\2026-03-28_21-33-02_Payload_Attack.pcap
+2026-03-28 21:33:02,664 [NIDS] WARNING: [ALERT] Payload Signature: TCP PSH-ACK Flood | Payload Attack | src=192.168.1.77 -> dst=192.168.1.77 | severity=CRITICAL
+2026-03-28 21:33:02,665 [AlertEngine] INFO: [EVIDENCE] Saved: attacks\Payload_Attack\2026-03-28_21-33-02_Payload_Attack.json
+2026-03-28 21:33:02,672 [AlertEngine] INFO: [PCAP] Saved: attacks\Payload_Attack\2026-03-28_21-33-02_Payload_Attack.pcap
+2026-03-28 21:33:02,765 [NIDS] WARNING: [ALERT] Payload Signature: TCP PSH-ACK Flood | Payload Attack | src=192.168.1.77 -> dst=192.168.1.77 | severity=HIGH
+2026-03-28 21:33:02,767 [AlertEngine] INFO: [EVIDENCE] Saved: attacks\Payload_Attack\2026-03-28_21-33-02_Payload_Attack.json
+2026-03-28 21:33:02,772 [AlertEngine] INFO: [PCAP] Saved: attacks\Payload_Attack\2026-03-28_21-33-02_Payload_Attack.pcap
+2026-03-28 21:33:03,017 [AlertEngine] INFO: ✓ Alert sent to Discord
+2026-03-28 21:33:03,301 [AlertEngine] INFO: ✓ Alert sent to Telegram
+2026-03-28 21:33:03,305 [SignatureBasedThresholds] WARNING: [ThresholdSig] Matched: port_scan_slow (confidence=0.70, priority=70)
+2026-03-28 21:33:03,310 [SignatureBasedThresholds] INFO: [ThresholdSig] Applied: port_scan_slow on TCP SYN Port Scan -> threshold=50
+2026-03-28 21:33:03,311 [DetectionEngine] INFO: [DETECTION] TCP SYN Flood | src=192.168.1.77 -> dst=192.168.1.77 | count=15/15 in 10s
+2026-03-28 21:33:03,312 [SignatureBasedThresholds] WARNING: [ThresholdSig] Matched: port_scan_slow (confidence=0.75, priority=70)
+2026-03-28 21:33:03,312 [SignatureBasedThresholds] INFO: [ThresholdSig] Applied: port_scan_slow on TCP SYN Port Scan -> threshold=50
+2026-03-28 21:33:03,313 [NIDS] WARNING: [ALERT] TCP SYN Flood | DoS | src=192.168.1.77 -> dst=192.168.1.77 | severity=HIGH
+2026-03-28 21:33:03,317 [AlertEngine] INFO: [EVIDENCE] Saved: attacks\DoS\2026-03-28_21-33-03_DoS.json
+2026-03-28 21:33:03,328 [AlertEngine] INFO: [PCAP] Saved: attacks\DoS\2026-03-28_21-33-03_DoS.pcap
+2026-03-28 21:33:03,329 [SignatureBasedThresholds] WARNING: [ThresholdSig] Matched: port_scan_slow (confidence=0.80, priority=70)
+2026-03-28 21:33:03,330 [SignatureBasedThresholds] INFO: [ThresholdSig] Applied: port_scan_slow on TCP SYN Port Scan -> threshold=50
+2026-03-28 21:33:03,331 [SignatureBasedThresholds] WARNING: [ThresholdSig] Matched: port_scan_slow (confidence=0.85, priority=70)
+2026-03-28 21:33:03,332 [SignatureBasedThresholds] INFO: [ThresholdSig] Applied: port_scan_slow on TCP SYN Port Scan -> threshold=50
+2026-03-28 21:33:03,334 [SignatureBasedThresholds] WARNING: [ThresholdSig] Matched: port_scan_slow (confidence=0.90, priority=70)
+2026-03-28 21:33:03,335 [SignatureBasedThresholds] INFO: [ThresholdSig] Applied: port_scan_slow on TCP SYN Port Scan -> threshold=50
+2026-03-28 21:33:03,335 [SignatureBasedThresholds] WARNING: [ThresholdSig] Matched: port_scan_slow (confidence=0.95, priority=70)
+2026-03-28 21:33:03,336 [SignatureBasedThresholds] INFO: [ThresholdSig] Applied: port_scan_slow on TCP SYN Port Scan -> threshold=50
+2026-03-28 21:33:03,337 [SignatureBasedThresholds] WARNING: [ThresholdSig] Matched: port_scan_slow (confidence=1.00, priority=70)
+2026-03-28 21:33:03,339 [SignatureBasedThresholds] INFO: [ThresholdSig] Applied: port_scan_slow on TCP SYN Port Scan -> threshold=50
+2026-03-28 21:33:03,762 [AlertEngine] INFO: ✓ Alert sent to Discord
+2026-03-28 21:33:04,162 [AlertEngine] INFO: ✓ Alert sent to Telegram
+2026-03-28 21:33:04,400 [SignatureBasedThresholds] WARNING: [ThresholdSig] Matched: port_scan_slow (confidence=1.00, priority=70)
+2026-03-28 21:33:04,401 [SignatureBasedThresholds] INFO: [ThresholdSig] Applied: port_scan_slow on TCP SYN Port Scan -> threshold=50
+2026-03-28 21:33:04,402 [SignatureBasedThresholds] WARNING: [ThresholdSig] Matched: port_scan_slow (confidence=1.00, priority=70)
+2026-03-28 21:33:04,403 [SignatureBasedThresholds] INFO: [ThresholdSig] Applied: port_scan_slow on TCP SYN Port Scan -> threshold=50
+2026-03-28 21:33:04,582 [SignatureBasedThresholds] WARNING: [ThresholdSig] Matched: port_scan_slow (confidence=1.00, priority=70)
+2026-03-28 21:33:04,586 [SignatureBasedThresholds] INFO: [ThresholdSig] Applied: port_scan_slow on TCP SYN Port Scan -> threshold=50
+2026-03-28 21:33:04,587 [SignatureBasedThresholds] WARNING: [ThresholdSig] Matched: port_scan_slow (confidence=1.00, priority=70)
+2026-03-28 21:33:04,587 [SignatureBasedThresholds] INFO: [ThresholdSig] Applied: port_scan_slow on TCP SYN Port Scan -> threshold=50
+2026-03-28 21:33:04,589 [SignatureBasedThresholds] WARNING: [ThresholdSig] Matched: port_scan_slow (confidence=1.00, priority=70)
+2026-03-28 21:33:04,589 [SignatureBasedThresholds] INFO: [ThresholdSig] Applied: port_scan_slow on TCP SYN Port Scan -> threshold=50
+2026-03-28 21:33:10,638 [DetectionEngine] INFO: [DETECTION] TCP ACK Flood | src=192.168.1.77 -> dst=192.168.1.77 | count=15/15 in 10s
+2026-03-28 21:33:10,639 [NIDS] WARNING: [ALERT] TCP ACK Flood | DoS | src=192.168.1.77 -> dst=192.168.1.77 | severity=MEDIUM
+2026-03-28 21:33:10,640 [AlertEngine] INFO: [EVIDENCE] Saved: attacks\DoS\2026-03-28_21-33-10_DoS.json
+2026-03-28 21:33:10,677 [AlertEngine] INFO: [PCAP] Saved: attacks\DoS\2026-03-28_21-33-10_DoS.pcap
+2026-03-28 21:33:10,689 [DetectionEngine] INFO: [DETECTION] TCP PSH-ACK Flood | src=192.168.1.77 -> dst=192.168.1.77 | count=15/15 in 10s
+2026-03-28 21:33:10,690 [NIDS] WARNING: [ALERT] TCP PSH-ACK Flood | DoS | src=192.168.1.77 -> dst=192.168.1.77 | severity=MEDIUM
+2026-03-28 21:33:10,695 [AlertEngine] INFO: [EVIDENCE] Saved: attacks\DoS\2026-03-28_21-33-10_DoS.json
+2026-03-28 21:33:10,732 [AlertEngine] INFO: [PCAP] Saved: attacks\DoS\2026-03-28_21-33-10_DoS.pcap
+2026-03-28 21:33:10,739 [DetectionEngine] INFO: [DETECTION] TCP SYN-ACK Flood | src=192.168.1.77 -> dst=192.168.1.77 | count=20/20 in 10s
+2026-03-28 21:33:10,740 [NIDS] WARNING: [ALERT] TCP SYN-ACK Flood | DoS | src=192.168.1.77 -> dst=192.168.1.77 | severity=HIGH
+2026-03-28 21:33:10,742 [AlertEngine] INFO: [EVIDENCE] Saved: attacks\DoS\2026-03-28_21-33-10_DoS.json
+2026-03-28 21:33:10,790 [AlertEngine] INFO: [PCAP] Saved: attacks\DoS\2026-03-28_21-33-10_DoS.pcap
+2026-03-28 21:33:10,793 [DetectionEngine] INFO: [DETECTION] SMB Flood | src=192.168.1.77 -> dst=192.168.1.77 | count=15/15 in 10s
+2026-03-28 21:33:10,794 [NIDS] WARNING: [ALERT] SMB Flood | DoS | src=192.168.1.77 -> dst=192.168.1.77 | severity=CRITICAL
+2026-03-28 21:33:10,796 [AlertEngine] INFO: [EVIDENCE] Saved: attacks\DoS\2026-03-28_21-33-10_DoS.json
+2026-03-28 21:33:10,850 [AlertEngine] INFO: [PCAP] Saved: attacks\DoS\2026-03-28_21-33-10_DoS.pcap
+2026-03-28 21:33:25,920 [vuln_scanner] INFO: Processing host: 192.168.1.77
+2026-03-28 21:33:25,922 [vuln_scanner] INFO: Found service: msrpc unknown on 192.168.1.77:135
+2026-03-28 21:33:25,923 [vuln_scanner] INFO: Found service: netbios-ssn unknown on 192.168.1.77:139
+2026-03-28 21:33:25,924 [vuln_scanner] INFO: Found service: microsoft-ds unknown on 192.168.1.77:445
+2026-03-28 21:33:25,925 [vuln_scanner] INFO: Found 3 services to analyze...
+2026-03-28 21:33:25,926 [vuln_scanner] INFO: Analyzing msrpc unknown on 192.168.1.77:135...
+2026-03-28 21:33:25,927 [vuln_scanner] INFO: Analyzing microsoft-ds unknown on 192.168.1.77:445...
+2026-03-28 21:33:25,927 [vuln_scanner] INFO: Analyzing netbios-ssn unknown on 192.168.1.77:139...
+2026-03-28 21:33:25,928 [vuln_scanner] INFO: Analyzing service: msrpc unknown with banner: 
+2026-03-28 21:33:25,928 [vuln_scanner] INFO: Analyzing service: microsoft-ds unknown with banner: 
+2026-03-28 21:33:25,929 [vuln_scanner] INFO: Analyzing service: netbios-ssn unknown with banner: 
+2026-03-28 21:33:26,835 [vuln_scanner] WARNING: rate limit in google api
+2026-03-28 21:33:26,912 [vuln_scanner] WARNING: rate limit in google api
+2026-03-28 21:33:26,986 [vuln_scanner] WARNING: rate limit in google api
+2026-03-28 21:33:26,989 [vuln_scanner] ERROR: [AutoScanner] Scan failed for 192.168.1.77: 'charmap' codec can't encode characters in position 109-110: character maps to <undefined>
+2026-03-28 21:35:17,578 [NIDS] WARNING: [ALERT] Payload Signature: TCP PSH-ACK Flood | Payload Attack | src=192.168.1.77 -> dst=192.168.1.77 | severity=HIGH
+2026-03-28 21:35:17,711 [AlertEngine] INFO: [EVIDENCE] Saved: attacks\Payload_Attack\2026-03-28_21-35-17_Payload_Attack.json
+2026-03-28 21:35:17,874 [AlertEngine] INFO: [PCAP] Saved: attacks\Payload_Attack\2026-03-28_21-35-17_Payload_Attack.pcap
+2026-03-28 21:35:17,875 [vuln_scanner] INFO: [SCAN] Triggering vulnerability scan on 192.168.1.77 (severity=HIGH)
+2026-03-28 21:35:17,882 [vuln_scanner] INFO: [AutoScanner] Starting scan workflow for 192.168.1.77
+2026-03-28 21:35:17,883 [vuln_scanner] INFO: Parsed 1 targets
+2026-03-28 21:35:17,884 [vuln_scanner] INFO: Scanning 1 target(s)...
+2026-03-28 21:35:17,887 [vuln_scanner] INFO: Running Nmap command: nmap -T4 -sV -sC --script=banner,vulners -iL C:\Users\ashish\AppData\Local\Temp\tmpvg_fdw57.txt -oX C:\Users\ashish\AppData\Local\Temp\tmp8scx8qc0.xml -p 21,22,23,25,53,80,135,139,443,445,902,1433,3268,3306,3389,5432,5985,5986,8080,8443
+2026-03-28 21:35:18,156 [AlertEngine] INFO: ✓ Alert sent to Discord
+2026-03-28 21:35:18,648 [AlertEngine] INFO: ✓ Alert sent to Telegram
+2026-03-28 21:35:18,812 [SignatureBasedThresholds] WARNING: [ThresholdSig] Matched: port_scan_slow (confidence=0.70, priority=70)
+2026-03-28 21:35:18,816 [SignatureBasedThresholds] INFO: [ThresholdSig] Applied: port_scan_slow on TCP SYN Port Scan -> threshold=50
+2026-03-28 21:35:18,817 [SignatureBasedThresholds] WARNING: [ThresholdSig] Matched: port_scan_slow (confidence=0.75, priority=70)
+2026-03-28 21:35:18,818 [SignatureBasedThresholds] INFO: [ThresholdSig] Applied: port_scan_slow on TCP SYN Port Scan -> threshold=50
+2026-03-28 21:35:18,819 [SignatureBasedThresholds] WARNING: [ThresholdSig] Matched: port_scan_slow (confidence=0.80, priority=70)
+2026-03-28 21:35:18,820 [SignatureBasedThresholds] INFO: [ThresholdSig] Applied: port_scan_slow on TCP SYN Port Scan -> threshold=50
+2026-03-28 21:35:18,821 [SignatureBasedThresholds] WARNING: [ThresholdSig] Matched: port_scan_slow (confidence=0.85, priority=70)
+2026-03-28 21:35:18,822 [SignatureBasedThresholds] INFO: [ThresholdSig] Applied: port_scan_slow on TCP SYN Port Scan -> threshold=50
+2026-03-28 21:35:18,823 [SignatureBasedThresholds] WARNING: [ThresholdSig] Matched: port_scan_slow (confidence=0.90, priority=70)
+2026-03-28 21:35:18,824 [SignatureBasedThresholds] INFO: [ThresholdSig] Applied: port_scan_slow on TCP SYN Port Scan -> threshold=50
+2026-03-28 21:35:18,825 [SignatureBasedThresholds] WARNING: [ThresholdSig] Matched: port_scan_slow (confidence=0.95, priority=70)
+2026-03-28 21:35:18,826 [SignatureBasedThresholds] INFO: [ThresholdSig] Applied: port_scan_slow on TCP SYN Port Scan -> threshold=50
+2026-03-28 21:35:18,828 [SignatureBasedThresholds] WARNING: [ThresholdSig] Matched: port_scan_slow (confidence=1.00, priority=70)
+2026-03-28 21:35:18,829 [SignatureBasedThresholds] INFO: [ThresholdSig] Applied: port_scan_slow on TCP SYN Port Scan -> threshold=50
+2026-03-28 21:35:19,923 [SignatureBasedThresholds] WARNING: [ThresholdSig] Matched: port_scan_slow (confidence=1.00, priority=70)
+2026-03-28 21:35:19,924 [SignatureBasedThresholds] INFO: [ThresholdSig] Applied: port_scan_slow on TCP SYN Port Scan -> threshold=50
+2026-03-28 21:35:19,925 [SignatureBasedThresholds] WARNING: [ThresholdSig] Matched: port_scan_slow (confidence=1.00, priority=70)
+2026-03-28 21:35:19,926 [SignatureBasedThresholds] INFO: [ThresholdSig] Applied: port_scan_slow on TCP SYN Port Scan -> threshold=50
+2026-03-28 21:35:20,115 [SignatureBasedThresholds] WARNING: [ThresholdSig] Matched: port_scan_slow (confidence=1.00, priority=70)
+2026-03-28 21:35:20,117 [SignatureBasedThresholds] INFO: [ThresholdSig] Applied: port_scan_slow on TCP SYN Port Scan -> threshold=50
+2026-03-28 21:35:20,118 [SignatureBasedThresholds] WARNING: [ThresholdSig] Matched: port_scan_slow (confidence=1.00, priority=70)
+2026-03-28 21:35:20,119 [SignatureBasedThresholds] INFO: [ThresholdSig] Applied: port_scan_slow on TCP SYN Port Scan -> threshold=50
+2026-03-28 21:35:20,120 [SignatureBasedThresholds] WARNING: [ThresholdSig] Matched: port_scan_slow (confidence=1.00, priority=70)
+2026-03-28 21:35:20,121 [SignatureBasedThresholds] INFO: [ThresholdSig] Applied: port_scan_slow on TCP SYN Port Scan -> threshold=50
+2026-03-28 21:35:20,733 [DetectionEngine] INFO: [DETECTION] Port Scan | src=192.168.1.77 | 21 unique ports in 5s (thr=16)
+2026-03-28 21:35:20,734 [NIDS] WARNING: [ALERT] UDP Port Scan | Port Scan | src=192.168.1.77 -> dst=239.255.255.250 | severity=LOW
+2026-03-28 21:35:20,739 [AlertEngine] INFO: [EVIDENCE] Saved: attacks\Port_Scan\2026-03-28_21-35-20_Port_Scan.json
+2026-03-28 21:35:20,808 [AlertEngine] INFO: [PCAP] Saved: attacks\Port_Scan\2026-03-28_21-35-20_Port_Scan.pcap
+2026-03-28 21:35:21,246 [AlertEngine] INFO: ✓ Alert sent to Discord
+2026-03-28 21:35:21,619 [AlertEngine] INFO: ✓ Alert sent to Telegram
+2026-03-28 21:35:26,262 [DetectionEngine] INFO: [DETECTION] TCP ACK Flood | src=192.168.1.77 -> dst=192.168.1.77 | count=45/45 in 10s
+2026-03-28 21:35:26,263 [NIDS] WARNING: [ALERT] TCP ACK Flood | DoS | src=192.168.1.77 -> dst=192.168.1.77 | severity=MEDIUM
+2026-03-28 21:35:26,268 [AlertEngine] INFO: [EVIDENCE] Saved: attacks\DoS\2026-03-28_21-35-26_DoS.json
+2026-03-28 21:35:26,340 [AlertEngine] INFO: [PCAP] Saved: attacks\DoS\2026-03-28_21-35-26_DoS.pcap
+2026-03-28 21:35:26,345 [DetectionEngine] INFO: [DETECTION] TCP SYN Flood | src=192.168.1.77 -> dst=192.168.1.77 | count=45/45 in 10s
+2026-03-28 21:35:26,346 [NIDS] WARNING: [ALERT] TCP SYN Flood | DoS | src=192.168.1.77 -> dst=192.168.1.77 | severity=HIGH
+2026-03-28 21:35:26,348 [AlertEngine] INFO: [EVIDENCE] Saved: attacks\DoS\2026-03-28_21-35-26_DoS.json
+2026-03-28 21:35:26,414 [AlertEngine] INFO: [PCAP] Saved: attacks\DoS\2026-03-28_21-35-26_DoS.pcap
+2026-03-28 21:35:26,758 [AlertEngine] INFO: ✓ Alert sent to Discord
+2026-03-28 21:35:27,204 [AlertEngine] INFO: ✓ Alert sent to Telegram
+2026-03-28 21:35:41,319 [vuln_scanner] INFO: Processing host: 192.168.1.77
+2026-03-28 21:35:41,321 [vuln_scanner] INFO: Found service: msrpc unknown on 192.168.1.77:135
+2026-03-28 21:35:41,321 [vuln_scanner] INFO: Found service: netbios-ssn unknown on 192.168.1.77:139
+2026-03-28 21:35:41,322 [vuln_scanner] INFO: Found service: microsoft-ds unknown on 192.168.1.77:445
+2026-03-28 21:35:41,324 [vuln_scanner] INFO: Found 3 services to analyze...
+2026-03-28 21:35:41,325 [vuln_scanner] INFO: Analyzing msrpc unknown on 192.168.1.77:135...
+2026-03-28 21:35:41,325 [vuln_scanner] INFO: Analyzing netbios-ssn unknown on 192.168.1.77:139...
+2026-03-28 21:35:41,326 [vuln_scanner] INFO: Analyzing service: msrpc unknown with banner: 
+2026-03-28 21:35:41,326 [vuln_scanner] INFO: Analyzing microsoft-ds unknown on 192.168.1.77:445...
+2026-03-28 21:35:41,326 [vuln_scanner] INFO: Analyzing service: netbios-ssn unknown with banner: 
+2026-03-28 21:35:41,328 [vuln_scanner] INFO: Analyzing service: microsoft-ds unknown with banner: 
+2026-03-28 21:35:42,414 [vuln_scanner] WARNING: rate limit in google api
+2026-03-28 21:35:42,415 [vuln_scanner] WARNING: rate limit in google api
+2026-03-28 21:35:42,525 [vuln_scanner] WARNING: rate limit in google api
+2026-03-28 21:35:42,528 [vuln_scanner] ERROR: [AutoScanner] Scan failed for 192.168.1.77: 'charmap' codec can't encode characters in position 109-110: character maps to <undefined>
+2026-03-28 21:36:08,726 [NIDS] WARNING: [ALERT] Payload Signature: TCP PSH-ACK Flood | Payload Attack | src=192.168.1.77 -> dst=192.168.1.77 | severity=HIGH
+2026-03-28 21:36:08,732 [AlertEngine] INFO: [EVIDENCE] Saved: attacks\Payload_Attack\2026-03-28_21-36-08_Payload_Attack.json
+2026-03-28 21:36:08,830 [AlertEngine] INFO: [PCAP] Saved: attacks\Payload_Attack\2026-03-28_21-36-08_Payload_Attack.pcap
+2026-03-28 21:36:08,833 [NIDS] WARNING: [ALERT] Payload Signature: TCP PSH-ACK Flood | Payload Attack | src=192.168.1.77 -> dst=192.168.1.77 | severity=HIGH
+2026-03-28 21:36:08,835 [AlertEngine] INFO: [EVIDENCE] Saved: attacks\Payload_Attack\2026-03-28_21-36-08_Payload_Attack.json
+2026-03-28 21:36:08,918 [AlertEngine] INFO: [PCAP] Saved: attacks\Payload_Attack\2026-03-28_21-36-08_Payload_Attack.pcap
+2026-03-28 21:36:08,929 [NIDS] WARNING: [ALERT] Payload Signature: TCP PSH-ACK Flood | Payload Attack | src=192.168.1.77 -> dst=192.168.1.77 | severity=HIGH
+2026-03-28 21:36:08,931 [AlertEngine] INFO: [EVIDENCE] Saved: attacks\Payload_Attack\2026-03-28_21-36-08_Payload_Attack.json
+2026-03-28 21:36:09,025 [AlertEngine] INFO: [PCAP] Saved: attacks\Payload_Attack\2026-03-28_21-36-08_Payload_Attack.pcap
+2026-03-28 21:36:09,031 [NIDS] WARNING: [ALERT] Payload Signature: TCP PSH-ACK Flood | Payload Attack | src=192.168.1.77 -> dst=192.168.1.77 | severity=HIGH
+2026-03-28 21:36:09,033 [AlertEngine] INFO: [EVIDENCE] Saved: attacks\Payload_Attack\2026-03-28_21-36-09_Payload_Attack.json
+2026-03-28 21:36:09,110 [AlertEngine] INFO: [PCAP] Saved: attacks\Payload_Attack\2026-03-28_21-36-09_Payload_Attack.pcap
+2026-03-28 21:36:09,133 [NIDS] WARNING: [ALERT] Payload Signature: TCP PSH-ACK Flood | Payload Attack | src=192.168.1.77 -> dst=192.168.1.77 | severity=HIGH
+2026-03-28 21:36:09,135 [AlertEngine] INFO: [EVIDENCE] Saved: attacks\Payload_Attack\2026-03-28_21-36-09_Payload_Attack.json
+2026-03-28 21:36:09,207 [AlertEngine] INFO: [PCAP] Saved: attacks\Payload_Attack\2026-03-28_21-36-09_Payload_Attack.pcap
+2026-03-28 21:36:09,242 [AlertEngine] INFO: ✓ Alert sent to Discord
+2026-03-28 21:36:09,624 [AlertEngine] INFO: ✓ Alert sent to Telegram
+2026-03-28 21:36:34,174 [DetectionEngine] INFO: [DETECTION] TCP ACK Flood | src=127.0.0.1 -> dst=127.0.0.1 | count=45/45 in 10s
+2026-03-28 21:36:34,175 [NIDS] WARNING: [ALERT] TCP ACK Flood | DoS | src=127.0.0.1 -> dst=127.0.0.1 | severity=MEDIUM
+2026-03-28 21:36:34,180 [AlertEngine] INFO: [EVIDENCE] Saved: attacks\DoS\2026-03-28_21-36-34_DoS.json
+2026-03-28 21:36:34,258 [AlertEngine] INFO: [PCAP] Saved: attacks\DoS\2026-03-28_21-36-34_DoS.pcap
+2026-03-28 21:36:34,387 [DetectionEngine] INFO: [DETECTION] TCP PSH-ACK Flood | src=192.168.1.77 -> dst=192.168.1.77 | count=45/45 in 10s
+2026-03-28 21:36:34,388 [NIDS] WARNING: [ALERT] TCP PSH-ACK Flood | DoS | src=192.168.1.77 -> dst=192.168.1.77 | severity=MEDIUM
+2026-03-28 21:36:34,389 [AlertEngine] INFO: [EVIDENCE] Saved: attacks\DoS\2026-03-28_21-36-34_DoS.json
+2026-03-28 21:36:34,459 [AlertEngine] INFO: [PCAP] Saved: attacks\DoS\2026-03-28_21-36-34_DoS.pcap
+2026-03-28 21:36:34,460 [DetectionEngine] INFO: [DETECTION] TCP RST Flood | src=192.168.1.77 -> dst=192.168.1.77 | count=45/45 in 10s
+2026-03-28 21:36:34,461 [NIDS] WARNING: [ALERT] TCP RST Flood | DoS | src=192.168.1.77 -> dst=192.168.1.77 | severity=HIGH
+2026-03-28 21:36:34,463 [AlertEngine] INFO: [EVIDENCE] Saved: attacks\DoS\2026-03-28_21-36-34_DoS.json
+2026-03-28 21:36:34,534 [AlertEngine] INFO: [PCAP] Saved: attacks\DoS\2026-03-28_21-36-34_DoS.pcap
+2026-03-28 21:36:34,535 [vuln_scanner] INFO: [SCAN] Triggering vulnerability scan on 192.168.1.77 (severity=HIGH)
+2026-03-28 21:36:34,541 [vuln_scanner] INFO: [AutoScanner] Starting scan workflow for 192.168.1.77
+2026-03-28 21:36:34,542 [vuln_scanner] INFO: Parsed 1 targets
+2026-03-28 21:36:34,543 [vuln_scanner] INFO: Scanning 1 target(s)...
+2026-03-28 21:36:34,545 [vuln_scanner] INFO: Running Nmap command: nmap -T4 -sV -sC --script=banner,vulners -iL C:\Users\ashish\AppData\Local\Temp\tmpmaiy22wr.txt -oX C:\Users\ashish\AppData\Local\Temp\tmppawssvjb.xml -p 21,22,23,25,53,80,135,139,443,445,902,1433,3268,3306,3389,5432,5985,5986,8080,8443
+2026-03-28 21:36:34,673 [AlertEngine] INFO: ✓ Alert sent to Discord
+2026-03-28 21:36:35,008 [AlertEngine] INFO: ✓ Alert sent to Telegram
+2026-03-28 21:36:35,479 [SignatureBasedThresholds] WARNING: [ThresholdSig] Matched: port_scan_slow (confidence=0.70, priority=70)
+2026-03-28 21:36:35,480 [SignatureBasedThresholds] INFO: [ThresholdSig] Applied: port_scan_slow on TCP SYN Port Scan -> threshold=50
+2026-03-28 21:36:35,481 [SignatureBasedThresholds] WARNING: [ThresholdSig] Matched: port_scan_slow (confidence=0.75, priority=70)
+2026-03-28 21:36:35,482 [SignatureBasedThresholds] INFO: [ThresholdSig] Applied: port_scan_slow on TCP SYN Port Scan -> threshold=50
+2026-03-28 21:36:35,482 [SignatureBasedThresholds] WARNING: [ThresholdSig] Matched: port_scan_slow (confidence=0.80, priority=70)
+2026-03-28 21:36:35,483 [SignatureBasedThresholds] INFO: [ThresholdSig] Applied: port_scan_slow on TCP SYN Port Scan -> threshold=50
+2026-03-28 21:36:35,484 [SignatureBasedThresholds] WARNING: [ThresholdSig] Matched: port_scan_slow (confidence=0.85, priority=70)
+2026-03-28 21:36:35,485 [SignatureBasedThresholds] INFO: [ThresholdSig] Applied: port_scan_slow on TCP SYN Port Scan -> threshold=50
+2026-03-28 21:36:35,485 [SignatureBasedThresholds] WARNING: [ThresholdSig] Matched: port_scan_slow (confidence=0.90, priority=70)
+2026-03-28 21:36:35,486 [SignatureBasedThresholds] INFO: [ThresholdSig] Applied: port_scan_slow on TCP SYN Port Scan -> threshold=50
+2026-03-28 21:36:35,487 [SignatureBasedThresholds] WARNING: [ThresholdSig] Matched: port_scan_slow (confidence=0.95, priority=70)
+2026-03-28 21:36:35,488 [SignatureBasedThresholds] INFO: [ThresholdSig] Applied: port_scan_slow on TCP SYN Port Scan -> threshold=50
+2026-03-28 21:36:35,489 [SignatureBasedThresholds] WARNING: [ThresholdSig] Matched: port_scan_slow (confidence=1.00, priority=70)
+2026-03-28 21:36:35,489 [SignatureBasedThresholds] INFO: [ThresholdSig] Applied: port_scan_slow on TCP SYN Port Scan -> threshold=50
+2026-03-28 21:36:36,569 [SignatureBasedThresholds] WARNING: [ThresholdSig] Matched: port_scan_slow (confidence=1.00, priority=70)
+2026-03-28 21:36:36,571 [SignatureBasedThresholds] INFO: [ThresholdSig] Applied: port_scan_slow on TCP SYN Port Scan -> threshold=50
+2026-03-28 21:36:36,572 [SignatureBasedThresholds] WARNING: [ThresholdSig] Matched: port_scan_slow (confidence=1.00, priority=70)
+2026-03-28 21:36:36,573 [SignatureBasedThresholds] INFO: [ThresholdSig] Applied: port_scan_slow on TCP SYN Port Scan -> threshold=50
+2026-03-28 21:36:36,767 [SignatureBasedThresholds] WARNING: [ThresholdSig] Matched: port_scan_slow (confidence=1.00, priority=70)
+2026-03-28 21:36:36,771 [SignatureBasedThresholds] INFO: [ThresholdSig] Applied: port_scan_slow on TCP SYN Port Scan -> threshold=50
+2026-03-28 21:36:36,772 [SignatureBasedThresholds] WARNING: [ThresholdSig] Matched: port_scan_slow (confidence=1.00, priority=70)
+2026-03-28 21:36:36,773 [SignatureBasedThresholds] INFO: [ThresholdSig] Applied: port_scan_slow on TCP SYN Port Scan -> threshold=50
+2026-03-28 21:36:36,774 [SignatureBasedThresholds] WARNING: [ThresholdSig] Matched: port_scan_slow (confidence=1.00, priority=70)
+2026-03-28 21:36:36,775 [SignatureBasedThresholds] INFO: [ThresholdSig] Applied: port_scan_slow on TCP SYN Port Scan -> threshold=50
+2026-03-28 21:36:42,902 [DetectionEngine] INFO: [DETECTION] TCP ACK Flood | src=192.168.1.77 -> dst=192.168.1.77 | count=45/45 in 10s
+2026-03-28 21:36:42,903 [NIDS] WARNING: [ALERT] TCP ACK Flood | DoS | src=192.168.1.77 -> dst=192.168.1.77 | severity=MEDIUM
+2026-03-28 21:36:42,904 [AlertEngine] INFO: [EVIDENCE] Saved: attacks\DoS\2026-03-28_21-36-42_DoS.json
+2026-03-28 21:36:43,009 [AlertEngine] INFO: [PCAP] Saved: attacks\DoS\2026-03-28_21-36-42_DoS.pcap
+2026-03-28 21:36:43,017 [DetectionEngine] INFO: [DETECTION] TCP SYN Flood | src=192.168.1.77 -> dst=192.168.1.77 | count=45/45 in 10s
+2026-03-28 21:36:43,018 [NIDS] WARNING: [ALERT] TCP SYN Flood | DoS | src=192.168.1.77 -> dst=192.168.1.77 | severity=HIGH
+2026-03-28 21:36:43,020 [AlertEngine] INFO: [EVIDENCE] Saved: attacks\DoS\2026-03-28_21-36-43_DoS.json
+2026-03-28 21:36:43,137 [AlertEngine] INFO: [PCAP] Saved: attacks\DoS\2026-03-28_21-36-43_DoS.pcap
+2026-03-28 21:36:58,076 [vuln_scanner] INFO: Processing host: 192.168.1.77
+2026-03-28 21:36:58,077 [vuln_scanner] INFO: Found service: msrpc unknown on 192.168.1.77:135
+2026-03-28 21:36:58,078 [vuln_scanner] INFO: Found service: netbios-ssn unknown on 192.168.1.77:139
+2026-03-28 21:36:58,079 [vuln_scanner] INFO: Found service: microsoft-ds unknown on 192.168.1.77:445
+2026-03-28 21:36:58,080 [vuln_scanner] INFO: Found 3 services to analyze...
+2026-03-28 21:36:58,081 [vuln_scanner] INFO: Analyzing msrpc unknown on 192.168.1.77:135...
+2026-03-28 21:36:58,082 [vuln_scanner] INFO: Analyzing microsoft-ds unknown on 192.168.1.77:445...
+2026-03-28 21:36:58,082 [vuln_scanner] INFO: Analyzing netbios-ssn unknown on 192.168.1.77:139...
+2026-03-28 21:36:58,082 [vuln_scanner] INFO: Analyzing service: msrpc unknown with banner: 
+2026-03-28 21:36:58,083 [vuln_scanner] INFO: Analyzing service: microsoft-ds unknown with banner: 
+2026-03-28 21:36:58,084 [vuln_scanner] INFO: Analyzing service: netbios-ssn unknown with banner: 
+2026-03-28 21:36:58,865 [vuln_scanner] WARNING: rate limit in google api
+2026-03-28 21:36:58,944 [vuln_scanner] WARNING: rate limit in google api
+2026-03-28 21:36:58,978 [vuln_scanner] WARNING: rate limit in google api
+2026-03-28 21:36:58,982 [vuln_scanner] ERROR: [AutoScanner] Scan failed for 192.168.1.77: 'charmap' codec can't encode characters in position 109-110: character maps to <undefined>
+2026-03-28 21:37:39,558 [NIDS] WARNING: [ALERT] Payload Signature: TCP PSH-ACK Flood | Payload Attack | src=192.168.1.77 -> dst=192.168.1.77 | severity=CRITICAL
+2026-03-28 21:37:39,563 [AlertEngine] INFO: [EVIDENCE] Saved: attacks\Payload_Attack\2026-03-28_21-37-39_Payload_Attack.json
+2026-03-28 21:37:39,665 [AlertEngine] INFO: [PCAP] Saved: attacks\Payload_Attack\2026-03-28_21-37-39_Payload_Attack.pcap
+2026-03-28 21:37:39,666 [vuln_scanner] INFO: [SCAN] Triggering vulnerability scan on 192.168.1.77 (severity=CRITICAL)
+2026-03-28 21:37:39,673 [vuln_scanner] INFO: [AutoScanner] Starting scan workflow for 192.168.1.77
+2026-03-28 21:37:39,674 [vuln_scanner] INFO: Parsed 1 targets
+2026-03-28 21:37:39,675 [vuln_scanner] INFO: Scanning 1 target(s)...
+2026-03-28 21:37:39,677 [vuln_scanner] INFO: Running Nmap command: nmap -T4 -sV -sC --script=banner,vulners -iL C:\Users\ashish\AppData\Local\Temp\tmpa9ejkdj9.txt -oX C:\Users\ashish\AppData\Local\Temp\tmpwmh6h7j6.xml -p 21,22,23,25,53,80,135,139,443,445,902,1433,3268,3306,3389,5432,5985,5986,8080,8443
+2026-03-28 21:37:40,161 [AlertEngine] INFO: ✓ Alert sent to Discord
+2026-03-28 21:37:40,290 [AlertEngine] INFO: ✓ Alert sent to Telegram
+2026-03-28 21:37:40,678 [SignatureBasedThresholds] WARNING: [ThresholdSig] Matched: port_scan_slow (confidence=0.70, priority=70)
+2026-03-28 21:37:40,679 [SignatureBasedThresholds] INFO: [ThresholdSig] Applied: port_scan_slow on TCP SYN Port Scan -> threshold=50
+2026-03-28 21:37:40,680 [SignatureBasedThresholds] WARNING: [ThresholdSig] Matched: port_scan_slow (confidence=0.75, priority=70)
+2026-03-28 21:37:40,680 [SignatureBasedThresholds] INFO: [ThresholdSig] Applied: port_scan_slow on TCP SYN Port Scan -> threshold=50
+2026-03-28 21:37:40,681 [SignatureBasedThresholds] WARNING: [ThresholdSig] Matched: port_scan_slow (confidence=0.80, priority=70)
+2026-03-28 21:37:40,682 [SignatureBasedThresholds] INFO: [ThresholdSig] Applied: port_scan_slow on TCP SYN Port Scan -> threshold=50
+2026-03-28 21:37:40,683 [SignatureBasedThresholds] WARNING: [ThresholdSig] Matched: port_scan_slow (confidence=0.85, priority=70)
+2026-03-28 21:37:40,683 [SignatureBasedThresholds] INFO: [ThresholdSig] Applied: port_scan_slow on TCP SYN Port Scan -> threshold=50
+2026-03-28 21:37:40,684 [SignatureBasedThresholds] WARNING: [ThresholdSig] Matched: port_scan_slow (confidence=0.90, priority=70)
+2026-03-28 21:37:40,685 [SignatureBasedThresholds] INFO: [ThresholdSig] Applied: port_scan_slow on TCP SYN Port Scan -> threshold=50
+2026-03-28 21:37:40,686 [SignatureBasedThresholds] WARNING: [ThresholdSig] Matched: port_scan_slow (confidence=0.95, priority=70)
+2026-03-28 21:37:40,687 [SignatureBasedThresholds] INFO: [ThresholdSig] Applied: port_scan_slow on TCP SYN Port Scan -> threshold=50
+2026-03-28 21:37:40,688 [SignatureBasedThresholds] WARNING: [ThresholdSig] Matched: port_scan_slow (confidence=1.00, priority=70)
+2026-03-28 21:37:40,688 [SignatureBasedThresholds] INFO: [ThresholdSig] Applied: port_scan_slow on TCP SYN Port Scan -> threshold=50
+2026-03-28 21:37:41,779 [SignatureBasedThresholds] WARNING: [ThresholdSig] Matched: port_scan_slow (confidence=1.00, priority=70)
+2026-03-28 21:37:41,780 [SignatureBasedThresholds] INFO: [ThresholdSig] Applied: port_scan_slow on TCP SYN Port Scan -> threshold=50
+2026-03-28 21:37:41,781 [SignatureBasedThresholds] WARNING: [ThresholdSig] Matched: port_scan_slow (confidence=1.00, priority=70)
+2026-03-28 21:37:41,782 [SignatureBasedThresholds] INFO: [ThresholdSig] Applied: port_scan_slow on TCP SYN Port Scan -> threshold=50
+2026-03-28 21:37:41,957 [SignatureBasedThresholds] WARNING: [ThresholdSig] Matched: port_scan_slow (confidence=1.00, priority=70)
+2026-03-28 21:37:41,961 [SignatureBasedThresholds] INFO: [ThresholdSig] Applied: port_scan_slow on TCP SYN Port Scan -> threshold=50
+2026-03-28 21:37:41,962 [SignatureBasedThresholds] WARNING: [ThresholdSig] Matched: port_scan_slow (confidence=1.00, priority=70)
+2026-03-28 21:37:41,963 [SignatureBasedThresholds] INFO: [ThresholdSig] Applied: port_scan_slow on TCP SYN Port Scan -> threshold=50
+2026-03-28 21:37:41,965 [SignatureBasedThresholds] WARNING: [ThresholdSig] Matched: port_scan_slow (confidence=1.00, priority=70)
+2026-03-28 21:37:41,966 [SignatureBasedThresholds] INFO: [ThresholdSig] Applied: port_scan_slow on TCP SYN Port Scan -> threshold=50
+2026-03-28 21:37:48,132 [DetectionEngine] INFO: [DETECTION] TCP ACK Flood | src=192.168.1.77 -> dst=192.168.1.77 | count=45/45 in 10s
+2026-03-28 21:37:48,133 [NIDS] WARNING: [ALERT] TCP ACK Flood | DoS | src=192.168.1.77 -> dst=192.168.1.77 | severity=MEDIUM
+2026-03-28 21:37:48,138 [AlertEngine] INFO: [EVIDENCE] Saved: attacks\DoS\2026-03-28_21-37-48_DoS.json
+2026-03-28 21:37:48,221 [AlertEngine] INFO: [PCAP] Saved: attacks\DoS\2026-03-28_21-37-48_DoS.pcap
+2026-03-28 21:37:48,228 [DetectionEngine] INFO: [DETECTION] TCP SYN Flood | src=192.168.1.77 -> dst=192.168.1.77 | count=45/45 in 10s
+2026-03-28 21:37:48,230 [NIDS] WARNING: [ALERT] TCP SYN Flood | DoS | src=192.168.1.77 -> dst=192.168.1.77 | severity=HIGH
+2026-03-28 21:37:48,232 [AlertEngine] INFO: [EVIDENCE] Saved: attacks\DoS\2026-03-28_21-37-48_DoS.json
+2026-03-28 21:37:48,322 [AlertEngine] INFO: [PCAP] Saved: attacks\DoS\2026-03-28_21-37-48_DoS.pcap
+2026-03-28 21:37:48,594 [AlertEngine] INFO: ✓ Alert sent to Discord
+2026-03-28 21:37:48,915 [AlertEngine] INFO: ✓ Alert sent to Telegram
+2026-03-28 21:38:03,121 [vuln_scanner] INFO: Processing host: 192.168.1.77
+2026-03-28 21:38:03,122 [vuln_scanner] INFO: Found service: msrpc unknown on 192.168.1.77:135
+2026-03-28 21:38:03,123 [vuln_scanner] INFO: Found service: netbios-ssn unknown on 192.168.1.77:139
+2026-03-28 21:38:03,125 [vuln_scanner] INFO: Found service: microsoft-ds unknown on 192.168.1.77:445
+2026-03-28 21:38:03,126 [vuln_scanner] INFO: Found 3 services to analyze...
+2026-03-28 21:38:03,127 [vuln_scanner] INFO: Analyzing msrpc unknown on 192.168.1.77:135...
+2026-03-28 21:38:03,127 [vuln_scanner] INFO: Analyzing netbios-ssn unknown on 192.168.1.77:139...
+2026-03-28 21:38:03,128 [vuln_scanner] INFO: Analyzing microsoft-ds unknown on 192.168.1.77:445...
+2026-03-28 21:38:03,128 [vuln_scanner] INFO: Analyzing service: msrpc unknown with banner: 
+2026-03-28 21:38:03,128 [vuln_scanner] INFO: Analyzing service: netbios-ssn unknown with banner: 
+2026-03-28 21:38:03,129 [vuln_scanner] INFO: Analyzing service: microsoft-ds unknown with banner: 
+2026-03-28 21:38:03,891 [vuln_scanner] WARNING: rate limit in google api
+2026-03-28 21:38:03,952 [vuln_scanner] WARNING: rate limit in google api
+2026-03-28 21:38:04,002 [vuln_scanner] WARNING: rate limit in google api
+2026-03-28 21:38:04,005 [vuln_scanner] ERROR: [AutoScanner] Scan failed for 192.168.1.77: 'charmap' codec can't encode characters in position 109-110: character maps to <undefined>
+2026-03-28 21:41:10,243 [DetectionEngine] INFO: [DETECTION] TCP ACK Flood | src=127.0.0.1 -> dst=127.0.0.1 | count=45/45 in 10s
+2026-03-28 21:41:10,246 [NIDS] WARNING: [ALERT] TCP ACK Flood | DoS | src=127.0.0.1 -> dst=127.0.0.1 | severity=MEDIUM
+2026-03-28 21:41:10,252 [AlertEngine] INFO: [EVIDENCE] Saved: attacks\DoS\2026-03-28_21-41-10_DoS.json
+2026-03-28 21:41:10,339 [AlertEngine] INFO: [PCAP] Saved: attacks\DoS\2026-03-28_21-41-10_DoS.pcap
+2026-03-28 21:41:10,900 [AlertEngine] INFO: ✓ Alert sent to Discord
+2026-03-28 21:41:11,149 [AlertEngine] INFO: ✓ Alert sent to Telegram
+2026-03-28 21:42:07,579 [DetectionEngine] INFO: [DETECTION] TCP ACK Flood | src=192.168.1.77 -> dst=192.168.1.77 | count=45/45 in 10s
+2026-03-28 21:42:07,591 [NIDS] WARNING: [ALERT] TCP ACK Flood | DoS | src=192.168.1.77 -> dst=192.168.1.77 | severity=MEDIUM
+2026-03-28 21:42:07,632 [AlertEngine] INFO: [EVIDENCE] Saved: attacks\DoS\2026-03-28_21-42-07_DoS.json
+2026-03-28 21:42:07,887 [AlertEngine] INFO: [PCAP] Saved: attacks\DoS\2026-03-28_21-42-07_DoS.pcap
+2026-03-28 21:42:08,022 [DetectionEngine] INFO: [DETECTION] TCP PSH-ACK Flood | src=192.168.1.77 -> dst=192.168.1.77 | count=45/45 in 10s
+2026-03-28 21:42:08,024 [NIDS] WARNING: [ALERT] TCP PSH-ACK Flood | DoS | src=192.168.1.77 -> dst=192.168.1.77 | severity=MEDIUM
+2026-03-28 21:42:08,031 [AlertEngine] INFO: [EVIDENCE] Saved: attacks\DoS\2026-03-28_21-42-08_DoS.json
+2026-03-28 21:42:08,203 [AlertEngine] INFO: [PCAP] Saved: attacks\DoS\2026-03-28_21-42-08_DoS.pcap
+2026-03-28 21:42:08,220 [AlertEngine] INFO: ✓ Alert sent to Discord
+2026-03-28 21:42:08,422 [AlertEngine] INFO: ✓ Alert sent to Telegram

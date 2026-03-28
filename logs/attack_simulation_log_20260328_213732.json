@@ -1,0 +1,14 @@
+[
+  {
+    "sim_arg": "rce",
+    "rule_name": "Remote Code Execution",
+    "detected": true,
+    "det_time": 0.5032639503479004,
+    "log_line": "2026-03-28 21:37:39,558 [NIDS] WARNING: [ALERT] Payload Signature: TCP PSH-ACK Flood | Payload Attack | src=192.168.1.77 -> dst=192.168.1.77 | severity=CRITICAL",
+    "packets": 5,
+    "duration": 15,
+    "attack_started_at": "2026-03-28T21:37:39.349186",
+    "elapsed_time": 0.5118279457092285,
+    "logged_at": "2026-03-28T21:37:39.861031"
+  }
+]

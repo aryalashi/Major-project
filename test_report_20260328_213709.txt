@@ -1,0 +1,28 @@
+==============================================================
+NIDS ATTACK SIMULATOR - TEST REPORT
+==============================================================
+
+Generated: 2026-03-28 21:37:09
+Total attacks: 1
+Detection rate: 0/1 (0%)
+
+--------------------------------------------------------------
+DETAILED RESULTS
+--------------------------------------------------------------
+Rule Name                           Result       Time    
+------------------------------------------------------------
+Path Traversal Attack               MISSED       —       
+
+--------------------------------------------------------------
+CONFUSION MATRIX
+--------------------------------------------------------------
+True Positive  (TP)  : 0  (correctly detected)
+False Negative (FN)  : 1  (missed / not detected)
+False Positive (FP)  : 0  (N/A in single-attack mode)
+True Negative  (TN)  : 0  (N/A in single-attack mode)
+
+Performance Metrics:
+  Sensitivity/Recall : 0.0%  (TP / (TP+FN))
+  Accuracy           : 0.0%  (Correct / Total)
+
+==============================================================

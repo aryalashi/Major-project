@@ -1,0 +1,14 @@
+[
+  {
+    "sim_arg": "shellcode",
+    "rule_name": "Shellcode Injection",
+    "detected": true,
+    "det_time": 0.5036523342132568,
+    "log_line": "2026-03-28 21:36:08,726 [NIDS] WARNING: [ALERT] Payload Signature: TCP PSH-ACK Flood | Payload Attack | src=192.168.1.77 -> dst=192.168.1.77 | severity=HIGH",
+    "packets": 5,
+    "duration": 15,
+    "attack_started_at": "2026-03-28T21:36:08.720991",
+    "elapsed_time": 0.5120220184326172,
+    "logged_at": "2026-03-28T21:36:09.233034"
+  }
+]

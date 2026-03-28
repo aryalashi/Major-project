@@ -130,6 +130,15 @@ Be honest about limitations in CVE verification rather than guessing."""
                                   headers=headers, json=data)
             response.raise_for_status()
             return response.json()["candidates"][0]["content"]["parts"][0]["text"]
+        except requests.exceptions.HTTPError as e:
+            status_code = e.response.status_code if e.response is not None else None
+            response_text = e.response.text.lower() if e.response is not None and e.response.text else ""
+            is_rate_limited = status_code == 429 or "rate" in response_text or "quota" in response_text
+            if is_rate_limited:
+                logger.warning("rate limit in google api")
+                return "rate limit in google api"
+            logger.error(f"Gemini API error: {str(e)}")
+            return f"Error: {str(e)}"
         except Exception as e:
             logger.error(f"Gemini API error: {str(e)}")
             return f"Error: {str(e)}"

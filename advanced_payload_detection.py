@@ -27,6 +27,7 @@ import sys
 import logging
 import json
 import hashlib
+import urllib.parse
 from collections import defaultdict
 from typing import List, Optional, Dict, Tuple
 from dataclasses import dataclass
@@ -258,13 +259,23 @@ class SignatureDetector:
         
         matches = []
         total_score = 0.0
-        
-        payload_upper = payload.upper()
+
+        # Expand matching view with decoded URL payload when possible.
+        matching_payload = payload
+        try:
+            decoded_text = urllib.parse.unquote_plus(payload.decode("latin-1", errors="ignore"))
+            decoded_payload = decoded_text.encode("latin-1", errors="ignore")
+            if decoded_payload and decoded_payload != payload:
+                matching_payload = payload + b"\n" + decoded_payload
+        except Exception:
+            matching_payload = payload
+
+        payload_upper = matching_payload.upper()
 
         for sig in self.signatures:
             haystack = payload_upper if sig.case_insensitive else payload
             needle = sig.pattern.upper() if sig.case_insensitive else sig.pattern
-            if self._is_signature_match(sig, payload, haystack, needle):
+            if self._is_signature_match(sig, matching_payload, haystack, needle):
                 match_data = {
                     "signature_name": sig.name,
                     "description": sig.description,

@@ -1,0 +1,14 @@
+[
+  {
+    "sim_arg": "path_trav",
+    "rule_name": "Path Traversal Attack",
+    "detected": false,
+    "det_time": null,
+    "log_line": "",
+    "packets": 147,
+    "duration": 15,
+    "attack_started_at": "2026-03-28T21:36:29.881377",
+    "elapsed_time": 40.082258224487305,
+    "logged_at": "2026-03-28T21:37:09.963649"
+  }
+]
