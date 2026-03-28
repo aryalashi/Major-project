@@ -1,0 +1,29 @@
+# NIDS Requirements
+# Install: pip install -r requirements.txt
+
+# Core packet capture
+scapy>=2.5.0
+
+# GUI framework
+PyQt6>=6.4.0
+
+# Environment variables
+python-dotenv>=1.0.0
+
+# HTTP requests (Telegram/Discord alerts)
+requests>=2.28.0
+
+# Desktop notifications (Windows Toast notifications)
+win10toast>=1.0.0
+
+# Desktop notifications (offline fallback)
+plyer>=2.1.0
+
+# Performance monitoring (Educational Tools)
+psutil>=5.0.0
+
+# Nmap vulnerability scanning
+python-libnmap>=0.7.2
+
+# Build EXE (optional)
+pyinstaller>=5.0.0

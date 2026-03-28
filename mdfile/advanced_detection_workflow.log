@@ -1,0 +1,552 @@
+2026-03-28 16:30:47,969 [WorkflowExample] INFO: 
+
+
+2026-03-28 16:30:49,105 [WorkflowExample] INFO: 
+================================================================================
+2026-03-28 16:30:49,105 [WorkflowExample] INFO: SCENARIO 1: HTTP FLOOD DETECTION WITH PAYLOAD ANALYSIS
+2026-03-28 16:30:49,105 [WorkflowExample] INFO: ================================================================================
+2026-03-28 16:30:49,106 [RuleEngine] INFO: Loaded 30 rules from rules.json
+2026-03-28 16:30:49,106 [RuleEngine] WARNING: Found 1 invalid rules:
+2026-03-28 16:30:49,106 [RuleEngine] WARNING:   ICMP Flood: ["ICMP rule must specify 'icmp_type'"]
+2026-03-28 16:30:49,107 [RuleEngine] INFO: Proceeding with 29 valid rules
+2026-03-28 16:30:49,107 [DetectionEngine] INFO: ======================================================================
+2026-03-28 16:30:49,107 [DetectionEngine] INFO: DetectionEngine Initialized
+2026-03-28 16:30:49,107 [DetectionEngine] INFO: ======================================================================
+2026-03-28 16:30:49,107 [DetectionEngine] INFO: Rules Loaded: 29
+2026-03-28 16:30:49,108 [DetectionEngine] INFO:   By Protocol: {'TCP': 25, 'UDP': 4}
+2026-03-28 16:30:49,108 [DetectionEngine] INFO:   By Severity: {'HIGH': 15, 'MEDIUM': 11, 'LOW': 1, 'CRITICAL': 2}
+2026-03-28 16:30:49,108 [DetectionEngine] INFO: 
+Auto-Tuner: EWMA adaptive thresholding
+2026-03-28 16:30:49,108 [DetectionEngine] INFO:   Alpha: 0.2
+2026-03-28 16:30:49,108 [DetectionEngine] INFO:   Headroom: 3.0x
+2026-03-28 16:30:49,108 [DetectionEngine] INFO: ======================================================================
+2026-03-28 16:30:49,108 [AdvancedPayloadDetection] INFO: AdvancedPayloadDetector initialized
+2026-03-28 16:30:49,109 [IntegrationAdapter] INFO: EnhancedDetectionPipeline initialized with config: {'entropy_threshold': 7.0, 'threshold_algorithm': 'EWMA', 'enable_entropy_analysis': True, 'enable_signature_detection': True, 'enable_protocol_anomalies': True, 'payload_sampling_rate': 1.0, 'max_payload_size': 4096}
+2026-03-28 16:30:49,109 [WorkflowExample] INFO: 
+[Step 1] Processing normal HTTP request...
+2026-03-28 16:30:49,109 [WorkflowExample] INFO:   Alerts generated: 0
+2026-03-28 16:30:49,109 [WorkflowExample] INFO:   Expected: 0 (normal traffic)
+2026-03-28 16:30:49,109 [WorkflowExample] INFO: 
+[Step 2] Processing malicious HTTP request (shellcode detection)...
+2026-03-28 16:30:49,109 [WorkflowExample] INFO:   Alerts generated: 0
+2026-03-28 16:30:49,109 [WorkflowExample] INFO: 
+[Summary] Pipeline Statistics:
+2026-03-28 16:30:49,109 [WorkflowExample] INFO:   Packets processed: 2
+2026-03-28 16:30:49,109 [WorkflowExample] INFO:   Alerts generated: 0
+2026-03-28 16:30:49,110 [WorkflowExample] INFO:   Alerts escalated: 0
+2026-03-28 16:30:49,110 [WorkflowExample] INFO:   Payload analyses: 0
+2026-03-28 16:30:49,110 [WorkflowExample] INFO: 
+================================================================================
+2026-03-28 16:30:49,110 [WorkflowExample] INFO: SCENARIO 2: DNS TUNNELING DETECTION
+2026-03-28 16:30:49,110 [WorkflowExample] INFO: ================================================================================
+2026-03-28 16:30:49,111 [RuleEngine] INFO: Loaded 30 rules from rules.json
+2026-03-28 16:30:49,111 [RuleEngine] WARNING: Found 1 invalid rules:
+2026-03-28 16:30:49,111 [RuleEngine] WARNING:   ICMP Flood: ["ICMP rule must specify 'icmp_type'"]
+2026-03-28 16:30:49,111 [RuleEngine] INFO: Proceeding with 29 valid rules
+2026-03-28 16:30:49,111 [DetectionEngine] INFO: ======================================================================
+2026-03-28 16:30:49,111 [DetectionEngine] INFO: DetectionEngine Initialized
+2026-03-28 16:30:49,111 [DetectionEngine] INFO: ======================================================================
+2026-03-28 16:30:49,111 [DetectionEngine] INFO: Rules Loaded: 29
+2026-03-28 16:30:49,112 [DetectionEngine] INFO:   By Protocol: {'TCP': 25, 'UDP': 4}
+2026-03-28 16:30:49,112 [DetectionEngine] INFO:   By Severity: {'HIGH': 15, 'MEDIUM': 11, 'LOW': 1, 'CRITICAL': 2}
+2026-03-28 16:30:49,112 [DetectionEngine] INFO: 
+Auto-Tuner: EWMA adaptive thresholding
+2026-03-28 16:30:49,112 [DetectionEngine] INFO:   Alpha: 0.2
+2026-03-28 16:30:49,112 [DetectionEngine] INFO:   Headroom: 3.0x
+2026-03-28 16:30:49,112 [DetectionEngine] INFO: ======================================================================
+2026-03-28 16:30:49,113 [AdvancedPayloadDetection] INFO: AdvancedPayloadDetector initialized
+2026-03-28 16:30:49,113 [IntegrationAdapter] INFO: EnhancedDetectionPipeline initialized with config: {'entropy_threshold': 6.5, 'threshold_algorithm': 'MAD', 'enable_entropy_analysis': True, 'enable_signature_detection': True, 'enable_protocol_anomalies': True, 'payload_sampling_rate': 1.0, 'max_payload_size': 4096}
+2026-03-28 16:30:49,113 [WorkflowExample] INFO: 
+[Step 1] Processing suspicious DNS packet (high entropy)...
+2026-03-28 16:30:49,116 [WorkflowExample] INFO:   Payload entropy: e674a72998b610c9
+2026-03-28 16:30:49,117 [WorkflowExample] INFO:   Threat detected: True
+2026-03-28 16:30:49,117 [WorkflowExample] INFO:   Detections:
+2026-03-28 16:30:49,117 [WorkflowExample] INFO:     - entropy_anomaly: HIGH
+2026-03-28 16:30:49,117 [WorkflowExample] INFO:       Entropy: 7.08 bits/byte (threshold: 6.5)
+2026-03-28 16:30:49,117 [WorkflowExample] INFO: 
+================================================================================
+2026-03-28 16:30:49,117 [WorkflowExample] INFO: SCENARIO 3: ADAPTIVE THRESHOLD LEARNING
+2026-03-28 16:30:49,117 [WorkflowExample] INFO: ================================================================================
+2026-03-28 16:30:49,118 [RuleEngine] INFO: Loaded 30 rules from rules.json
+2026-03-28 16:30:49,118 [RuleEngine] WARNING: Found 1 invalid rules:
+2026-03-28 16:30:49,118 [RuleEngine] WARNING:   ICMP Flood: ["ICMP rule must specify 'icmp_type'"]
+2026-03-28 16:30:49,118 [RuleEngine] INFO: Proceeding with 29 valid rules
+2026-03-28 16:30:49,119 [DetectionEngine] INFO: ======================================================================
+2026-03-28 16:30:49,119 [DetectionEngine] INFO: DetectionEngine Initialized
+2026-03-28 16:30:49,119 [DetectionEngine] INFO: ======================================================================
+2026-03-28 16:30:49,119 [DetectionEngine] INFO: Rules Loaded: 29
+2026-03-28 16:30:49,120 [DetectionEngine] INFO:   By Protocol: {'TCP': 25, 'UDP': 4}
+2026-03-28 16:30:49,120 [DetectionEngine] INFO:   By Severity: {'HIGH': 15, 'MEDIUM': 11, 'LOW': 1, 'CRITICAL': 2}
+2026-03-28 16:30:49,120 [DetectionEngine] INFO: 
+Auto-Tuner: EWMA adaptive thresholding
+2026-03-28 16:30:49,120 [DetectionEngine] INFO:   Alpha: 0.2
+2026-03-28 16:30:49,120 [DetectionEngine] INFO:   Headroom: 3.0x
+2026-03-28 16:30:49,120 [DetectionEngine] INFO: ======================================================================
+2026-03-28 16:30:49,120 [AdvancedPayloadDetection] INFO: AdvancedPayloadDetector initialized
+2026-03-28 16:30:49,121 [IntegrationAdapter] INFO: EnhancedDetectionPipeline initialized with config: {'entropy_threshold': 7.0, 'threshold_algorithm': 'EWMA', 'enable_entropy_analysis': True, 'enable_signature_detection': True, 'enable_protocol_anomalies': True, 'payload_sampling_rate': 1.0, 'max_payload_size': 4096}
+2026-03-28 16:30:49,121 [WorkflowExample] INFO: 
+Threshold Adaptation Throughout the Day:
+2026-03-28 16:30:49,121 [WorkflowExample] INFO: (TCP SYN Flood rule, base threshold: 15 pkt/10s)
+2026-03-28 16:30:49,122 [WorkflowExample] INFO: 
+  08:00 (Morning low)
+2026-03-28 16:30:49,122 [WorkflowExample] INFO:     Observed rate: 1.0 pkt/s (10 pkt/10s)
+2026-03-28 16:30:49,122 [WorkflowExample] INFO:     Baseline: 1.0 pkt/s
+2026-03-28 16:30:49,122 [WorkflowExample] INFO:     Adjusted threshold: 30 pkt/10s
+2026-03-28 16:30:49,123 [WorkflowExample] INFO: 
+  12:00 (Noon peak)
+2026-03-28 16:30:49,123 [WorkflowExample] INFO:     Observed rate: 5.1 pkt/s (51 pkt/10s)
+2026-03-28 16:30:49,123 [WorkflowExample] INFO:     Baseline: 1.78 pkt/s
+2026-03-28 16:30:49,123 [WorkflowExample] INFO:     Adjusted threshold: 53 pkt/10s
+2026-03-28 16:30:49,123 [WorkflowExample] INFO: 
+  14:00 (Afternoon)
+2026-03-28 16:30:49,124 [WorkflowExample] INFO:     Observed rate: 5.0 pkt/s (50 pkt/10s)
+2026-03-28 16:30:49,124 [WorkflowExample] INFO:     Baseline: 2.46 pkt/s
+2026-03-28 16:30:49,124 [WorkflowExample] INFO:     Adjusted threshold: 73 pkt/10s
+2026-03-28 16:30:49,124 [WorkflowExample] INFO: 
+  18:00 (Evening)
+2026-03-28 16:30:49,124 [WorkflowExample] INFO:     Observed rate: 2.0 pkt/s (20 pkt/10s)
+2026-03-28 16:30:49,124 [WorkflowExample] INFO:     Baseline: 2.37 pkt/s
+2026-03-28 16:30:49,125 [WorkflowExample] INFO:     Adjusted threshold: 71 pkt/10s
+2026-03-28 16:30:49,125 [WorkflowExample] INFO: 
+================================================================================
+2026-03-28 16:30:49,125 [WorkflowExample] INFO: SCENARIO 4: MULTI-ALGORITHM CONSENSUS VOTING
+2026-03-28 16:30:49,125 [WorkflowExample] INFO: ================================================================================
+2026-03-28 16:30:49,127 [RuleEngine] INFO: Loaded 30 rules from rules.json
+2026-03-28 16:30:49,128 [RuleEngine] WARNING: Found 1 invalid rules:
+2026-03-28 16:30:49,128 [RuleEngine] WARNING:   ICMP Flood: ["ICMP rule must specify 'icmp_type'"]
+2026-03-28 16:30:49,128 [RuleEngine] INFO: Proceeding with 29 valid rules
+2026-03-28 16:30:49,129 [DetectionEngine] INFO: ======================================================================
+2026-03-28 16:30:49,129 [DetectionEngine] INFO: DetectionEngine Initialized
+2026-03-28 16:30:49,129 [DetectionEngine] INFO: ======================================================================
+2026-03-28 16:30:49,130 [DetectionEngine] INFO: Rules Loaded: 29
+2026-03-28 16:30:49,130 [DetectionEngine] INFO:   By Protocol: {'TCP': 25, 'UDP': 4}
+2026-03-28 16:30:49,130 [DetectionEngine] INFO:   By Severity: {'HIGH': 15, 'MEDIUM': 11, 'LOW': 1, 'CRITICAL': 2}
+2026-03-28 16:30:49,130 [DetectionEngine] INFO: 
+Auto-Tuner: EWMA adaptive thresholding
+2026-03-28 16:30:49,130 [DetectionEngine] INFO:   Alpha: 0.2
+2026-03-28 16:30:49,130 [DetectionEngine] INFO:   Headroom: 3.0x
+2026-03-28 16:30:49,130 [DetectionEngine] INFO: ======================================================================
+2026-03-28 16:30:49,130 [AdvancedPayloadDetection] INFO: AdvancedPayloadDetector initialized
+2026-03-28 16:30:49,130 [IntegrationAdapter] INFO: EnhancedDetectionPipeline initialized with config: {'entropy_threshold': 7.0, 'threshold_algorithm': 'EWMA', 'enable_entropy_analysis': True, 'enable_signature_detection': True, 'enable_protocol_anomalies': True, 'payload_sampling_rate': 1.0, 'max_payload_size': 4096}
+2026-03-28 16:30:49,131 [WorkflowExample] INFO: 
+Observation: 60 packets/10s
+2026-03-28 16:30:49,131 [WorkflowExample] INFO: Base threshold: 15 packets/10s
+2026-03-28 16:30:49,131 [WorkflowExample] INFO: Recent rates history: {recent_rates}
+2026-03-28 16:30:49,131 [WorkflowExample] INFO: 
+Threshold from each algorithm:
+2026-03-28 16:30:49,131 [WorkflowExample] INFO:   EWMA      : threshold=   66 (CLEAR)
+2026-03-28 16:30:49,131 [WorkflowExample] INFO:   MAD       : threshold=   15 (ALERT)
+2026-03-28 16:30:49,132 [WorkflowExample] INFO:   ZSCORE    : threshold=   15 (ALERT)
+2026-03-28 16:30:49,132 [WorkflowExample] INFO:   BAYESIAN  : threshold=   14 (ALERT)
+2026-03-28 16:30:49,132 [WorkflowExample] INFO: 
+Consensus Result: 3/4 algorithms vote ALERT
+2026-03-28 16:30:49,133 [WorkflowExample] INFO:   Decision: CONFIDENCE ALERT (high confidence)
+2026-03-28 16:30:49,133 [WorkflowExample] INFO: 
+================================================================================
+2026-03-28 16:30:49,133 [WorkflowExample] INFO: SCENARIO 5: ENTROPY DISTRIBUTION & ANOMALY DETECTION
+2026-03-28 16:30:49,133 [WorkflowExample] INFO: ================================================================================
+2026-03-28 16:30:49,133 [WorkflowExample] INFO: 
+Entropy Analysis by Payload Type:
+2026-03-28 16:30:49,133 [WorkflowExample] INFO: 
+  Normal HTTP Headers:
+2026-03-28 16:30:49,133 [WorkflowExample] INFO:     Samples: 3
+2026-03-28 16:30:49,133 [WorkflowExample] INFO:     Entropies: ['4.32', '4.52', '4.38']
+2026-03-28 16:30:49,134 [WorkflowExample] INFO:     Mean: 4.41 bits/byte
+2026-03-28 16:30:49,134 [WorkflowExample] INFO:     StdDev: 0.10
+2026-03-28 16:30:49,134 [WorkflowExample] INFO: 
+  Compressed/Encrypted:
+2026-03-28 16:30:49,135 [WorkflowExample] INFO:     Samples: 2
+2026-03-28 16:30:49,135 [WorkflowExample] INFO:     Entropies: ['7.00', '6.98']
+2026-03-28 16:30:49,135 [WorkflowExample] INFO:     Mean: 6.99 bits/byte
+2026-03-28 16:30:49,135 [WorkflowExample] INFO:     StdDev: 0.01
+2026-03-28 16:30:49,135 [WorkflowExample] INFO: 
+  Structured Binary:
+2026-03-28 16:30:49,135 [WorkflowExample] INFO:     Samples: 1
+2026-03-28 16:30:49,135 [WorkflowExample] INFO:     Entropies: ['2.89']
+2026-03-28 16:30:49,136 [WorkflowExample] INFO:     Mean: 2.89 bits/byte
+2026-03-28 16:30:49,136 [WorkflowExample] INFO:     StdDev: 0.00
+2026-03-28 16:30:49,136 [WorkflowExample] INFO: 
+================================================================================
+2026-03-28 16:30:49,136 [WorkflowExample] INFO: SCENARIO 6: FORMULA VERIFICATION
+2026-03-28 16:30:49,136 [WorkflowExample] INFO: ================================================================================
+2026-03-28 16:30:49,136 [WorkflowExample] INFO: 
+EWMA Formula Verification:
+2026-03-28 16:30:49,139 [WorkflowExample] INFO: 
+  Iteration | rate | Formula Calc | Code Calc | Match
+2026-03-28 16:30:49,139 [WorkflowExample] INFO:   -------------------------------------------------------
+2026-03-28 16:30:49,139 [WorkflowExample] ERROR: Workflow error: cannot import name 'AdaptiveDetectionConfig' from 'integration_adapter' (C:\Users\ashish\Desktop\DOS\nids_project\old\integration_adapter.py)
+Traceback (most recent call last):
+  File "C:\Users\ashish\Desktop\DOS\nids_project\old\example_complete_workflow.py", line 449, in <module>
+    scenario_formula_verification()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\ashish\Desktop\DOS\nids_project\old\example_complete_workflow.py", line 321, in scenario_formula_verification
+    from integration_adapter import AdaptiveDetectionConfig
+ImportError: cannot import name 'AdaptiveDetectionConfig' from 'integration_adapter' (C:\Users\ashish\Desktop\DOS\nids_project\old\integration_adapter.py). Did you mean: 'AdvancedDetectionConfig'?
+2026-03-28 16:30:55,925 [WorkflowExample] INFO: 
+
+
+2026-03-28 16:30:57,099 [WorkflowExample] INFO: 
+================================================================================
+2026-03-28 16:30:57,099 [WorkflowExample] INFO: SCENARIO 1: HTTP FLOOD DETECTION WITH PAYLOAD ANALYSIS
+2026-03-28 16:30:57,099 [WorkflowExample] INFO: ================================================================================
+2026-03-28 16:30:57,100 [RuleEngine] INFO: Loaded 30 rules from rules.json
+2026-03-28 16:30:57,100 [RuleEngine] WARNING: Found 1 invalid rules:
+2026-03-28 16:30:57,100 [RuleEngine] WARNING:   ICMP Flood: ["ICMP rule must specify 'icmp_type'"]
+2026-03-28 16:30:57,100 [RuleEngine] INFO: Proceeding with 29 valid rules
+2026-03-28 16:30:57,100 [DetectionEngine] INFO: ======================================================================
+2026-03-28 16:30:57,100 [DetectionEngine] INFO: DetectionEngine Initialized
+2026-03-28 16:30:57,100 [DetectionEngine] INFO: ======================================================================
+2026-03-28 16:30:57,100 [DetectionEngine] INFO: Rules Loaded: 29
+2026-03-28 16:30:57,100 [DetectionEngine] INFO:   By Protocol: {'TCP': 25, 'UDP': 4}
+2026-03-28 16:30:57,100 [DetectionEngine] INFO:   By Severity: {'HIGH': 15, 'MEDIUM': 11, 'LOW': 1, 'CRITICAL': 2}
+2026-03-28 16:30:57,100 [DetectionEngine] INFO: 
+Auto-Tuner: EWMA adaptive thresholding
+2026-03-28 16:30:57,100 [DetectionEngine] INFO:   Alpha: 0.2
+2026-03-28 16:30:57,100 [DetectionEngine] INFO:   Headroom: 3.0x
+2026-03-28 16:30:57,100 [DetectionEngine] INFO: ======================================================================
+2026-03-28 16:30:57,101 [AdvancedPayloadDetection] INFO: AdvancedPayloadDetector initialized
+2026-03-28 16:30:57,101 [IntegrationAdapter] INFO: EnhancedDetectionPipeline initialized with config: {'entropy_threshold': 7.0, 'threshold_algorithm': 'EWMA', 'enable_entropy_analysis': True, 'enable_signature_detection': True, 'enable_protocol_anomalies': True, 'payload_sampling_rate': 1.0, 'max_payload_size': 4096}
+2026-03-28 16:30:57,101 [WorkflowExample] INFO: 
+[Step 1] Processing normal HTTP request...
+2026-03-28 16:30:57,101 [WorkflowExample] INFO:   Alerts generated: 0
+2026-03-28 16:30:57,101 [WorkflowExample] INFO:   Expected: 0 (normal traffic)
+2026-03-28 16:30:57,101 [WorkflowExample] INFO: 
+[Step 2] Processing malicious HTTP request (shellcode detection)...
+2026-03-28 16:30:57,101 [WorkflowExample] INFO:   Alerts generated: 0
+2026-03-28 16:30:57,101 [WorkflowExample] INFO: 
+[Summary] Pipeline Statistics:
+2026-03-28 16:30:57,101 [WorkflowExample] INFO:   Packets processed: 2
+2026-03-28 16:30:57,101 [WorkflowExample] INFO:   Alerts generated: 0
+2026-03-28 16:30:57,101 [WorkflowExample] INFO:   Alerts escalated: 0
+2026-03-28 16:30:57,101 [WorkflowExample] INFO:   Payload analyses: 0
+2026-03-28 16:30:57,101 [WorkflowExample] INFO: 
+================================================================================
+2026-03-28 16:30:57,101 [WorkflowExample] INFO: SCENARIO 2: DNS TUNNELING DETECTION
+2026-03-28 16:30:57,101 [WorkflowExample] INFO: ================================================================================
+2026-03-28 16:30:57,102 [RuleEngine] INFO: Loaded 30 rules from rules.json
+2026-03-28 16:30:57,102 [RuleEngine] WARNING: Found 1 invalid rules:
+2026-03-28 16:30:57,102 [RuleEngine] WARNING:   ICMP Flood: ["ICMP rule must specify 'icmp_type'"]
+2026-03-28 16:30:57,102 [RuleEngine] INFO: Proceeding with 29 valid rules
+2026-03-28 16:30:57,102 [DetectionEngine] INFO: ======================================================================
+2026-03-28 16:30:57,102 [DetectionEngine] INFO: DetectionEngine Initialized
+2026-03-28 16:30:57,102 [DetectionEngine] INFO: ======================================================================
+2026-03-28 16:30:57,102 [DetectionEngine] INFO: Rules Loaded: 29
+2026-03-28 16:30:57,102 [DetectionEngine] INFO:   By Protocol: {'TCP': 25, 'UDP': 4}
+2026-03-28 16:30:57,102 [DetectionEngine] INFO:   By Severity: {'HIGH': 15, 'MEDIUM': 11, 'LOW': 1, 'CRITICAL': 2}
+2026-03-28 16:30:57,102 [DetectionEngine] INFO: 
+Auto-Tuner: EWMA adaptive thresholding
+2026-03-28 16:30:57,102 [DetectionEngine] INFO:   Alpha: 0.2
+2026-03-28 16:30:57,102 [DetectionEngine] INFO:   Headroom: 3.0x
+2026-03-28 16:30:57,102 [DetectionEngine] INFO: ======================================================================
+2026-03-28 16:30:57,103 [AdvancedPayloadDetection] INFO: AdvancedPayloadDetector initialized
+2026-03-28 16:30:57,103 [IntegrationAdapter] INFO: EnhancedDetectionPipeline initialized with config: {'entropy_threshold': 6.5, 'threshold_algorithm': 'MAD', 'enable_entropy_analysis': True, 'enable_signature_detection': True, 'enable_protocol_anomalies': True, 'payload_sampling_rate': 1.0, 'max_payload_size': 4096}
+2026-03-28 16:30:57,103 [WorkflowExample] INFO: 
+[Step 1] Processing suspicious DNS packet (high entropy)...
+2026-03-28 16:30:57,104 [WorkflowExample] INFO:   Payload entropy: ca764070dcc122a5
+2026-03-28 16:30:57,104 [WorkflowExample] INFO:   Threat detected: True
+2026-03-28 16:30:57,104 [WorkflowExample] INFO:   Detections:
+2026-03-28 16:30:57,104 [WorkflowExample] INFO:     - entropy_anomaly: HIGH
+2026-03-28 16:30:57,104 [WorkflowExample] INFO:       Entropy: 7.25 bits/byte (threshold: 6.5)
+2026-03-28 16:30:57,105 [WorkflowExample] INFO: 
+================================================================================
+2026-03-28 16:30:57,105 [WorkflowExample] INFO: SCENARIO 3: ADAPTIVE THRESHOLD LEARNING
+2026-03-28 16:30:57,105 [WorkflowExample] INFO: ================================================================================
+2026-03-28 16:30:57,105 [RuleEngine] INFO: Loaded 30 rules from rules.json
+2026-03-28 16:30:57,105 [RuleEngine] WARNING: Found 1 invalid rules:
+2026-03-28 16:30:57,105 [RuleEngine] WARNING:   ICMP Flood: ["ICMP rule must specify 'icmp_type'"]
+2026-03-28 16:30:57,105 [RuleEngine] INFO: Proceeding with 29 valid rules
+2026-03-28 16:30:57,105 [DetectionEngine] INFO: ======================================================================
+2026-03-28 16:30:57,105 [DetectionEngine] INFO: DetectionEngine Initialized
+2026-03-28 16:30:57,105 [DetectionEngine] INFO: ======================================================================
+2026-03-28 16:30:57,106 [DetectionEngine] INFO: Rules Loaded: 29
+2026-03-28 16:30:57,106 [DetectionEngine] INFO:   By Protocol: {'TCP': 25, 'UDP': 4}
+2026-03-28 16:30:57,106 [DetectionEngine] INFO:   By Severity: {'HIGH': 15, 'MEDIUM': 11, 'LOW': 1, 'CRITICAL': 2}
+2026-03-28 16:30:57,106 [DetectionEngine] INFO: 
+Auto-Tuner: EWMA adaptive thresholding
+2026-03-28 16:30:57,106 [DetectionEngine] INFO:   Alpha: 0.2
+2026-03-28 16:30:57,106 [DetectionEngine] INFO:   Headroom: 3.0x
+2026-03-28 16:30:57,106 [DetectionEngine] INFO: ======================================================================
+2026-03-28 16:30:57,106 [AdvancedPayloadDetection] INFO: AdvancedPayloadDetector initialized
+2026-03-28 16:30:57,106 [IntegrationAdapter] INFO: EnhancedDetectionPipeline initialized with config: {'entropy_threshold': 7.0, 'threshold_algorithm': 'EWMA', 'enable_entropy_analysis': True, 'enable_signature_detection': True, 'enable_protocol_anomalies': True, 'payload_sampling_rate': 1.0, 'max_payload_size': 4096}
+2026-03-28 16:30:57,106 [WorkflowExample] INFO: 
+Threshold Adaptation Throughout the Day:
+2026-03-28 16:30:57,106 [WorkflowExample] INFO: (TCP SYN Flood rule, base threshold: 15 pkt/10s)
+2026-03-28 16:30:57,106 [WorkflowExample] INFO: 
+  08:00 (Morning low)
+2026-03-28 16:30:57,106 [WorkflowExample] INFO:     Observed rate: 1.0 pkt/s (10 pkt/10s)
+2026-03-28 16:30:57,106 [WorkflowExample] INFO:     Baseline: 1.0 pkt/s
+2026-03-28 16:30:57,106 [WorkflowExample] INFO:     Adjusted threshold: 30 pkt/10s
+2026-03-28 16:30:57,106 [WorkflowExample] INFO: 
+  12:00 (Noon peak)
+2026-03-28 16:30:57,106 [WorkflowExample] INFO:     Observed rate: 5.1 pkt/s (51 pkt/10s)
+2026-03-28 16:30:57,106 [WorkflowExample] INFO:     Baseline: 1.78 pkt/s
+2026-03-28 16:30:57,106 [WorkflowExample] INFO:     Adjusted threshold: 53 pkt/10s
+2026-03-28 16:30:57,107 [WorkflowExample] INFO: 
+  14:00 (Afternoon)
+2026-03-28 16:30:57,107 [WorkflowExample] INFO:     Observed rate: 5.0 pkt/s (50 pkt/10s)
+2026-03-28 16:30:57,107 [WorkflowExample] INFO:     Baseline: 2.46 pkt/s
+2026-03-28 16:30:57,107 [WorkflowExample] INFO:     Adjusted threshold: 73 pkt/10s
+2026-03-28 16:30:57,107 [WorkflowExample] INFO: 
+  18:00 (Evening)
+2026-03-28 16:30:57,107 [WorkflowExample] INFO:     Observed rate: 2.0 pkt/s (20 pkt/10s)
+2026-03-28 16:30:57,107 [WorkflowExample] INFO:     Baseline: 2.37 pkt/s
+2026-03-28 16:30:57,107 [WorkflowExample] INFO:     Adjusted threshold: 71 pkt/10s
+2026-03-28 16:30:57,107 [WorkflowExample] INFO: 
+================================================================================
+2026-03-28 16:30:57,107 [WorkflowExample] INFO: SCENARIO 4: MULTI-ALGORITHM CONSENSUS VOTING
+2026-03-28 16:30:57,107 [WorkflowExample] INFO: ================================================================================
+2026-03-28 16:30:57,107 [RuleEngine] INFO: Loaded 30 rules from rules.json
+2026-03-28 16:30:57,107 [RuleEngine] WARNING: Found 1 invalid rules:
+2026-03-28 16:30:57,108 [RuleEngine] WARNING:   ICMP Flood: ["ICMP rule must specify 'icmp_type'"]
+2026-03-28 16:30:57,108 [RuleEngine] INFO: Proceeding with 29 valid rules
+2026-03-28 16:30:57,108 [DetectionEngine] INFO: ======================================================================
+2026-03-28 16:30:57,108 [DetectionEngine] INFO: DetectionEngine Initialized
+2026-03-28 16:30:57,108 [DetectionEngine] INFO: ======================================================================
+2026-03-28 16:30:57,108 [DetectionEngine] INFO: Rules Loaded: 29
+2026-03-28 16:30:57,108 [DetectionEngine] INFO:   By Protocol: {'TCP': 25, 'UDP': 4}
+2026-03-28 16:30:57,108 [DetectionEngine] INFO:   By Severity: {'HIGH': 15, 'MEDIUM': 11, 'LOW': 1, 'CRITICAL': 2}
+2026-03-28 16:30:57,108 [DetectionEngine] INFO: 
+Auto-Tuner: EWMA adaptive thresholding
+2026-03-28 16:30:57,108 [DetectionEngine] INFO:   Alpha: 0.2
+2026-03-28 16:30:57,108 [DetectionEngine] INFO:   Headroom: 3.0x
+2026-03-28 16:30:57,108 [DetectionEngine] INFO: ======================================================================
+2026-03-28 16:30:57,108 [AdvancedPayloadDetection] INFO: AdvancedPayloadDetector initialized
+2026-03-28 16:30:57,108 [IntegrationAdapter] INFO: EnhancedDetectionPipeline initialized with config: {'entropy_threshold': 7.0, 'threshold_algorithm': 'EWMA', 'enable_entropy_analysis': True, 'enable_signature_detection': True, 'enable_protocol_anomalies': True, 'payload_sampling_rate': 1.0, 'max_payload_size': 4096}
+2026-03-28 16:30:57,108 [WorkflowExample] INFO: 
+Observation: 60 packets/10s
+2026-03-28 16:30:57,108 [WorkflowExample] INFO: Base threshold: 15 packets/10s
+2026-03-28 16:30:57,108 [WorkflowExample] INFO: Recent rates history: {recent_rates}
+2026-03-28 16:30:57,108 [WorkflowExample] INFO: 
+Threshold from each algorithm:
+2026-03-28 16:30:57,108 [WorkflowExample] INFO:   EWMA      : threshold=   66 (CLEAR)
+2026-03-28 16:30:57,109 [WorkflowExample] INFO:   MAD       : threshold=   15 (ALERT)
+2026-03-28 16:30:57,109 [WorkflowExample] INFO:   ZSCORE    : threshold=   15 (ALERT)
+2026-03-28 16:30:57,109 [WorkflowExample] INFO:   BAYESIAN  : threshold=   14 (ALERT)
+2026-03-28 16:30:57,109 [WorkflowExample] INFO: 
+Consensus Result: 3/4 algorithms vote ALERT
+2026-03-28 16:30:57,109 [WorkflowExample] INFO:   Decision: CONFIDENCE ALERT (high confidence)
+2026-03-28 16:30:57,109 [WorkflowExample] INFO: 
+================================================================================
+2026-03-28 16:30:57,109 [WorkflowExample] INFO: SCENARIO 5: ENTROPY DISTRIBUTION & ANOMALY DETECTION
+2026-03-28 16:30:57,109 [WorkflowExample] INFO: ================================================================================
+2026-03-28 16:30:57,109 [WorkflowExample] INFO: 
+Entropy Analysis by Payload Type:
+2026-03-28 16:30:57,109 [WorkflowExample] INFO: 
+  Normal HTTP Headers:
+2026-03-28 16:30:57,109 [WorkflowExample] INFO:     Samples: 3
+2026-03-28 16:30:57,110 [WorkflowExample] INFO:     Entropies: ['4.32', '4.52', '4.38']
+2026-03-28 16:30:57,110 [WorkflowExample] INFO:     Mean: 4.41 bits/byte
+2026-03-28 16:30:57,110 [WorkflowExample] INFO:     StdDev: 0.10
+2026-03-28 16:30:57,110 [WorkflowExample] INFO: 
+  Compressed/Encrypted:
+2026-03-28 16:30:57,110 [WorkflowExample] INFO:     Samples: 2
+2026-03-28 16:30:57,110 [WorkflowExample] INFO:     Entropies: ['7.00', '6.98']
+2026-03-28 16:30:57,110 [WorkflowExample] INFO:     Mean: 6.99 bits/byte
+2026-03-28 16:30:57,110 [WorkflowExample] INFO:     StdDev: 0.01
+2026-03-28 16:30:57,110 [WorkflowExample] INFO: 
+  Structured Binary:
+2026-03-28 16:30:57,110 [WorkflowExample] INFO:     Samples: 1
+2026-03-28 16:30:57,110 [WorkflowExample] INFO:     Entropies: ['2.89']
+2026-03-28 16:30:57,110 [WorkflowExample] INFO:     Mean: 2.89 bits/byte
+2026-03-28 16:30:57,110 [WorkflowExample] INFO:     StdDev: 0.00
+2026-03-28 16:30:57,110 [WorkflowExample] INFO: 
+================================================================================
+2026-03-28 16:30:57,110 [WorkflowExample] INFO: SCENARIO 6: FORMULA VERIFICATION
+2026-03-28 16:30:57,110 [WorkflowExample] INFO: ================================================================================
+2026-03-28 16:30:57,110 [WorkflowExample] INFO: 
+EWMA Formula Verification:
+2026-03-28 16:30:57,112 [WorkflowExample] INFO: 
+  Iteration | rate | Formula Calc | Code Calc | Match
+2026-03-28 16:30:57,112 [WorkflowExample] INFO:   -------------------------------------------------------
+2026-03-28 16:30:57,112 [WorkflowExample] ERROR: Workflow error: cannot import name 'AdaptiveDetectionConfig' from 'integration_adapter' (C:\Users\ashish\Desktop\DOS\nids_project\old\integration_adapter.py)
+Traceback (most recent call last):
+  File "C:\Users\ashish\Desktop\DOS\nids_project\old\example_complete_workflow.py", line 449, in <module>
+    scenario_formula_verification()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\ashish\Desktop\DOS\nids_project\old\example_complete_workflow.py", line 321, in scenario_formula_verification
+    from integration_adapter import AdaptiveDetectionConfig
+ImportError: cannot import name 'AdaptiveDetectionConfig' from 'integration_adapter' (C:\Users\ashish\Desktop\DOS\nids_project\old\integration_adapter.py). Did you mean: 'AdvancedDetectionConfig'?
+2026-03-28 16:31:09,462 [WorkflowExample] INFO: 
+
+
+2026-03-28 16:31:10,613 [WorkflowExample] INFO: 
+================================================================================
+2026-03-28 16:31:10,614 [WorkflowExample] INFO: SCENARIO 1: HTTP FLOOD DETECTION WITH PAYLOAD ANALYSIS
+2026-03-28 16:31:10,614 [WorkflowExample] INFO: ================================================================================
+2026-03-28 16:31:10,615 [RuleEngine] INFO: Loaded 30 rules from rules.json
+2026-03-28 16:31:10,615 [RuleEngine] WARNING: Found 1 invalid rules:
+2026-03-28 16:31:10,615 [RuleEngine] WARNING:   ICMP Flood: ["ICMP rule must specify 'icmp_type'"]
+2026-03-28 16:31:10,616 [RuleEngine] INFO: Proceeding with 29 valid rules
+2026-03-28 16:31:10,616 [DetectionEngine] INFO: ======================================================================
+2026-03-28 16:31:10,616 [DetectionEngine] INFO: DetectionEngine Initialized
+2026-03-28 16:31:10,617 [DetectionEngine] INFO: ======================================================================
+2026-03-28 16:31:10,617 [DetectionEngine] INFO: Rules Loaded: 29
+2026-03-28 16:31:10,617 [DetectionEngine] INFO:   By Protocol: {'TCP': 25, 'UDP': 4}
+2026-03-28 16:31:10,617 [DetectionEngine] INFO:   By Severity: {'HIGH': 15, 'MEDIUM': 11, 'LOW': 1, 'CRITICAL': 2}
+2026-03-28 16:31:10,617 [DetectionEngine] INFO: 
+Auto-Tuner: EWMA adaptive thresholding
+2026-03-28 16:31:10,618 [DetectionEngine] INFO:   Alpha: 0.2
+2026-03-28 16:31:10,618 [DetectionEngine] INFO:   Headroom: 3.0x
+2026-03-28 16:31:10,618 [DetectionEngine] INFO: ======================================================================
+2026-03-28 16:31:10,618 [AdvancedPayloadDetection] INFO: AdvancedPayloadDetector initialized
+2026-03-28 16:31:10,618 [IntegrationAdapter] INFO: EnhancedDetectionPipeline initialized with config: {'entropy_threshold': 7.0, 'threshold_algorithm': 'EWMA', 'enable_entropy_analysis': True, 'enable_signature_detection': True, 'enable_protocol_anomalies': True, 'payload_sampling_rate': 1.0, 'max_payload_size': 4096}
+2026-03-28 16:31:10,618 [WorkflowExample] INFO: 
+[Step 1] Processing normal HTTP request...
+2026-03-28 16:31:10,619 [WorkflowExample] INFO:   Alerts generated: 0
+2026-03-28 16:31:10,619 [WorkflowExample] INFO:   Expected: 0 (normal traffic)
+2026-03-28 16:31:10,619 [WorkflowExample] INFO: 
+[Step 2] Processing malicious HTTP request (shellcode detection)...
+2026-03-28 16:31:10,619 [WorkflowExample] INFO:   Alerts generated: 0
+2026-03-28 16:31:10,620 [WorkflowExample] INFO: 
+[Summary] Pipeline Statistics:
+2026-03-28 16:31:10,620 [WorkflowExample] INFO:   Packets processed: 2
+2026-03-28 16:31:10,620 [WorkflowExample] INFO:   Alerts generated: 0
+2026-03-28 16:31:10,620 [WorkflowExample] INFO:   Alerts escalated: 0
+2026-03-28 16:31:10,620 [WorkflowExample] INFO:   Payload analyses: 0
+2026-03-28 16:31:10,621 [WorkflowExample] INFO: 
+================================================================================
+2026-03-28 16:31:10,621 [WorkflowExample] INFO: SCENARIO 2: DNS TUNNELING DETECTION
+2026-03-28 16:31:10,621 [WorkflowExample] INFO: ================================================================================
+2026-03-28 16:31:10,621 [RuleEngine] INFO: Loaded 30 rules from rules.json
+2026-03-28 16:31:10,622 [RuleEngine] WARNING: Found 1 invalid rules:
+2026-03-28 16:31:10,622 [RuleEngine] WARNING:   ICMP Flood: ["ICMP rule must specify 'icmp_type'"]
+2026-03-28 16:31:10,622 [RuleEngine] INFO: Proceeding with 29 valid rules
+2026-03-28 16:31:10,622 [DetectionEngine] INFO: ======================================================================
+2026-03-28 16:31:10,623 [DetectionEngine] INFO: DetectionEngine Initialized
+2026-03-28 16:31:10,623 [DetectionEngine] INFO: ======================================================================
+2026-03-28 16:31:10,623 [DetectionEngine] INFO: Rules Loaded: 29
+2026-03-28 16:31:10,623 [DetectionEngine] INFO:   By Protocol: {'TCP': 25, 'UDP': 4}
+2026-03-28 16:31:10,623 [DetectionEngine] INFO:   By Severity: {'HIGH': 15, 'MEDIUM': 11, 'LOW': 1, 'CRITICAL': 2}
+2026-03-28 16:31:10,624 [DetectionEngine] INFO: 
+Auto-Tuner: EWMA adaptive thresholding
+2026-03-28 16:31:10,624 [DetectionEngine] INFO:   Alpha: 0.2
+2026-03-28 16:31:10,624 [DetectionEngine] INFO:   Headroom: 3.0x
+2026-03-28 16:31:10,624 [DetectionEngine] INFO: ======================================================================
+2026-03-28 16:31:10,624 [AdvancedPayloadDetection] INFO: AdvancedPayloadDetector initialized
+2026-03-28 16:31:10,625 [IntegrationAdapter] INFO: EnhancedDetectionPipeline initialized with config: {'entropy_threshold': 6.5, 'threshold_algorithm': 'MAD', 'enable_entropy_analysis': True, 'enable_signature_detection': True, 'enable_protocol_anomalies': True, 'payload_sampling_rate': 1.0, 'max_payload_size': 4096}
+2026-03-28 16:31:10,625 [WorkflowExample] INFO: 
+[Step 1] Processing suspicious DNS packet (high entropy)...
+2026-03-28 16:31:10,627 [WorkflowExample] INFO:   Payload entropy: eb3fad1b35dcafd8
+2026-03-28 16:31:10,627 [WorkflowExample] INFO:   Threat detected: True
+2026-03-28 16:31:10,627 [WorkflowExample] INFO:   Detections:
+2026-03-28 16:31:10,627 [WorkflowExample] INFO:     - entropy_anomaly: HIGH
+2026-03-28 16:31:10,627 [WorkflowExample] INFO:       Entropy: 7.18 bits/byte (threshold: 6.5)
+2026-03-28 16:31:10,628 [WorkflowExample] INFO: 
+================================================================================
+2026-03-28 16:31:10,628 [WorkflowExample] INFO: SCENARIO 3: ADAPTIVE THRESHOLD LEARNING
+2026-03-28 16:31:10,628 [WorkflowExample] INFO: ================================================================================
+2026-03-28 16:31:10,628 [RuleEngine] INFO: Loaded 30 rules from rules.json
+2026-03-28 16:31:10,629 [RuleEngine] WARNING: Found 1 invalid rules:
+2026-03-28 16:31:10,629 [RuleEngine] WARNING:   ICMP Flood: ["ICMP rule must specify 'icmp_type'"]
+2026-03-28 16:31:10,629 [RuleEngine] INFO: Proceeding with 29 valid rules
+2026-03-28 16:31:10,629 [DetectionEngine] INFO: ======================================================================
+2026-03-28 16:31:10,629 [DetectionEngine] INFO: DetectionEngine Initialized
+2026-03-28 16:31:10,629 [DetectionEngine] INFO: ======================================================================
+2026-03-28 16:31:10,629 [DetectionEngine] INFO: Rules Loaded: 29
+2026-03-28 16:31:10,629 [DetectionEngine] INFO:   By Protocol: {'TCP': 25, 'UDP': 4}
+2026-03-28 16:31:10,630 [DetectionEngine] INFO:   By Severity: {'HIGH': 15, 'MEDIUM': 11, 'LOW': 1, 'CRITICAL': 2}
+2026-03-28 16:31:10,630 [DetectionEngine] INFO: 
+Auto-Tuner: EWMA adaptive thresholding
+2026-03-28 16:31:10,630 [DetectionEngine] INFO:   Alpha: 0.2
+2026-03-28 16:31:10,630 [DetectionEngine] INFO:   Headroom: 3.0x
+2026-03-28 16:31:10,630 [DetectionEngine] INFO: ======================================================================
+2026-03-28 16:31:10,630 [AdvancedPayloadDetection] INFO: AdvancedPayloadDetector initialized
+2026-03-28 16:31:10,631 [IntegrationAdapter] INFO: EnhancedDetectionPipeline initialized with config: {'entropy_threshold': 7.0, 'threshold_algorithm': 'EWMA', 'enable_entropy_analysis': True, 'enable_signature_detection': True, 'enable_protocol_anomalies': True, 'payload_sampling_rate': 1.0, 'max_payload_size': 4096}
+2026-03-28 16:31:10,631 [WorkflowExample] INFO: 
+Threshold Adaptation Throughout the Day:
+2026-03-28 16:31:10,631 [WorkflowExample] INFO: (TCP SYN Flood rule, base threshold: 15 pkt/10s)
+2026-03-28 16:31:10,631 [WorkflowExample] INFO: 
+  08:00 (Morning low)
+2026-03-28 16:31:10,631 [WorkflowExample] INFO:     Observed rate: 1.0 pkt/s (10 pkt/10s)
+2026-03-28 16:31:10,631 [WorkflowExample] INFO:     Baseline: 1.0 pkt/s
+2026-03-28 16:31:10,632 [WorkflowExample] INFO:     Adjusted threshold: 30 pkt/10s
+2026-03-28 16:31:10,632 [WorkflowExample] INFO: 
+  12:00 (Noon peak)
+2026-03-28 16:31:10,632 [WorkflowExample] INFO:     Observed rate: 5.1 pkt/s (51 pkt/10s)
+2026-03-28 16:31:10,632 [WorkflowExample] INFO:     Baseline: 1.78 pkt/s
+2026-03-28 16:31:10,632 [WorkflowExample] INFO:     Adjusted threshold: 53 pkt/10s
+2026-03-28 16:31:10,632 [WorkflowExample] INFO: 
+  14:00 (Afternoon)
+2026-03-28 16:31:10,632 [WorkflowExample] INFO:     Observed rate: 5.0 pkt/s (50 pkt/10s)
+2026-03-28 16:31:10,633 [WorkflowExample] INFO:     Baseline: 2.46 pkt/s
+2026-03-28 16:31:10,633 [WorkflowExample] INFO:     Adjusted threshold: 73 pkt/10s
+2026-03-28 16:31:10,633 [WorkflowExample] INFO: 
+  18:00 (Evening)
+2026-03-28 16:31:10,633 [WorkflowExample] INFO:     Observed rate: 2.0 pkt/s (20 pkt/10s)
+2026-03-28 16:31:10,633 [WorkflowExample] INFO:     Baseline: 2.37 pkt/s
+2026-03-28 16:31:10,633 [WorkflowExample] INFO:     Adjusted threshold: 71 pkt/10s
+2026-03-28 16:31:10,633 [WorkflowExample] INFO: 
+================================================================================
+2026-03-28 16:31:10,634 [WorkflowExample] INFO: SCENARIO 4: MULTI-ALGORITHM CONSENSUS VOTING
+2026-03-28 16:31:10,634 [WorkflowExample] INFO: ================================================================================
+2026-03-28 16:31:10,634 [RuleEngine] INFO: Loaded 30 rules from rules.json
+2026-03-28 16:31:10,635 [RuleEngine] WARNING: Found 1 invalid rules:
+2026-03-28 16:31:10,635 [RuleEngine] WARNING:   ICMP Flood: ["ICMP rule must specify 'icmp_type'"]
+2026-03-28 16:31:10,635 [RuleEngine] INFO: Proceeding with 29 valid rules
+2026-03-28 16:31:10,635 [DetectionEngine] INFO: ======================================================================
+2026-03-28 16:31:10,635 [DetectionEngine] INFO: DetectionEngine Initialized
+2026-03-28 16:31:10,635 [DetectionEngine] INFO: ======================================================================
+2026-03-28 16:31:10,635 [DetectionEngine] INFO: Rules Loaded: 29
+2026-03-28 16:31:10,635 [DetectionEngine] INFO:   By Protocol: {'TCP': 25, 'UDP': 4}
+2026-03-28 16:31:10,636 [DetectionEngine] INFO:   By Severity: {'HIGH': 15, 'MEDIUM': 11, 'LOW': 1, 'CRITICAL': 2}
+2026-03-28 16:31:10,636 [DetectionEngine] INFO: 
+Auto-Tuner: EWMA adaptive thresholding
+2026-03-28 16:31:10,636 [DetectionEngine] INFO:   Alpha: 0.2
+2026-03-28 16:31:10,636 [DetectionEngine] INFO:   Headroom: 3.0x
+2026-03-28 16:31:10,636 [DetectionEngine] INFO: ======================================================================
+2026-03-28 16:31:10,636 [AdvancedPayloadDetection] INFO: AdvancedPayloadDetector initialized
+2026-03-28 16:31:10,636 [IntegrationAdapter] INFO: EnhancedDetectionPipeline initialized with config: {'entropy_threshold': 7.0, 'threshold_algorithm': 'EWMA', 'enable_entropy_analysis': True, 'enable_signature_detection': True, 'enable_protocol_anomalies': True, 'payload_sampling_rate': 1.0, 'max_payload_size': 4096}
+2026-03-28 16:31:10,636 [WorkflowExample] INFO: 
+Observation: 60 packets/10s
+2026-03-28 16:31:10,637 [WorkflowExample] INFO: Base threshold: 15 packets/10s
+2026-03-28 16:31:10,637 [WorkflowExample] INFO: Recent rates history: {recent_rates}
+2026-03-28 16:31:10,637 [WorkflowExample] INFO: 
+Threshold from each algorithm:
+2026-03-28 16:31:10,637 [WorkflowExample] INFO:   EWMA      : threshold=   66 (CLEAR)
+2026-03-28 16:31:10,637 [WorkflowExample] INFO:   MAD       : threshold=   15 (ALERT)
+2026-03-28 16:31:10,638 [WorkflowExample] INFO:   ZSCORE    : threshold=   15 (ALERT)
+2026-03-28 16:31:10,638 [WorkflowExample] INFO:   BAYESIAN  : threshold=   14 (ALERT)
+2026-03-28 16:31:10,638 [WorkflowExample] INFO: 
+Consensus Result: 3/4 algorithms vote ALERT
+2026-03-28 16:31:10,638 [WorkflowExample] INFO:   Decision: CONFIDENCE ALERT (high confidence)
+2026-03-28 16:31:10,638 [WorkflowExample] INFO: 
+================================================================================
+2026-03-28 16:31:10,638 [WorkflowExample] INFO: SCENARIO 5: ENTROPY DISTRIBUTION & ANOMALY DETECTION
+2026-03-28 16:31:10,638 [WorkflowExample] INFO: ================================================================================
+2026-03-28 16:31:10,639 [WorkflowExample] INFO: 
+Entropy Analysis by Payload Type:
+2026-03-28 16:31:10,639 [WorkflowExample] INFO: 
+  Normal HTTP Headers:
+2026-03-28 16:31:10,639 [WorkflowExample] INFO:     Samples: 3
+2026-03-28 16:31:10,639 [WorkflowExample] INFO:     Entropies: ['4.32', '4.52', '4.38']
+2026-03-28 16:31:10,639 [WorkflowExample] INFO:     Mean: 4.41 bits/byte
+2026-03-28 16:31:10,640 [WorkflowExample] INFO:     StdDev: 0.10
+2026-03-28 16:31:10,640 [WorkflowExample] INFO: 
+  Compressed/Encrypted:
+2026-03-28 16:31:10,640 [WorkflowExample] INFO:     Samples: 2
+2026-03-28 16:31:10,640 [WorkflowExample] INFO:     Entropies: ['7.00', '6.98']
+2026-03-28 16:31:10,640 [WorkflowExample] INFO:     Mean: 6.99 bits/byte
+2026-03-28 16:31:10,640 [WorkflowExample] INFO:     StdDev: 0.01
+2026-03-28 16:31:10,641 [WorkflowExample] INFO: 
+  Structured Binary:
+2026-03-28 16:31:10,641 [WorkflowExample] INFO:     Samples: 1
+2026-03-28 16:31:10,641 [WorkflowExample] INFO:     Entropies: ['2.89']
+2026-03-28 16:31:10,641 [WorkflowExample] INFO:     Mean: 2.89 bits/byte
+2026-03-28 16:31:10,641 [WorkflowExample] INFO:     StdDev: 0.00
+2026-03-28 16:31:10,641 [WorkflowExample] INFO: 
+================================================================================
+2026-03-28 16:31:10,641 [WorkflowExample] INFO: SCENARIO 6: FORMULA VERIFICATION
+2026-03-28 16:31:10,642 [WorkflowExample] INFO: ================================================================================
+2026-03-28 16:31:10,642 [WorkflowExample] INFO: 
+EWMA Formula Verification:
+2026-03-28 16:31:10,645 [WorkflowExample] INFO: 
+  Iteration | rate | Formula Calc | Code Calc | Match
+2026-03-28 16:31:10,645 [WorkflowExample] INFO:   -------------------------------------------------------
+2026-03-28 16:31:10,645 [WorkflowExample] ERROR: Workflow error: cannot import name 'AdaptiveDetectionConfig' from 'integration_adapter' (C:\Users\ashish\Desktop\DOS\nids_project\old\integration_adapter.py)
+Traceback (most recent call last):
+  File "C:\Users\ashish\Desktop\DOS\nids_project\old\example_complete_workflow.py", line 449, in <module>
+    scenario_formula_verification()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\ashish\Desktop\DOS\nids_project\old\example_complete_workflow.py", line 321, in scenario_formula_verification
+    from integration_adapter import AdaptiveDetectionConfig
+ImportError: cannot import name 'AdaptiveDetectionConfig' from 'integration_adapter' (C:\Users\ashish\Desktop\DOS\nids_project\old\integration_adapter.py). Did you mean: 'AdvancedDetectionConfig'?

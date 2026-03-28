@@ -1,0 +1,24 @@
+{
+  "alert": {
+    "type": "DoS",
+    "rule_name": "LDAP Flood",
+    "protocol": "TCP",
+    "severity": "HIGH",
+    "source": "192.168.1.74",
+    "target": "192.168.1.77",
+    "dst_port": 389,
+    "packet_count": 120,
+    "window": 10,
+    "threshold": 120,
+    "baseline_rps": 11.6,
+    "algorithm": "EWMA adaptive thresholding",
+    "timestamp": 1774688791.6392162
+  },
+  "metadata": {
+    "logged_at": "2026-03-28T14:51:31.643250",
+    "attack_type": "DoS",
+    "source": "192.168.1.74",
+    "target": "192.168.1.77",
+    "severity": "HIGH"
+  }
+}

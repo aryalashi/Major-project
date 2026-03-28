@@ -1,0 +1,23 @@
+{
+  "alert": {
+    "type": "DoS",
+    "rule_name": "Heartbleed Attack",
+    "protocol": "TCP",
+    "severity": "CRITICAL",
+    "source": "192.168.1.77",
+    "target": "192.168.1.77",
+    "dst_port": 443,
+    "packet_count": 45,
+    "window": 5,
+    "threshold": 45,
+    "algorithm": "Signature-based threshold tuning",
+    "timestamp": 1774711316.1116297
+  },
+  "metadata": {
+    "logged_at": "2026-03-28T21:06:56.196099",
+    "attack_type": "DoS",
+    "source": "192.168.1.77",
+    "target": "192.168.1.77",
+    "severity": "CRITICAL"
+  }
+}

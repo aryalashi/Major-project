@@ -1,0 +1,24 @@
+{
+  "alert": {
+    "type": "DoS",
+    "rule_name": "HTTP Flood",
+    "protocol": "TCP",
+    "severity": "HIGH",
+    "source": "192.168.1.74",
+    "target": "192.168.1.77",
+    "dst_port": 80,
+    "packet_count": 180,
+    "window": 10,
+    "threshold": 180,
+    "baseline_rps": 17.6,
+    "algorithm": "EWMA adaptive thresholding",
+    "timestamp": 1774692800.23811
+  },
+  "metadata": {
+    "logged_at": "2026-03-28T15:58:20.241837",
+    "attack_type": "DoS",
+    "source": "192.168.1.74",
+    "target": "192.168.1.77",
+    "severity": "HIGH"
+  }
+}

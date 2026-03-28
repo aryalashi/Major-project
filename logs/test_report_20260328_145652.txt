@@ -1,0 +1,59 @@
+==============================================================
+NIDS ATTACK SIMULATOR - TEST REPORT
+==============================================================
+
+Generated: 2026-03-28 14:56:52
+Total attacks: 31
+Detection rate: 0/31 (0%)
+
+--------------------------------------------------------------
+DETAILED RESULTS
+--------------------------------------------------------------
+Rule Name                           Result       Time    
+------------------------------------------------------------
+TCP SYN Flood                       MISSED       —       
+UDP Flood                           MISSED       —       
+ICMP Flood                          MISSED       —       
+TCP ACK Flood                       MISSED       —       
+TCP RST Flood                       MISSED       —       
+Port Scan Detection                 MISSED       —       
+TCP FIN Scan                        MISSED       —       
+TCP NULL Scan                       MISSED       —       
+TCP XMAS Scan                       MISSED       —       
+UDP Port Scan                       MISSED       —       
+Heartbleed Attack                   MISSED       —       
+FTP Brute Force                     MISSED       —       
+SSH Brute Force                     MISSED       —       
+Telnet Brute Force                  MISSED       —       
+RDP Brute Force                     MISSED       —       
+HTTP Flood                          MISSED       —       
+HTTPS Flood                         MISSED       —       
+SMTP Flood                          MISSED       —       
+DNS Amplification                   MISSED       —       
+MySQL Brute Force                   MISSED       —       
+SMB Flood                           MISSED       —       
+NetBIOS Flood                       MISSED       —       
+LDAP Flood                          MISSED       —       
+MSSQL Brute Force                   MISSED       —       
+PostgreSQL Brute Force              MISSED       —       
+TCP SYN-ACK Flood                   MISSED       —       
+TCP FIN Flood                       MISSED       —       
+TCP PSH-ACK Flood                   MISSED       —       
+WinRM Brute Force                   MISSED       —       
+Elasticsearch Attack                MISSED       —       
+DDoS Multi-Source                   MISSED       —       
+Normal Traffic                      MISSED       —       
+
+--------------------------------------------------------------
+CONFUSION MATRIX
+--------------------------------------------------------------
+True Positive  (TP)  : 0  (correctly detected)
+False Negative (FN)  : 31  (missed / not detected)
+False Positive (FP)  : 0  (N/A in single-attack mode)
+True Negative  (TN)  : 1  (N/A in single-attack mode)
+
+Performance Metrics:
+  Sensitivity/Recall : 0.0%  (TP / (TP+FN))
+  Accuracy           : 0.0%  (Correct / Total)
+
+==============================================================

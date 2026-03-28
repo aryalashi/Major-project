@@ -1,0 +1,27 @@
+{
+  "alert": {
+    "type": "Payload Attack",
+    "rule_name": "Payload Signature: TCP payload on port 43993",
+    "protocol": "TCP",
+    "severity": "MEDIUM",
+    "source": "103.163.183.236",
+    "target": "192.168.1.77",
+    "dst_port": 43993,
+    "packet_count": 1,
+    "window": 1,
+    "threshold": 1,
+    "timestamp": 1774706689.192088,
+    "category": "Shellcode",
+    "matched_signatures": [
+      "x86_Mov_EAX_Pattern"
+    ],
+    "confidence": 0.2
+  },
+  "metadata": {
+    "logged_at": "2026-03-28T19:51:02.946441",
+    "attack_type": "Payload_Attack",
+    "source": "103.163.183.236",
+    "target": "192.168.1.77",
+    "severity": "MEDIUM"
+  }
+}

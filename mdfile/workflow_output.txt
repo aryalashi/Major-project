@@ -1,0 +1,330 @@
+2026-03-28 16:30:55,925 [WorkflowExample] INFO: 
+
+
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Users\ashish\AppData\Local\Programs\Python\Python314\Lib\logging\__init__.py", line 1154, in emit
+    stream.write(msg + self.terminator)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ashish\AppData\Local\Programs\Python\Python314\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2554' in position 48: character maps to <undefined>
+Call stack:
+  File "C:\Users\ashish\Desktop\DOS\nids_project\old\example_complete_workflow.py", line 437, in <module>
+    logger.info("\u2554" + "="*78 + "\u2557")
+Message: '\u2554==============================================================================\u2557'
+Arguments: ()
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Users\ashish\AppData\Local\Programs\Python\Python314\Lib\logging\__init__.py", line 1154, in emit
+    stream.write(msg + self.terminator)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ashish\AppData\Local\Programs\Python\Python314\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2554' in position 48: character maps to <undefined>
+Call stack:
+  File "C:\Users\ashish\Desktop\DOS\nids_project\old\example_complete_workflow.py", line 437, in <module>
+    logger.info("\u2554" + "="*78 + "\u2557")
+Message: '\u2554==============================================================================\u2557'
+Arguments: ()
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Users\ashish\AppData\Local\Programs\Python\Python314\Lib\logging\__init__.py", line 1154, in emit
+    stream.write(msg + self.terminator)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ashish\AppData\Local\Programs\Python\Python314\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2551' in position 48: character maps to <undefined>
+Call stack:
+  File "C:\Users\ashish\Desktop\DOS\nids_project\old\example_complete_workflow.py", line 438, in <module>
+    logger.info("\u2551" + " "*20 + "ADVANCED PAYLOAD DETECTION - COMPLETE WORKFLOW" + " "*13 + "\u2551")
+Message: '\u2551                    ADVANCED PAYLOAD DETECTION - COMPLETE WORKFLOW             \u2551'
+Arguments: ()
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Users\ashish\AppData\Local\Programs\Python\Python314\Lib\logging\__init__.py", line 1154, in emit
+    stream.write(msg + self.terminator)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ashish\AppData\Local\Programs\Python\Python314\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2551' in position 48: character maps to <undefined>
+Call stack:
+  File "C:\Users\ashish\Desktop\DOS\nids_project\old\example_complete_workflow.py", line 438, in <module>
+    logger.info("\u2551" + " "*20 + "ADVANCED PAYLOAD DETECTION - COMPLETE WORKFLOW" + " "*13 + "\u2551")
+Message: '\u2551                    ADVANCED PAYLOAD DETECTION - COMPLETE WORKFLOW             \u2551'
+Arguments: ()
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Users\ashish\AppData\Local\Programs\Python\Python314\Lib\logging\__init__.py", line 1154, in emit
+    stream.write(msg + self.terminator)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ashish\AppData\Local\Programs\Python\Python314\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2551' in position 48: character maps to <undefined>
+Call stack:
+  File "C:\Users\ashish\Desktop\DOS\nids_project\old\example_complete_workflow.py", line 439, in <module>
+    logger.info("\u2551" + " "*16 + "Integration with old/ folder NIDS components" + " "*17 + "\u2551")
+Message: '\u2551                Integration with old/ folder NIDS components                 \u2551'
+Arguments: ()
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Users\ashish\AppData\Local\Programs\Python\Python314\Lib\logging\__init__.py", line 1154, in emit
+    stream.write(msg + self.terminator)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ashish\AppData\Local\Programs\Python\Python314\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2551' in position 48: character maps to <undefined>
+Call stack:
+  File "C:\Users\ashish\Desktop\DOS\nids_project\old\example_complete_workflow.py", line 439, in <module>
+    logger.info("\u2551" + " "*16 + "Integration with old/ folder NIDS components" + " "*17 + "\u2551")
+Message: '\u2551                Integration with old/ folder NIDS components                 \u2551'
+Arguments: ()
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Users\ashish\AppData\Local\Programs\Python\Python314\Lib\logging\__init__.py", line 1154, in emit
+    stream.write(msg + self.terminator)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ashish\AppData\Local\Programs\Python\Python314\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u255a' in position 48: character maps to <undefined>
+Call stack:
+  File "C:\Users\ashish\Desktop\DOS\nids_project\old\example_complete_workflow.py", line 440, in <module>
+    logger.info("\u255a" + "="*78 + "\u255d")
+Message: '\u255a==============================================================================\u255d'
+Arguments: ()
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Users\ashish\AppData\Local\Programs\Python\Python314\Lib\logging\__init__.py", line 1154, in emit
+    stream.write(msg + self.terminator)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ashish\AppData\Local\Programs\Python\Python314\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u255a' in position 48: character maps to <undefined>
+Call stack:
+  File "C:\Users\ashish\Desktop\DOS\nids_project\old\example_complete_workflow.py", line 440, in <module>
+    logger.info("\u255a" + "="*78 + "\u255d")
+Message: '\u255a==============================================================================\u255d'
+Arguments: ()
+2026-03-28 16:30:57,099 [WorkflowExample] INFO: 
+================================================================================
+2026-03-28 16:30:57,099 [WorkflowExample] INFO: SCENARIO 1: HTTP FLOOD DETECTION WITH PAYLOAD ANALYSIS
+2026-03-28 16:30:57,099 [WorkflowExample] INFO: ================================================================================
+2026-03-28 16:30:57,100 [RuleEngine] INFO: Loaded 30 rules from rules.json
+2026-03-28 16:30:57,100 [RuleEngine] WARNING: Found 1 invalid rules:
+2026-03-28 16:30:57,100 [RuleEngine] WARNING:   ICMP Flood: ["ICMP rule must specify 'icmp_type'"]
+2026-03-28 16:30:57,100 [RuleEngine] INFO: Proceeding with 29 valid rules
+2026-03-28 16:30:57,100 [DetectionEngine] INFO: ======================================================================
+2026-03-28 16:30:57,100 [DetectionEngine] INFO: DetectionEngine Initialized
+2026-03-28 16:30:57,100 [DetectionEngine] INFO: ======================================================================
+2026-03-28 16:30:57,100 [DetectionEngine] INFO: Rules Loaded: 29
+2026-03-28 16:30:57,100 [DetectionEngine] INFO:   By Protocol: {'TCP': 25, 'UDP': 4}
+2026-03-28 16:30:57,100 [DetectionEngine] INFO:   By Severity: {'HIGH': 15, 'MEDIUM': 11, 'LOW': 1, 'CRITICAL': 2}
+2026-03-28 16:30:57,100 [DetectionEngine] INFO: 
+Auto-Tuner: EWMA adaptive thresholding
+2026-03-28 16:30:57,100 [DetectionEngine] INFO:   Alpha: 0.2
+2026-03-28 16:30:57,100 [DetectionEngine] INFO:   Headroom: 3.0x
+2026-03-28 16:30:57,100 [DetectionEngine] INFO: ======================================================================
+2026-03-28 16:30:57,101 [AdvancedPayloadDetection] INFO: AdvancedPayloadDetector initialized
+2026-03-28 16:30:57,101 [IntegrationAdapter] INFO: EnhancedDetectionPipeline initialized with config: {'entropy_threshold': 7.0, 'threshold_algorithm': 'EWMA', 'enable_entropy_analysis': True, 'enable_signature_detection': True, 'enable_protocol_anomalies': True, 'payload_sampling_rate': 1.0, 'max_payload_size': 4096}
+2026-03-28 16:30:57,101 [WorkflowExample] INFO: 
+[Step 1] Processing normal HTTP request...
+2026-03-28 16:30:57,101 [WorkflowExample] INFO:   Alerts generated: 0
+2026-03-28 16:30:57,101 [WorkflowExample] INFO:   Expected: 0 (normal traffic)
+2026-03-28 16:30:57,101 [WorkflowExample] INFO: 
+[Step 2] Processing malicious HTTP request (shellcode detection)...
+2026-03-28 16:30:57,101 [WorkflowExample] INFO:   Alerts generated: 0
+2026-03-28 16:30:57,101 [WorkflowExample] INFO: 
+[Summary] Pipeline Statistics:
+2026-03-28 16:30:57,101 [WorkflowExample] INFO:   Packets processed: 2
+2026-03-28 16:30:57,101 [WorkflowExample] INFO:   Alerts generated: 0
+2026-03-28 16:30:57,101 [WorkflowExample] INFO:   Alerts escalated: 0
+2026-03-28 16:30:57,101 [WorkflowExample] INFO:   Payload analyses: 0
+2026-03-28 16:30:57,101 [WorkflowExample] INFO: 
+================================================================================
+2026-03-28 16:30:57,101 [WorkflowExample] INFO: SCENARIO 2: DNS TUNNELING DETECTION
+2026-03-28 16:30:57,101 [WorkflowExample] INFO: ================================================================================
+2026-03-28 16:30:57,102 [RuleEngine] INFO: Loaded 30 rules from rules.json
+2026-03-28 16:30:57,102 [RuleEngine] WARNING: Found 1 invalid rules:
+2026-03-28 16:30:57,102 [RuleEngine] WARNING:   ICMP Flood: ["ICMP rule must specify 'icmp_type'"]
+2026-03-28 16:30:57,102 [RuleEngine] INFO: Proceeding with 29 valid rules
+2026-03-28 16:30:57,102 [DetectionEngine] INFO: ======================================================================
+2026-03-28 16:30:57,102 [DetectionEngine] INFO: DetectionEngine Initialized
+2026-03-28 16:30:57,102 [DetectionEngine] INFO: ======================================================================
+2026-03-28 16:30:57,102 [DetectionEngine] INFO: Rules Loaded: 29
+2026-03-28 16:30:57,102 [DetectionEngine] INFO:   By Protocol: {'TCP': 25, 'UDP': 4}
+2026-03-28 16:30:57,102 [DetectionEngine] INFO:   By Severity: {'HIGH': 15, 'MEDIUM': 11, 'LOW': 1, 'CRITICAL': 2}
+2026-03-28 16:30:57,102 [DetectionEngine] INFO: 
+Auto-Tuner: EWMA adaptive thresholding
+2026-03-28 16:30:57,102 [DetectionEngine] INFO:   Alpha: 0.2
+2026-03-28 16:30:57,102 [DetectionEngine] INFO:   Headroom: 3.0x
+2026-03-28 16:30:57,102 [DetectionEngine] INFO: ======================================================================
+2026-03-28 16:30:57,103 [AdvancedPayloadDetection] INFO: AdvancedPayloadDetector initialized
+2026-03-28 16:30:57,103 [IntegrationAdapter] INFO: EnhancedDetectionPipeline initialized with config: {'entropy_threshold': 6.5, 'threshold_algorithm': 'MAD', 'enable_entropy_analysis': True, 'enable_signature_detection': True, 'enable_protocol_anomalies': True, 'payload_sampling_rate': 1.0, 'max_payload_size': 4096}
+2026-03-28 16:30:57,103 [WorkflowExample] INFO: 
+[Step 1] Processing suspicious DNS packet (high entropy)...
+2026-03-28 16:30:57,104 [WorkflowExample] INFO:   Payload entropy: ca764070dcc122a5
+2026-03-28 16:30:57,104 [WorkflowExample] INFO:   Threat detected: True
+2026-03-28 16:30:57,104 [WorkflowExample] INFO:   Detections:
+2026-03-28 16:30:57,104 [WorkflowExample] INFO:     - entropy_anomaly: HIGH
+2026-03-28 16:30:57,104 [WorkflowExample] INFO:       Entropy: 7.25 bits/byte (threshold: 6.5)
+2026-03-28 16:30:57,105 [WorkflowExample] INFO: 
+================================================================================
+2026-03-28 16:30:57,105 [WorkflowExample] INFO: SCENARIO 3: ADAPTIVE THRESHOLD LEARNING
+2026-03-28 16:30:57,105 [WorkflowExample] INFO: ================================================================================
+2026-03-28 16:30:57,105 [RuleEngine] INFO: Loaded 30 rules from rules.json
+2026-03-28 16:30:57,105 [RuleEngine] WARNING: Found 1 invalid rules:
+2026-03-28 16:30:57,105 [RuleEngine] WARNING:   ICMP Flood: ["ICMP rule must specify 'icmp_type'"]
+2026-03-28 16:30:57,105 [RuleEngine] INFO: Proceeding with 29 valid rules
+2026-03-28 16:30:57,105 [DetectionEngine] INFO: ======================================================================
+2026-03-28 16:30:57,105 [DetectionEngine] INFO: DetectionEngine Initialized
+2026-03-28 16:30:57,105 [DetectionEngine] INFO: ======================================================================
+2026-03-28 16:30:57,106 [DetectionEngine] INFO: Rules Loaded: 29
+2026-03-28 16:30:57,106 [DetectionEngine] INFO:   By Protocol: {'TCP': 25, 'UDP': 4}
+2026-03-28 16:30:57,106 [DetectionEngine] INFO:   By Severity: {'HIGH': 15, 'MEDIUM': 11, 'LOW': 1, 'CRITICAL': 2}
+2026-03-28 16:30:57,106 [DetectionEngine] INFO: 
+Auto-Tuner: EWMA adaptive thresholding
+2026-03-28 16:30:57,106 [DetectionEngine] INFO:   Alpha: 0.2
+2026-03-28 16:30:57,106 [DetectionEngine] INFO:   Headroom: 3.0x
+2026-03-28 16:30:57,106 [DetectionEngine] INFO: ======================================================================
+2026-03-28 16:30:57,106 [AdvancedPayloadDetection] INFO: AdvancedPayloadDetector initialized
+2026-03-28 16:30:57,106 [IntegrationAdapter] INFO: EnhancedDetectionPipeline initialized with config: {'entropy_threshold': 7.0, 'threshold_algorithm': 'EWMA', 'enable_entropy_analysis': True, 'enable_signature_detection': True, 'enable_protocol_anomalies': True, 'payload_sampling_rate': 1.0, 'max_payload_size': 4096}
+2026-03-28 16:30:57,106 [WorkflowExample] INFO: 
+Threshold Adaptation Throughout the Day:
+2026-03-28 16:30:57,106 [WorkflowExample] INFO: (TCP SYN Flood rule, base threshold: 15 pkt/10s)
+2026-03-28 16:30:57,106 [WorkflowExample] INFO: 
+  08:00 (Morning low)
+2026-03-28 16:30:57,106 [WorkflowExample] INFO:     Observed rate: 1.0 pkt/s (10 pkt/10s)
+2026-03-28 16:30:57,106 [WorkflowExample] INFO:     Baseline: 1.0 pkt/s
+2026-03-28 16:30:57,106 [WorkflowExample] INFO:     Adjusted threshold: 30 pkt/10s
+2026-03-28 16:30:57,106 [WorkflowExample] INFO: 
+  12:00 (Noon peak)
+2026-03-28 16:30:57,106 [WorkflowExample] INFO:     Observed rate: 5.1 pkt/s (51 pkt/10s)
+2026-03-28 16:30:57,106 [WorkflowExample] INFO:     Baseline: 1.78 pkt/s
+2026-03-28 16:30:57,106 [WorkflowExample] INFO:     Adjusted threshold: 53 pkt/10s
+2026-03-28 16:30:57,107 [WorkflowExample] INFO: 
+  14:00 (Afternoon)
+2026-03-28 16:30:57,107 [WorkflowExample] INFO:     Observed rate: 5.0 pkt/s (50 pkt/10s)
+2026-03-28 16:30:57,107 [WorkflowExample] INFO:     Baseline: 2.46 pkt/s
+2026-03-28 16:30:57,107 [WorkflowExample] INFO:     Adjusted threshold: 73 pkt/10s
+2026-03-28 16:30:57,107 [WorkflowExample] INFO: 
+  18:00 (Evening)
+2026-03-28 16:30:57,107 [WorkflowExample] INFO:     Observed rate: 2.0 pkt/s (20 pkt/10s)
+2026-03-28 16:30:57,107 [WorkflowExample] INFO:     Baseline: 2.37 pkt/s
+2026-03-28 16:30:57,107 [WorkflowExample] INFO:     Adjusted threshold: 71 pkt/10s
+2026-03-28 16:30:57,107 [WorkflowExample] INFO: 
+================================================================================
+2026-03-28 16:30:57,107 [WorkflowExample] INFO: SCENARIO 4: MULTI-ALGORITHM CONSENSUS VOTING
+2026-03-28 16:30:57,107 [WorkflowExample] INFO: ================================================================================
+2026-03-28 16:30:57,107 [RuleEngine] INFO: Loaded 30 rules from rules.json
+2026-03-28 16:30:57,107 [RuleEngine] WARNING: Found 1 invalid rules:
+2026-03-28 16:30:57,108 [RuleEngine] WARNING:   ICMP Flood: ["ICMP rule must specify 'icmp_type'"]
+2026-03-28 16:30:57,108 [RuleEngine] INFO: Proceeding with 29 valid rules
+2026-03-28 16:30:57,108 [DetectionEngine] INFO: ======================================================================
+2026-03-28 16:30:57,108 [DetectionEngine] INFO: DetectionEngine Initialized
+2026-03-28 16:30:57,108 [DetectionEngine] INFO: ======================================================================
+2026-03-28 16:30:57,108 [DetectionEngine] INFO: Rules Loaded: 29
+2026-03-28 16:30:57,108 [DetectionEngine] INFO:   By Protocol: {'TCP': 25, 'UDP': 4}
+2026-03-28 16:30:57,108 [DetectionEngine] INFO:   By Severity: {'HIGH': 15, 'MEDIUM': 11, 'LOW': 1, 'CRITICAL': 2}
+2026-03-28 16:30:57,108 [DetectionEngine] INFO: 
+Auto-Tuner: EWMA adaptive thresholding
+2026-03-28 16:30:57,108 [DetectionEngine] INFO:   Alpha: 0.2
+2026-03-28 16:30:57,108 [DetectionEngine] INFO:   Headroom: 3.0x
+2026-03-28 16:30:57,108 [DetectionEngine] INFO: ======================================================================
+2026-03-28 16:30:57,108 [AdvancedPayloadDetection] INFO: AdvancedPayloadDetector initialized
+2026-03-28 16:30:57,108 [IntegrationAdapter] INFO: EnhancedDetectionPipeline initialized with config: {'entropy_threshold': 7.0, 'threshold_algorithm': 'EWMA', 'enable_entropy_analysis': True, 'enable_signature_detection': True, 'enable_protocol_anomalies': True, 'payload_sampling_rate': 1.0, 'max_payload_size': 4096}
+2026-03-28 16:30:57,108 [WorkflowExample] INFO: 
+Observation: 60 packets/10s
+2026-03-28 16:30:57,108 [WorkflowExample] INFO: Base threshold: 15 packets/10s
+2026-03-28 16:30:57,108 [WorkflowExample] INFO: Recent rates history: {recent_rates}
+2026-03-28 16:30:57,108 [WorkflowExample] INFO: 
+Threshold from each algorithm:
+2026-03-28 16:30:57,108 [WorkflowExample] INFO:   EWMA      : threshold=   66 (CLEAR)
+2026-03-28 16:30:57,109 [WorkflowExample] INFO:   MAD       : threshold=   15 (ALERT)
+2026-03-28 16:30:57,109 [WorkflowExample] INFO:   ZSCORE    : threshold=   15 (ALERT)
+2026-03-28 16:30:57,109 [WorkflowExample] INFO:   BAYESIAN  : threshold=   14 (ALERT)
+2026-03-28 16:30:57,109 [WorkflowExample] INFO: 
+Consensus Result: 3/4 algorithms vote ALERT
+2026-03-28 16:30:57,109 [WorkflowExample] INFO:   Decision: CONFIDENCE ALERT (high confidence)
+2026-03-28 16:30:57,109 [WorkflowExample] INFO: 
+================================================================================
+2026-03-28 16:30:57,109 [WorkflowExample] INFO: SCENARIO 5: ENTROPY DISTRIBUTION & ANOMALY DETECTION
+2026-03-28 16:30:57,109 [WorkflowExample] INFO: ================================================================================
+2026-03-28 16:30:57,109 [WorkflowExample] INFO: 
+Entropy Analysis by Payload Type:
+2026-03-28 16:30:57,109 [WorkflowExample] INFO: 
+  Normal HTTP Headers:
+2026-03-28 16:30:57,109 [WorkflowExample] INFO:     Samples: 3
+2026-03-28 16:30:57,110 [WorkflowExample] INFO:     Entropies: ['4.32', '4.52', '4.38']
+2026-03-28 16:30:57,110 [WorkflowExample] INFO:     Mean: 4.41 bits/byte
+2026-03-28 16:30:57,110 [WorkflowExample] INFO:     StdDev: 0.10
+2026-03-28 16:30:57,110 [WorkflowExample] INFO: 
+  Compressed/Encrypted:
+2026-03-28 16:30:57,110 [WorkflowExample] INFO:     Samples: 2
+2026-03-28 16:30:57,110 [WorkflowExample] INFO:     Entropies: ['7.00', '6.98']
+2026-03-28 16:30:57,110 [WorkflowExample] INFO:     Mean: 6.99 bits/byte
+2026-03-28 16:30:57,110 [WorkflowExample] INFO:     StdDev: 0.01
+2026-03-28 16:30:57,110 [WorkflowExample] INFO: 
+  Structured Binary:
+2026-03-28 16:30:57,110 [WorkflowExample] INFO:     Samples: 1
+2026-03-28 16:30:57,110 [WorkflowExample] INFO:     Entropies: ['2.89']
+2026-03-28 16:30:57,110 [WorkflowExample] INFO:     Mean: 2.89 bits/byte
+2026-03-28 16:30:57,110 [WorkflowExample] INFO:     StdDev: 0.00
+2026-03-28 16:30:57,110 [WorkflowExample] INFO: 
+================================================================================
+2026-03-28 16:30:57,110 [WorkflowExample] INFO: SCENARIO 6: FORMULA VERIFICATION
+2026-03-28 16:30:57,110 [WorkflowExample] INFO: ================================================================================
+2026-03-28 16:30:57,110 [WorkflowExample] INFO: 
+EWMA Formula Verification:
+2026-03-28 16:30:57,111 [WorkflowExample] INFO:   baseline(t) = Î± Ã— rate(t) + (1-Î±) Ã— baseline(t-1)
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Users\ashish\AppData\Local\Programs\Python\Python314\Lib\logging\__init__.py", line 1154, in emit
+    stream.write(msg + self.terminator)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ashish\AppData\Local\Programs\Python\Python314\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u03b1' in position 64: character maps to <undefined>
+Call stack:
+  File "C:\Users\ashish\Desktop\DOS\nids_project\old\example_complete_workflow.py", line 449, in <module>
+    scenario_formula_verification()
+  File "C:\Users\ashish\Desktop\DOS\nids_project\old\example_complete_workflow.py", line 305, in scenario_formula_verification
+    logger.info("  baseline(t) = \u03b1 × rate(t) + (1-\u03b1) × baseline(t-1)")
+Message: '  baseline(t) = \u03b1 × rate(t) + (1-\u03b1) × baseline(t-1)'
+Arguments: ()
+2026-03-28 16:30:57,111 [WorkflowExample] INFO:   Î± = 0.2, baseline(0) = 1.0
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Users\ashish\AppData\Local\Programs\Python\Python314\Lib\logging\__init__.py", line 1154, in emit
+    stream.write(msg + self.terminator)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ashish\AppData\Local\Programs\Python\Python314\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u03b1' in position 50: character maps to <undefined>
+Call stack:
+  File "C:\Users\ashish\Desktop\DOS\nids_project\old\example_complete_workflow.py", line 449, in <module>
+    scenario_formula_verification()
+  File "C:\Users\ashish\Desktop\DOS\nids_project\old\example_complete_workflow.py", line 306, in scenario_formula_verification
+    logger.info("  \u03b1 = 0.2, baseline(0) = 1.0")
+Message: '  \u03b1 = 0.2, baseline(0) = 1.0'
+Arguments: ()
+2026-03-28 16:30:57,112 [WorkflowExample] INFO: 
+  Iteration | rate | Formula Calc | Code Calc | Match
+2026-03-28 16:30:57,112 [WorkflowExample] INFO:   -------------------------------------------------------
+2026-03-28 16:30:57,112 [WorkflowExample] ERROR: Workflow error: cannot import name 'AdaptiveDetectionConfig' from 'integration_adapter' (C:\Users\ashish\Desktop\DOS\nids_project\old\integration_adapter.py)
+Traceback (most recent call last):
+  File "C:\Users\ashish\Desktop\DOS\nids_project\old\example_complete_workflow.py", line 449, in <module>
+    scenario_formula_verification()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\ashish\Desktop\DOS\nids_project\old\example_complete_workflow.py", line 321, in scenario_formula_verification
+    from integration_adapter import AdaptiveDetectionConfig
+ImportError: cannot import name 'AdaptiveDetectionConfig' from 'integration_adapter' (C:\Users\ashish\Desktop\DOS\nids_project\old\integration_adapter.py). Did you mean: 'AdvancedDetectionConfig'?

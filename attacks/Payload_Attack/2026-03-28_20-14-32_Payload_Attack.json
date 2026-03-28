@@ -1,0 +1,27 @@
+{
+  "alert": {
+    "type": "Payload Attack",
+    "rule_name": "Payload Signature: TCP payload on port 26927",
+    "protocol": "TCP",
+    "severity": "MEDIUM",
+    "source": "57.144.40.141",
+    "target": "192.168.1.77",
+    "dst_port": 26927,
+    "packet_count": 1,
+    "window": 1,
+    "threshold": 1,
+    "timestamp": 1774708171.1202426,
+    "category": "Shellcode",
+    "matched_signatures": [
+      "x86_Mov_EAX_Pattern"
+    ],
+    "confidence": 0.2
+  },
+  "metadata": {
+    "logged_at": "2026-03-28T20:14:32.983887",
+    "attack_type": "Payload_Attack",
+    "source": "57.144.40.141",
+    "target": "192.168.1.77",
+    "severity": "MEDIUM"
+  }
+}

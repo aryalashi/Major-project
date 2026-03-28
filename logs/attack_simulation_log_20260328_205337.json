@@ -1,0 +1,42 @@
+[
+  {
+    "sim_arg": "sqli",
+    "rule_name": "SQL Injection Attack",
+    "detected": true,
+    "det_time": 2.3,
+    "packets": 15,
+    "logged_at": "2026-03-28T20:53:37.620025"
+  },
+  {
+    "sim_arg": "xss",
+    "rule_name": "XSS Attack",
+    "detected": true,
+    "det_time": 1.8,
+    "packets": 12,
+    "logged_at": "2026-03-28T20:53:37.620787"
+  },
+  {
+    "sim_arg": "shellcode",
+    "rule_name": "Shellcode Injection",
+    "detected": true,
+    "det_time": 3.1,
+    "packets": 20,
+    "logged_at": "2026-03-28T20:53:37.621543"
+  },
+  {
+    "sim_arg": "path_trav",
+    "rule_name": "Path Traversal Attack",
+    "detected": false,
+    "det_time": null,
+    "packets": 10,
+    "logged_at": "2026-03-28T20:53:37.622248"
+  },
+  {
+    "sim_arg": "rce",
+    "rule_name": "Remote Code Execution",
+    "detected": true,
+    "det_time": 2.5,
+    "packets": 18,
+    "logged_at": "2026-03-28T20:53:37.622812"
+  }
+]

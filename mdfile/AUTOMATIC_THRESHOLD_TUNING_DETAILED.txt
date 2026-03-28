@@ -1,0 +1,861 @@
+# AUTOMATIC THRESHOLD TUNING - COMPREHENSIVE GUIDE
+
+================================================================================
+CONCEPTUAL OVERVIEW
+================================================================================
+
+PROBLEM:
+  Fixed thresholds don't adapt to changing network conditions:
+  - Morning traffic: Light → threshold too high, misses actual attacks
+  - Afternoon traffic: Heavy → threshold triggers false alarms
+  - Attack campaign: Baseline shifts → manual re-tuning required
+
+SOLUTION:
+  Four complementary automatic threshold adaptation algorithms that learn
+  from live traffic:
+  
+  1. EWMA (Exponential Weighted Moving Average) - Real-time trend following
+  2. MAD (Median Absolute Deviation) - Robust statistical bounds
+  3. Z-Score - Standard deviation based confidence levels
+  4. Bayesian - Prior knowledge + observed evidence
+
+
+================================================================================
+KEY PRINCIPLE: THRESHOLD FORMULA
+================================================================================
+
+All algorithms use the same final formula:
+
+  threshold_final = bounded(computed_threshold, min_threshold, hard_cap)
+
+Where:
+  computed_threshold = algorithm-specific calculation
+  min_threshold = absolute floor (e.g., 3 packets/10s)
+  hard_cap = absolute ceiling (e.g., 5000 packets/10s)
+
+This ensures even adaptive algorithms stay within reasonable bounds.
+
+
+================================================================================
+ALGORITHM 1: EWMA (Exponential Weighted Moving Average)
+================================================================================
+
+PURPOSE:
+  Quickly adapt to changing baseline traffic patterns in real time.
+  Heavy weighting on recent observations, decay for old data.
+
+MATHEMATICAL FORMULA:
+
+  baseline(t) = α × observed_rate(t) + (1 - α) × baseline(t-1)
+  
+  threshold(t) = bounded(
+    baseline(t) × window_size × headroom,
+    min_threshold,
+    hard_cap
+  )
+
+Where:
+  α = smoothing factor ∈ [0, 1]
+    α = 0.0:  No change (pure history)
+    α = 0.5:  Equal weight (current + history)
+    α = 1.0:  Instant change (current only)
+    default = 0.2 (prioritize history, slow adaptation)
+  
+  observed_rate(t) = packets per second in current window
+  
+  window_size = detection window in seconds (default 10)
+  
+  headroom = multiplier above baseline (default 3.0)
+    headroom = 2.0: Alert if rate > 2× baseline
+    headroom = 3.0: Alert if rate > 3× baseline
+    headroom = 5.0: Alert if rate > 5× baseline
+
+
+STEP-BY-STEP WALKTHROUGH:
+
+Initial Conditions:
+  - Morning time: 8:00 AM (normal business traffic)
+  - Base threshold: 15 packets/10s
+  - α = 0.2
+  - headroom = 3.0
+  - window = 10 seconds
+
+Time Period 1: 8:00-8:10 AM (Light traffic)
+───────────────────────────────────────────
+  observed_rate = 1 pkt/s
+  baseline_old = baseline_0 (initialized to current_rate)
+  
+  baseline(1) = 0.2 × 1 + 0.8 × 1 = 1.0 pkt/s
+  
+  threshold(1) = 1.0 × 10 × 3.0 = 30 packets/10s
+  bounded_threshold = min(30, 5000) = 30 packets/10s
+  
+  Status: Allow up to 30 packets/10s before alert
+
+
+Time Period 2: 8:10-8:20 AM (Still light)
+───────────────────────────────────────────
+  observed_rate = 1.2 pkt/s
+  baseline_old = 1.0
+  
+  baseline(2) = 0.2 × 1.2 + 0.8 × 1.0 = 0.24 + 0.80 = 1.04 pkt/s
+  
+  threshold(2) = 1.04 × 10 × 3.0 = 31.2 packets/10s
+  Status: Threshold rises slightly with traffic
+
+
+Time Period 3-10: Pages increase gradually
+────────────────────────────────────────────
+  t=5: observed=2.0, baseline=1.16, threshold=35
+  t=10: observed=3.0, baseline=1.40, threshold=42
+  t=15: observed=3.5, baseline=1.60, threshold=48
+  
+  [Baseline follows current gradually due to α=0.2]
+
+
+Time Period 25: Noon Hour (Traffic spike)
+──────────────────────────────────────────
+  observed_rate = 10 pkt/s (5× normal)
+  baseline_old = 3.0
+  
+  baseline(25) = 0.2 × 10 + 0.8 × 3.0 = 2.0 + 2.4 = 4.4 pkt/s
+  
+  threshold(25) = 4.4 × 10 × 3.0 = 132 packets/10s
+  
+  Status: Threshold increased but smoothly. Safe from false alerts.
+
+
+Time Period 30: Attack detected (100 pkt/s)
+───────────────────────────────────────────
+  observed_rate = 100 pkt/s (26× baseline!)
+  baseline_old = 5.0 (had been climbing)
+  
+  baseline(30) = 0.2 × 100 + 0.8 × 5.0 = 20 + 4 = 24 pkt/s
+  
+  threshold(30) = 24 × 10 × 3.0 = 720 packets/10s (still high)
+  
+  Hmm, with α=0.2, spike detection is slow. Is 100 > 720? NO
+  
+  Alternative: Use aggressive α=0.5 for faster response
+  baseline(30) = 0.5 × 100 + 0.5 × 5.0 = 50 + 2.5 = 52.5 pkt/s
+  threshold(30) = 52.5 × 10 × 3.0 = 1575 pkt/s (still captures attack)
+
+
+EWMA ADVANTAGES & DISADVANTAGES:
+
+Advantages:
+  ✓ Simple formula, fast computation
+  ✓ Adapts smoothly to gradual changes
+  ✓ Prioritizes recent observations
+  ✓ Minimal memory (only need one baseline value)
+
+Disadvantages:
+  ✗ Slow response to sudden spikes (α < 0.5)
+  ✗ Can miss initial attack phase
+  ✗ Requires careful tuning of α and headroom
+
+
+PARAMETER TUNING:
+
+α (smoothing factor):
+  α = 0.1: Very slow adaptation, smooth baseline (miss spike attacks)
+  α = 0.2: Moderate (default, good balance)
+  α = 0.5: Fast adaptation (respond quickly to legitimate changes)
+  α = 0.8: Very fast (risky, may chase individual spikes)
+
+headroom:
+  headroom = 2.0: Aggressive detection (higher false positive)
+  headroom = 3.0: Moderate (default, balanced)
+  headroom = 5.0: Conservative (miss real attacks)
+
+
+================================================================================
+ALGORITHM 2: MAD (Median Absolute Deviation)
+================================================================================
+
+PURPOSE:
+  Robust statistical thresholding even with outliers.
+  Less influenced by extreme values than standard deviation.
+
+MATHEMATICAL FORMULA:
+
+  1. Calculate median of observations:
+     median = middle value of sorted(x_i)
+  
+  2. Calculate deviations from median:
+     dev_i = |x_i - median|
+  
+  3. Calculate median of deviations (MAD):
+     MAD = median(dev_i)
+  
+  4. Compute threshold:
+     threshold = median + k × MAD
+
+Where:
+  x_i = observed rates in current window
+  
+  k = scaling factor (statistically justified)
+    k = 1.0:  ~68% of normal data below (31% false positive)
+    k = 2.0:  ~95% of normal data below (5% false positive)
+    k = 2.5:  ~99% of normal data below (1% false positive) ← DEFAULT
+    k = 3.0:  ~99.7% of normal data below (0.3% false positive)
+
+
+STEP-BY-STEP EXAMPLE 1: Normal Traffic with Outlier
+
+Observations (packets/10s window):
+  Sample history: [5, 4, 6, 5, 4, 5, 100]
+  
+  Note: The value 100 is a temporary spike (network hiccup, not attack)
+
+Calculation:
+  1. Sort: [4, 4, 5, 5, 5, 6, 100]
+  2. Count: N = 7 (odd)
+  3. Median = x[3] = 5 (middle value)
+  
+  4. Deviations: |4-5|=1, |4-5|=1, |5-5|=0, |5-5|=0, |5-5|=0, |6-5|=1, |100-5|=95
+     devs = [1, 1, 0, 0, 0, 1, 95]
+  
+  5. Sort deviations: [0, 0, 0, 1, 1, 1, 95]
+  6. Median of deviations (MAD) = 1 (robust!)
+  
+  7. Threshold = 5 + 2.5 × 1 = 7.5 packets/10s
+
+Comparison with standard deviation:
+  Historical: [5, 4, 6, 5, 4, 5]
+  With outlier: [5, 4, 6, 5, 4, 5, 100]
+  
+  Without outlier:
+    mean = 4.83, std = 0.75
+    threshold = 4.83 + 2×0.75 = 6.33
+  
+  With outlier (std dev method):
+    mean = 18.71, std = 35.0 (HUGE!)
+    threshold = 18.71 + 2×35 = 88.71 (too high, bad!)
+  
+  With outl​-ier (MAD method):
+    threshold = 5 + 2.5×1 = 7.5 (good!)
+  
+  MAD is 11× better at handling this outlier!
+
+
+STEP-BY-STEP EXAMPLE 2: Legitimate Traffic Increase
+
+Morning baseline (8-10 AM):
+  Observations: [5, 4, 5, 5, 6] packets/10s
+  
+  median = 5
+  deviations = [0, 1, 0, 0, 1]
+  MAD = 0.5
+  threshold_morning = 5 + 2.5×0.5 = 6.25
+
+Noon spike (12-2 PM, expected workload):
+  Observations: [8, 9, 7, 8, 7, 8]
+  
+  median = 7.5
+  deviations = [0.5, 1.5, 0.5, 0.5, 0.5, 0.5]
+  MAD = 0.5
+  threshold_noon = 7.5 + 2.5×0.5 = 8.75
+
+Afternoon (2-5 PM, workload continuing):
+  Observations: [12, 11, 13, 10, 12]
+  
+  median = 12
+  deviations = [0, 1, 1, 2, 0]
+  MAD = 1
+  threshold_afternoon = 12 + 2.5×1 = 14.5
+
+System automatically adapts!
+
+
+MAD ADVANTAGES & DISADVANTAGES:
+
+Advantages:
+  ✓ Robust to outliers (breakdown point 50%)
+  ✓ Handles skewed distributions well
+  ✓ Less sensitive to data quality issues
+  ✓ Statistically well-justified
+
+Disadvantages:
+  ✗ Requires more observations (minimum 3-5)
+  ✗ Slightly slower computation (sort + median)
+  ✗ Can miss gradual drifts if MAD changes slowly
+
+
+================================================================================
+ALGORITHM 3: Z-SCORE ADAPTIVE THRESHOLDING
+================================================================================
+
+PURPOSE:
+  Standard statistical approach with tunable false-positive rate.
+  Ideal when traffic follows approximate normal distribution.
+
+MATHEMATICAL FORMULA:
+
+  1. Calculate mean:
+     mean = (1/N) × Σ(x_i)
+  
+  2. Calculate variance:
+     variance = (1/N) × Σ(x_i - mean)²
+  
+  3. Calculate standard deviation:
+     std_dev = sqrt(variance)
+  
+  4. Select z-multiplier based on false-positive tolerance:
+     threshold = mean + z × std_dev
+
+Where:
+  z = number of standard deviations from mean
+  
+  z = 1.0  (68% below threshold):
+    False positive rate = 32%
+    Use case: High sensitivity (aggressive detection)
+  
+  z = 1.5  (86.6% below threshold):
+    False positive rate = 13.4%
+    Use case: Moderate sensitivity
+  
+  z = 2.0  (95% below threshold):
+    False positive rate = 5%
+    Use case: Balanced (most common)
+  
+  z = 2.5  (99.4% below threshold):
+    False positive rate = 0.6%
+    Use case: Conservative
+  
+  z = 3.0  (99.7% below threshold):
+    False positive rate = 0.3%
+    Use case: Very conservative (default)
+
+
+STEP-BY-STEP EXAMPLE 1: Tuning for 5% False Positives
+
+Network environment: Stable office network
+Observation window: Last 10 detection cycles
+
+Observations (packets/10s):
+  [10, 12, 11, 9, 10, 11, 10, 12, 9, 11]
+
+Calculation:
+  1. mean = (10+12+11+9+10+11+10+12+9+11) / 10
+          = 105 / 10 = 10.5
+
+  2. Deviations squared:
+     (10-10.5)² = 0.25
+     (12-10.5)² = 2.25
+     (11-10.5)² = 0.25
+     (9-10.5)²  = 2.25
+     (10-10.5)² = 0.25
+     (11-10.5)² = 0.25
+     (10-10.5)² = 0.25
+     (12-10.5)² = 2.25
+     (9-10.5)²  = 2.25
+     (11-10.5)² = 0.25
+     
+     Sum = 0.25×4 + 2.25×6 = 1 + 13.5 = 14.5
+
+  3. variance = 14.5 / 10 = 1.45
+  
+  4. std_dev = sqrt(1.45) ≈ 1.20
+
+  5. For 5% false positive (z = 2.0):
+     threshold = 10.5 + 2.0 × 1.20 = 10.5 + 2.4 = 12.9 ≈ 13 packets/10s
+  
+  6. For 1% false positive (z = 2.33):
+     threshold = 10.5 + 2.33 × 1.20 = 10.5 + 2.80 = 13.3 ≈ 13 packets/10s
+  
+  7. For 0.3% false positive (z = 3.0):
+     threshold = 10.5 + 3.0 × 1.20 = 10.5 + 3.6 = 14.1 ≈ 14 packets/10s
+
+
+STEP-BY-STEP EXAMPLE 2: Attack Under Load
+
+Scenario: Network normally receives 1-2 Mbps, now attacked
+
+Normal period statistics:
+  Observations: [10, 11, 10, 12, 11, 10] pkt/s
+  mean = 10.67, std = 0.82
+  threshold (z=2.0) = 10.67 + 2.0×0.82 = 12.31
+
+Attack starts (mixed with legitimate traffic):
+  Observations (first 5s): [10, 11, 50, 12, 11]
+  
+  mean = 16.8, std = 17.4 (INFLATED by outlier!)
+  threshold (z=2.0) = 16.8 + 2.0×17.4 = 52.0 (way too high!)
+
+Solution 1: Use windowed calculation (last N observations only):
+  Keep only recent: [50, 12, 11, 15, 18]
+  mean = 21.2, std = 17.7
+  threshold = 21.2 + 2.0×17.7 = 56.6 (better, but still high)
+
+Solution 2: Filter outliers before calculation (3-sigma rule):
+  Initial: [10, 11, 50, 12, 11]
+  Remove > (mean ± 3×std): Remove 50
+  Recalculate: [10, 11, 12, 11]
+  mean = 11, std = 0.82
+  threshold = 11 + 2.0×0.82 = 12.64 (good!)
+
+
+Z-SCORE ADVANTAGES & DISADVANTAGES:
+
+Advantages:
+  ✓ Well-known statistical method
+  ✓ Tunable false-positive rate via z parameter
+  ✓ Requires only mean and std (fast to compute)
+  ✓ Scales to any observation magnitude
+
+Disadvantages:
+  ✗ Assumes normal distribution (not always valid)
+  ✗ Sensitive to outliers (can be fixed by filtering)
+  ✗ Needs multiple observations
+
+
+================================================================================
+ALGORITHM 4: BAYESIAN THRESHOLD ADAPTATION
+================================================================================
+
+PURPOSE:
+  Incorporate domain knowledge and context (priors) with observed evidence.
+  Mathematically principled approach to updating beliefs.
+
+MATHEMATICAL FORMULA:
+
+  1. Establish prior probability:
+     P(attack|baseline) = prior_prob (from history)
+     
+     typical values:
+       prior = 0.01 (1%): Normal period, rare attacks
+       prior = 0.05 (5%): Elevated alertness
+       prior = 0.50 (50%): Known DDoS campaign
+  
+  2. Calculate likelihoods:
+     P(obs|attack)   = Gaussian PDF(observation, attack_mean, attack_std)
+     P(obs|normal)   = Gaussian PDF(observation, normal_mean, normal_std)
+  
+  3. Apply Bayes' theorem:
+     P(attack|obs) = P(obs|attack) × P(attack) / [
+                     P(obs|attack) × P(attack) + P(obs|normal) × P(normal)
+                   ]
+  
+  4. Adjust threshold:
+     threshold = base_threshold × (1.0 - P(attack|obs) × adjustment_factor)
+
+
+BAYESIAN PROBABILITY DENSITY:
+
+Normal distribution PDF:
+  P(x) = (1 / sqrt(2π×σ²)) × exp(-(x - μ)² / (2×σ²))
+
+Where μ = mean, σ = standard deviation
+
+Example:
+  Normal traffic: μ=10, σ=1
+  Attack pattern: μ=50, σ=10 (high volume, variable)
+  
+  P(observation=20 | Normal) = high PDF (close to μ)
+  P(observation=20 | Attack) = low PDF (far below attack μ)
+
+
+STEP-BY-STEP EXAMPLE 1: Silent Learning Phase
+
+Context:
+  Time: Regular business hours
+  Network history: No attacks in past month
+  Prior probability: P(attack) = 0.01 (1%)
+  Base threshold: 100 packets/10s
+
+Normal traffic statistics (historical):
+  Normal mean = 20 pkt/s, std = 3
+  Attack mean = 100 pkt/s, std = 20
+  
+Observation:
+  Current rate = 25 packets/10s
+
+Likelihood calculation:
+  P(25 | Normal):
+    P = (1/sqrt(2π×9)) × exp(-(25-20)²/(2×9))
+      = 0.1330 × exp(-25/18)
+      = 0.1330 × exp(-1.389)
+      = 0.1330 × 0.249
+      = 0.0331
+  
+  P(25 | Attack):
+    P = (1/sqrt(2π×400)) × exp(-(25-100)²/(2×400))
+      = 0.01995 × exp((-75)²/800)
+      = 0.01995 × exp(-7.03)
+      = 0.01995 × 0.0009
+      = 0.0000179
+  
+  Likelihood ratio = 0.0331 / 0.0000179 ≈ 1848
+
+Posterior calculation:
+  P(attack|obs) = (1848 × 0.01) / (1848 × 0.01 + 1 × 0.99)
+                = 18.48 / (18.48 + 0.99)
+                = 18.48 / 19.47
+                = 0.949 (95% likely attack!)
+  
+  Wait, this seems wrong. Let me recalculate...
+  
+  Actually, the formula should be:
+  P(attack|obs) ∝ P(obs|attack) × P(attack)
+  P(normal|obs) ∝ P(obs|normal) × P(normal)
+  
+  P(attack|obs) = 0.0000179 × 0.01 / (0.0331 × 0.99 + 0.0000179 × 0.01)
+                = 0.000000179 / (0.0327 + 0.000000179)
+                ≈ 0.00000549 (essentially 0% - false alarm!)
+  
+  So with low prior, even 25 pkt/s (above normal) doesn't trigger.
+
+Decision:
+  With P(attack|obs) ≈ 0, system expects normal behavior
+  Threshold remains at 100 pkt/s
+
+
+STEP-BY-STEP EXAMPLE 2: DDoS Campaign Context
+
+Same network, but:
+  Context changes: Known DDoS targeting this IP range
+  New prior: P(attack) = 0.50 (50% chance ongoing attack)
+  Base threshold: 100 packets/10s
+
+Observation: Same 25 packets/10s
+
+Posterior calculation:
+  P(attack|obs) = 0.0000179 × 0.50 / (0.0331 × 0.50 + 0.0000179 × 0.50)
+                = 0.00000895 / (0.01655 + 0.00000895)
+                = 0.00000895 / 0.01656
+                ≈ 0.00054 (still low, but context changed)
+  
+  Wait, the issue is that 25 pkt/s IS MORE LIKELY NORMAL THAN ATTACK.
+  This is correct Bayesian reasoning.
+  
+  However, the system should use:
+  alert_factor = P(attack|obs) × 0.5 = 0.00054 × 0.5 ≈ 0.00027
+  threshold_adjusted = 100 × (1.0 - 0.00027) ≈ 100
+  
+  Marginal reduction.
+  
+  For truly suspicious rates (e.g., 80 pkt/s):
+  P(80 | Normal) = very low (4 standard deviations away)
+  P(80 | Attack) = low but plausible
+  
+  With 50% prior:
+  Posterior ≈ 0.85 (85% likely attack)
+  alert_factor = 0.85 × 0.5 = 0.425
+  threshold_adjusted = 100 × (1.0 - 0.425) = 57.5
+  
+  Now 80 > 57.5 → ALERT with context adjustment
+
+
+BAYESIAN ADVANTAGES & DISADVANTAGES:
+
+Advantages:
+  ✓ Mathematically principled (Bayes' theorem)
+  ✓ Incorporates domain knowledge via priors
+  ✓ Adapts to changing context (shift priors)
+  ✓ Elegant handling of uncertainty
+
+Disadvantages:
+  ✗ Requires setting reasonable priors (not always easy)
+  ✗ Higher CPU cost (PDF calculations)
+  ✗ Can be over-confident with poor prior
+  ✗ Assumes normality of distributions
+
+
+================================================================================
+COMPARISON TABLE
+================================================================================
+
+Algorithm │ Complexity │ Response Time │ Robustness │ Memory │ Best For
+──────────┼────────────┼───────────────┼────────────┼────────┼───────────────
+EWMA      │ Low        │ Slow-Medium   │ Medium     │ V.Low  │ Quick trends
+MAD       │ Medium     │ Medium        │ HIGH       │ Low    │ Noisy data
+ZSCORE    │ Low-Med    │ Medium        │ Medium     │ Low    │ Normal distrib
+Bayesian  │ High       │ Fast          │ HIGH       │ Medium │ Contextual
+──────────┴────────────┴───────────────┴────────────┴────────┴───────────────
+
+
+================================================================================
+HOW TO CHOOSE THE RIGHT ALGORITHM
+================================================================================
+
+DECISION TREE:
+
+Is your traffic normally distributed?
+  └─ YES → Use Z-SCORE
+     └─ Tunable FP rate via z parameter
+     └─ Simple and efficient
+  
+  └─ NO → Continue
+     ├─ Is data very noisy with frequent outliers?
+     │  └─ YES → Use MAD
+     │     └─ Robust to 50% corrupted data
+     │     └─ Works with any distribution
+     │
+     └─ NO → Continue
+        ├─ Do you need real-time adaptation?
+        │  └─ YES → Use EWMA
+        │     └─ Fast, follows trends
+        │     └─ Minimal memory
+        │
+        └─ Do you have strong domain knowledge (attack patterns)?
+           └─ YES → Use BAYESIAN
+              └─ Incorporate priors
+              └─ Good under known threats
+
+
+PRACTICAL RECOMMENDATIONS:
+
+For small networks (< 100 hosts):
+  → Start with MAD (robust, few false alarms)
+
+For medium networks (100-10K hosts):
+  → Use EWMA + context (trending + adaptation)
+
+For large networks (> 10K hosts):
+  → Use Z-SCORE (scalable, predictable)
+
+For security-critical networks:
+  → Use BAYESIAN + HAD (maximum robustness)
+
+For noisy/unreliable sensors:
+  → Use MAD (most robust to bad data)
+
+
+================================================================================
+INTEGRATION WITH DETECTION PIPELINE
+================================================================================
+
+FLOW:
+
+  Raw packet
+      │
+      ▼
+  Detection engine checks rules
+      │
+      ├─── Rule matches? NO → pass through
+      │
+      └─── Rule matches? YES
+           │
+           ▼
+      Get base threshold (from rule)
+           │
+           ▼
+      Get recent observations (last 10 windows)
+           │
+           ▼
+      Adaptive Algorithm (EWMA|MAD|ZSCORE|BAYESIAN)
+           │
+           ├─── adjusted_threshold
+           │
+           ├─── metadata (formula, parameters)
+           │
+           ▼
+      Alert threshold comparison
+           │
+           ├─── rate > threshold? NO → pass
+           │
+           └─── rate > threshold? YES → ALERT
+
+
+CODE USAGE:
+
+From integration_adapter.py:
+
+  pipeline = EnhancedDetectionPipeline(
+      rules_file="rules.json",
+      config={
+          "threshold_algorithm": "EWMA",  # or MAD, ZSCORE, BAYESIAN
+          "entropy_threshold": 7.0,
+      }
+  )
+  
+  # Process packet
+  alerts = pipeline.process(packet_dict, raw_packet)
+  
+  # Optional: Get optimized threshold for specific rule
+  optimal_threshold = pipeline.get_optimal_threshold(
+      rule_name="TCP SYN Flood",
+      protocol="TCP",
+      dst_port=80,
+      recent_rates=[1.2, 1.5, 1.8, 2.0, 2.2]  # Recent 5-second rates
+  )
+
+
+From advanced_payload_detection.py:
+
+  threshold_mgr = AdaptiveThresholdManager(window_size=100)
+  
+  observations = [10, 11, 10, 12, 9, 10]  # Last 6 measurements
+  
+  base_threshold = 15
+  
+  # Try each algorithm
+  ewma_result, ewma_meta = threshold_mgr.compute_threshold(
+      rule_name="HTTP Flood",
+      base_threshold=base_threshold,
+      current_observations=observations,
+      algorithm="EWMA"
+  )
+  
+  mad_result, mad_meta = threshold_mgr.compute_threshold(
+      rule_name="HTTP Flood",
+      base_threshold=base_threshold,
+      current_observations=observations,
+      algorithm="MAD"
+  )
+  
+  zscore_result, zscore_meta = threshold_mgr.compute_threshold(
+      rule_name="HTTP Flood",
+      base_threshold=base_threshold,
+      current_observations=observations,
+      algorithm="ZSCORE"
+  )
+
+
+================================================================================
+TUNING PARAMETERS FOR EACH ALGORITHM
+================================================================================
+
+ALGORITHM: EWMA
+┌──────────────┬──────────┬──────────────┬─────────────────────┐
+│ Parameter    │ Default  │ Range        │ Interpretation      │
+├──────────────┼──────────┼──────────────┼─────────────────────┤
+│ α (alpha)    │ 0.2      │ 0.01 - 0.99  │ Lower=slow, High=fast│
+│ headroom     │ 3.0      │ 1.5 - 10.0   │ Lower=sensitive,    │
+│              │          │              │ High=conservative   │
+│ window       │ 10s      │ 5s - 60s     │ Time per window     │
+│ max_mult     │ 6.0      │ 2.0 - 10.0   │ Max factor above    │
+│              │          │              │ base threshold      │
+│ hard_cap     │ 5000     │ Auto         │ Absolute maximum    │
+│ min_thresh   │ 3        │ Auto         │ Absolute minimum    │
+└──────────────┴──────────┴──────────────┴─────────────────────┘
+
+Tuning recommendations:
+  - Increase α for faster attack response (but more false positives)
+  - Decrease headroom for more aggressive detection
+  - Increase window for larger observations
+
+
+ALGORITHM: MAD
+┌──────────────┬──────────┬──────────────┬─────────────────────┐
+│ Parameter    │ Default  │ Range        │ Interpretation      │
+├──────────────┼──────────┼──────────────┼─────────────────────┤
+│ k (scaling)  │ 2.5      │ 1.0 - 4.0    │ ~99% below thresh   │
+│              │          │              │                     │
+│ min_obs      │ 3        │ 2 - 10       │ Minimum observations│
+│              │          │              │ before computing    │
+│ max_mult     │ 6.0      │ 2.0 - 10.0   │ Max factor above    │
+│              │          │              │ base threshold      │
+└──────────────┴──────────┴──────────────┴─────────────────────┘
+
+Tuning recommendations:
+  - k=2.0 for 5% false positive rate
+  - k=2.5 for 1% false positive rate (default)
+  - k=3.0 for 0.3% false positive rate
+
+
+ALGORITHM: Z-SCORE
+┌──────────────┬──────────┬──────────────┬─────────────────────┐
+│ Parameter    │ Default  │ Range        │ Interpretation      │
+├──────────────┼──────────┼──────────────┼─────────────────────┤
+│ z (multiplier)│ 2.5      │ 1.0 - 4.0    │ ~99.4% below       │
+│              │          │              │                     │
+│ min_obs      │ 2        │ 2 - 10       │ Observations needed │
+│ max_mult     │ 6.0      │ 2.0 - 10.0   │ Max factor above base│
+└──────────────┴──────────┴──────────────┴─────────────────────┘
+
+False positive rate mapping:
+  z=1.0:  32% FP (aggressive)
+  z=1.5:  13% FP
+  z=2.0:  5% FP (moderate)
+  z=2.5:  0.6% FP (default)
+  z=3.0:  0.3% FP (conservative)
+
+
+ALGORITHM: BAYESIAN
+┌──────────────┬──────────┬──────────────┬─────────────────────┐
+│ Parameter    │ Default  │ Range        │ Interpretation      │
+├──────────────┼──────────┼──────────────┼─────────────────────┤
+│ prior_attack │ 0.05     │ 0.01 - 0.90  │ P(attack|baseline)  │
+│              │          │              │ Low=safe, High=threat│
+│              │          │              │                     │
+│ attack_mean  │ μ×3      │ Auto         │ Expected attack rate│
+│ attack_sigma │ σ×2      │ Auto         │ Attack variability  │
+│ adjustment   │ 0.5      │ 0.2 - 1.0    │ Posterior weighting │
+└──────────────┴──────────┴──────────────┴─────────────────────┘
+
+Tuning recommendations:
+  - Increase prior_attack during known campaigns
+  - Decrease prior_attack during quiet periods
+  - Adjust attack stats based on known patterns
+
+
+================================================================================
+REAL-WORLD DEPLOYMENT EXAMPLE
+================================================================================
+
+SCENARIO: HTTP Web Server Protected by NIDS
+
+Rule: "HTTP Flood Detection"
+  Base threshold: 50 requests per 10-second window
+  
+Morning (8-10 AM):
+  Observations: Manual traffic 10-15 req/10s
+  Algorithm: EWMA with α=0.2
+  Computed threshold: 30-45 req/10s
+  Status: Normal
+
+Midday (10 AM - 2 PM):
+  Observations: Business hours, 30-50 req/10s
+  Algorithm adapts:
+    12 PM: threshold ≈ 65 req/10s
+    1 PM: threshold ≈ 75 req/10s
+  Status: Normal, no false alarms
+
+Attack Detected (2:30 PM):
+  Observations: Sudden 200+ req/10s
+  EWMA kicks in:
+    baseline ≈ 50 (from history)
+    threshold = 50 × 10 × 3.0 = 1500 (still safe)
+  
+  Switch to aggressive: α=0.5
+    baseline ≈ 125
+    threshold = 125 × 10 × 3.0 = 3750 (still high)
+  
+  Attack worse (1000 req/10s):
+    Alert triggered (exceeds all thresholds)
+  
+  Status: ALERT
+
+
+================================================================================
+MONITORING & DIAGNOSTICS
+================================================================================
+
+Check threshold tuning health:
+
+1. Alert distribution:
+   Expected: ~1-5% of total packets flagged as alerts
+   Reality: >> 20% = threshold too low
+   Reality: << 0.1% = threshold too high
+
+2. False positive trend:
+   Monitor known-benign traffic sources
+   Count false alerts per source
+   If increasing: Loosen threshold (increase headroom/z)
+
+3. Detection latency:
+   Measure time from attack start to first alert
+   Acceptable: < 30 seconds for HTTP floods
+   Unacceptable: > 60 seconds (threshold learning too slow)
+
+4. Threshold stability:
+   Chart threshold over time
+   Should follow traffic smoothly
+   Spikes indicate outlier capture (may need MAD)
+
+
+================================================================================
+END OF GUIDE
+================================================================================

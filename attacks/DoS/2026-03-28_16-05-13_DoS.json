@@ -1,0 +1,24 @@
+{
+  "alert": {
+    "type": "DoS",
+    "rule_name": "SSH Brute Force",
+    "protocol": "TCP",
+    "severity": "HIGH",
+    "source": "192.168.1.74",
+    "target": "192.168.1.77",
+    "dst_port": 22,
+    "packet_count": 72,
+    "window": 10,
+    "threshold": 72,
+    "baseline_rps": 6.8,
+    "algorithm": "EWMA adaptive thresholding",
+    "timestamp": 1774693213.7763433
+  },
+  "metadata": {
+    "logged_at": "2026-03-28T16:05:13.782867",
+    "attack_type": "DoS",
+    "source": "192.168.1.74",
+    "target": "192.168.1.77",
+    "severity": "HIGH"
+  }
+}

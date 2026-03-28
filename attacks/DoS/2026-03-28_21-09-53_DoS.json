@@ -1,0 +1,23 @@
+{
+  "alert": {
+    "type": "DoS",
+    "rule_name": "Elasticsearch Attack",
+    "protocol": "TCP",
+    "severity": "HIGH",
+    "source": "192.168.1.77",
+    "target": "192.168.1.77",
+    "dst_port": 9200,
+    "packet_count": 75,
+    "window": 10,
+    "threshold": 75,
+    "algorithm": "Signature-based threshold tuning",
+    "timestamp": 1774711493.7235446
+  },
+  "metadata": {
+    "logged_at": "2026-03-28T21:09:53.726398",
+    "attack_type": "DoS",
+    "source": "192.168.1.77",
+    "target": "192.168.1.77",
+    "severity": "HIGH"
+  }
+}

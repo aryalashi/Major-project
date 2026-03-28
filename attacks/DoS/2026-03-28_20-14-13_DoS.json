@@ -1,0 +1,23 @@
+{
+  "alert": {
+    "type": "DoS",
+    "rule_name": "TCP PSH-ACK Flood",
+    "protocol": "TCP",
+    "severity": "MEDIUM",
+    "source": "192.168.1.77",
+    "target": "23.212.255.210",
+    "dst_port": 443,
+    "packet_count": 43,
+    "window": 10,
+    "threshold": 25,
+    "algorithm": "Signature-based threshold tuning",
+    "timestamp": 1774708153.8515303
+  },
+  "metadata": {
+    "logged_at": "2026-03-28T20:14:13.865812",
+    "attack_type": "DoS",
+    "source": "192.168.1.77",
+    "target": "23.212.255.210",
+    "severity": "MEDIUM"
+  }
+}

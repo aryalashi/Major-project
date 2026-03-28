@@ -1,0 +1,24 @@
+{
+  "alert": {
+    "type": "DoS",
+    "rule_name": "ICMP Ping Flood",
+    "protocol": "ICMP",
+    "severity": "MEDIUM",
+    "source": "192.168.1.77",
+    "target": "192.168.1.77",
+    "dst_port": null,
+    "packet_count": 240,
+    "window": 10,
+    "threshold": 240,
+    "baseline_rps": 23.6,
+    "algorithm": "EWMA adaptive thresholding",
+    "timestamp": 1774682326.4772654
+  },
+  "metadata": {
+    "logged_at": "2026-03-28T13:03:48.416437",
+    "attack_type": "DoS",
+    "source": "192.168.1.77",
+    "target": "192.168.1.77",
+    "severity": "MEDIUM"
+  }
+}

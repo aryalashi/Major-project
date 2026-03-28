@@ -1,0 +1,27 @@
+{
+  "alert": {
+    "type": "Payload Attack",
+    "rule_name": "Payload Signature: UDP Flood",
+    "protocol": "UDP",
+    "severity": "MEDIUM",
+    "source": "192.168.1.77",
+    "target": "192.178.211.84",
+    "dst_port": 443,
+    "packet_count": 1,
+    "window": 1,
+    "threshold": 1,
+    "timestamp": 1774708189.1299748,
+    "category": "Shellcode",
+    "matched_signatures": [
+      "x86_Mov_EAX_Pattern"
+    ],
+    "confidence": 0.2
+  },
+  "metadata": {
+    "logged_at": "2026-03-28T20:14:52.994093",
+    "attack_type": "Payload_Attack",
+    "source": "192.168.1.77",
+    "target": "192.178.211.84",
+    "severity": "MEDIUM"
+  }
+}

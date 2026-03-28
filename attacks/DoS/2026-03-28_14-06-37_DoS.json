@@ -1,0 +1,24 @@
+{
+  "alert": {
+    "type": "DoS",
+    "rule_name": "TCP RST Flood",
+    "protocol": "TCP",
+    "severity": "HIGH",
+    "source": "192.168.1.77",
+    "target": "192.168.1.77",
+    "dst_port": 30791,
+    "packet_count": 90,
+    "window": 10,
+    "threshold": 90,
+    "baseline_rps": 8.6,
+    "algorithm": "EWMA adaptive thresholding",
+    "timestamp": 1774686095.2174208
+  },
+  "metadata": {
+    "logged_at": "2026-03-28T14:06:37.294374",
+    "attack_type": "DoS",
+    "source": "192.168.1.77",
+    "target": "192.168.1.77",
+    "severity": "HIGH"
+  }
+}

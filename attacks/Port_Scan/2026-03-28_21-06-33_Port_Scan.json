@@ -1,0 +1,23 @@
+{
+  "alert": {
+    "type": "Port Scan",
+    "rule_name": "TCP XMAS Scan",
+    "protocol": "TCP",
+    "severity": "MEDIUM",
+    "source": "192.168.1.77",
+    "target": "192.168.1.77",
+    "dst_port": 12,
+    "packet_count": 12,
+    "window": 5,
+    "threshold": 12,
+    "algorithm": "Signature-based threshold tuning",
+    "timestamp": 1774711293.3451269
+  },
+  "metadata": {
+    "logged_at": "2026-03-28T21:06:33.348163",
+    "attack_type": "Port_Scan",
+    "source": "192.168.1.77",
+    "target": "192.168.1.77",
+    "severity": "MEDIUM"
+  }
+}

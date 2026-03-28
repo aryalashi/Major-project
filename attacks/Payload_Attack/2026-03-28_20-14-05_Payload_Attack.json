@@ -1,0 +1,27 @@
+{
+  "alert": {
+    "type": "Payload Attack",
+    "rule_name": "Payload Signature: TCP payload on port 16662",
+    "protocol": "TCP",
+    "severity": "MEDIUM",
+    "source": "57.144.40.145",
+    "target": "192.168.1.77",
+    "dst_port": 16662,
+    "packet_count": 1,
+    "window": 1,
+    "threshold": 1,
+    "timestamp": 1774708145.2799993,
+    "category": "Shellcode",
+    "matched_signatures": [
+      "x86_Mov_EAX_Pattern"
+    ],
+    "confidence": 0.2
+  },
+  "metadata": {
+    "logged_at": "2026-03-28T20:14:05.282731",
+    "attack_type": "Payload_Attack",
+    "source": "57.144.40.145",
+    "target": "192.168.1.77",
+    "severity": "MEDIUM"
+  }
+}
