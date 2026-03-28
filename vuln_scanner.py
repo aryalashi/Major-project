@@ -22,6 +22,49 @@ from datetime import date
 logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
 logger = logging.getLogger(__name__)
 
+
+class _RedactSecretsFilter(logging.Filter):
+    """Redacts sensitive env-derived secrets from log records."""
+
+    _KEY_PATTERN = re.compile(r"(?i)(key|token|apikey|api_key|password)=([^&\s]+)")
+
+    def __init__(self):
+        super().__init__()
+        self._secret_values = []
+        secret_env_names = [
+            "GEMINI_API_KEY",
+            "TELEGRAM_BOT_TOKEN",
+            "DISCORD_WEBHOOK_URL",
+            "SLACK_WEBHOOK_URL",
+            "EMAIL_PASSWORD",
+            "CALLMEBOT_APIKEY",
+        ]
+        for name in secret_env_names:
+            value = os.getenv(name, "")
+            if value and len(value) >= 6:
+                self._secret_values.append(value)
+
+    def _redact(self, text: str) -> str:
+        redacted = text or ""
+        for secret in self._secret_values:
+            redacted = redacted.replace(secret, "***REDACTED***")
+        redacted = self._KEY_PATTERN.sub(lambda m: f"{m.group(1)}=***REDACTED***", redacted)
+        return redacted
+
+    def filter(self, record: logging.LogRecord) -> bool:
+        try:
+            msg = record.getMessage()
+            safe = self._redact(msg)
+            if safe != msg:
+                record.msg = safe
+                record.args = ()
+        except Exception:
+            pass
+        return True
+
+
+logger.addFilter(_RedactSecretsFilter())
+
 load_dotenv()
 
 
@@ -466,11 +509,16 @@ class VulnerabilityScanner:
             report += "-" * 50 + "\n"
         
         if output_file:
-            with open(output_file, 'w') as f:
+            # Force UTF-8 so Unicode content in reports never fails on Windows codepages.
+            with open(output_file, 'w', encoding='utf-8', errors='replace') as f:
                 f.write(report)
             logger.info(f"Report saved to: {output_file}")
         else:
-            print(report)
+            try:
+                print(report)
+            except UnicodeEncodeError:
+                safe_report = report.encode('utf-8', errors='replace').decode('utf-8', errors='replace')
+                print(safe_report)
     
     def estimate_version_age(self, service: str, version: str) -> str:
         try:

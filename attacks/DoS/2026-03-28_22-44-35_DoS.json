@@ -1,0 +1,23 @@
+{
+  "alert": {
+    "type": "DoS",
+    "rule_name": "UDP Flood",
+    "protocol": "UDP",
+    "severity": "MEDIUM",
+    "source": "192.168.1.77",
+    "target": "57.144.43.135",
+    "dst_port": 40003,
+    "packet_count": 296,
+    "window": 10,
+    "threshold": 90,
+    "algorithm": "Signature-based threshold tuning",
+    "timestamp": 1774717175.962353
+  },
+  "metadata": {
+    "logged_at": "2026-03-28T22:44:35.966931",
+    "attack_type": "DoS",
+    "source": "192.168.1.77",
+    "target": "57.144.43.135",
+    "severity": "MEDIUM"
+  }
+}

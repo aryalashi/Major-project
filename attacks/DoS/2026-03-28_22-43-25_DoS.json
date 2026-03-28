@@ -1,0 +1,23 @@
+{
+  "alert": {
+    "type": "DoS",
+    "rule_name": "DNS Amplification",
+    "protocol": "UDP",
+    "severity": "HIGH",
+    "source": "192.168.1.74",
+    "target": "192.168.1.77",
+    "dst_port": 53,
+    "packet_count": 90,
+    "window": 5,
+    "threshold": 90,
+    "algorithm": "Signature-based threshold tuning",
+    "timestamp": 1774717105.5745928
+  },
+  "metadata": {
+    "logged_at": "2026-03-28T22:43:25.701428",
+    "attack_type": "DoS",
+    "source": "192.168.1.74",
+    "target": "192.168.1.77",
+    "severity": "HIGH"
+  }
+}

@@ -1,0 +1,45 @@
+VULNERABILITY SCAN REPORT
+==================================================
+Total Services Analyzed: 3
+
+⚠️  IMPORTANT DISCLAIMER:
+- CVE information should be independently verified
+- Risk assessments are based on software age and general security posture
+- Always consult vendor security advisories for authoritative information
+==================================================
+
+Host: 192.168.1.77:135
+Service: msrpc unknown
+Risk: Unknown
+CVEs: None verified for this exact service/version
+Exploitable: False
+Exploits Available: False
+Patch Status: Unknown
+
+Detailed Analysis:
+rate limit in google api
+--------------------------------------------------
+
+Host: 192.168.1.77:139
+Service: netbios-ssn unknown
+Risk: Unknown
+CVEs: None verified for this exact service/version
+Exploitable: False
+Exploits Available: False
+Patch Status: Unknown
+
+Detailed Analysis:
+rate limit in google api
+--------------------------------------------------
+
+Host: 192.168.1.77:445
+Service: microsoft-ds unknown
+Risk: Unknown
+CVEs: None verified for this exact service/version
+Exploitable: False
+Exploits Available: False
+Patch Status: Unknown
+
+Detailed Analysis:
+rate limit in google api
+--------------------------------------------------

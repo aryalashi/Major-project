@@ -1,0 +1,23 @@
+{
+  "alert": {
+    "type": "DoS",
+    "rule_name": "FTP Brute Force",
+    "protocol": "TCP",
+    "severity": "MEDIUM",
+    "source": "192.168.1.74",
+    "target": "192.168.1.77",
+    "dst_port": 21,
+    "packet_count": 12,
+    "window": 10,
+    "threshold": 12,
+    "algorithm": "Signature-based threshold tuning",
+    "timestamp": 1774715321.9630806
+  },
+  "metadata": {
+    "logged_at": "2026-03-28T22:13:41.968984",
+    "attack_type": "DoS",
+    "source": "192.168.1.74",
+    "target": "192.168.1.77",
+    "severity": "MEDIUM"
+  }
+}

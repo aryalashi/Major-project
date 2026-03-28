@@ -102,7 +102,7 @@ CATEGORIZATION: LOW (2.0-4.0 range) → NORMAL TEXT
 
 EXAMPLE 2: HTTP Request
 ────────────────────────
-Payload: "POST /api?key=xyz HTTP/1.1\r\nContent-Length: 42\r\n\r\n"
+Payload: "POST /api?key=***REDACTED*** HTTP/1.1\r\nContent-Length: 42\r\n\r\n"
 
 Byte distribution:
   Letters (P,O,S,T,etc): ~30 bytes

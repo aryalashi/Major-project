@@ -1,0 +1,23 @@
+{
+  "alert": {
+    "type": "DoS",
+    "rule_name": "TCP FIN Flood",
+    "protocol": "TCP",
+    "severity": "MEDIUM",
+    "source": "192.168.1.74",
+    "target": "192.168.1.77",
+    "dst_port": 80,
+    "packet_count": 60,
+    "window": 10,
+    "threshold": 60,
+    "algorithm": "Signature-based threshold tuning",
+    "timestamp": 1774717488.67137
+  },
+  "metadata": {
+    "logged_at": "2026-03-28T22:49:48.674745",
+    "attack_type": "DoS",
+    "source": "192.168.1.74",
+    "target": "192.168.1.77",
+    "severity": "MEDIUM"
+  }
+}

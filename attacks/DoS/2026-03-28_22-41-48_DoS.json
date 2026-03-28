@@ -1,0 +1,23 @@
+{
+  "alert": {
+    "type": "DoS",
+    "rule_name": "HTTPS Flood",
+    "protocol": "TCP",
+    "severity": "HIGH",
+    "source": "192.168.1.74",
+    "target": "192.168.1.77",
+    "dst_port": 443,
+    "packet_count": 90,
+    "window": 10,
+    "threshold": 90,
+    "algorithm": "Signature-based threshold tuning",
+    "timestamp": 1774717008.6111405
+  },
+  "metadata": {
+    "logged_at": "2026-03-28T22:41:48.613888",
+    "attack_type": "DoS",
+    "source": "192.168.1.74",
+    "target": "192.168.1.77",
+    "severity": "HIGH"
+  }
+}

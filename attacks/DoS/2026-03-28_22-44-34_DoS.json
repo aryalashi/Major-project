@@ -1,0 +1,23 @@
+{
+  "alert": {
+    "type": "DoS",
+    "rule_name": "TCP ACK Flood",
+    "protocol": "TCP",
+    "severity": "MEDIUM",
+    "source": "192.168.1.77",
+    "target": "163.70.145.20",
+    "dst_port": 443,
+    "packet_count": 49,
+    "window": 10,
+    "threshold": 45,
+    "algorithm": "Signature-based threshold tuning",
+    "timestamp": 1774717174.8205483
+  },
+  "metadata": {
+    "logged_at": "2026-03-28T22:44:34.823347",
+    "attack_type": "DoS",
+    "source": "192.168.1.77",
+    "target": "163.70.145.20",
+    "severity": "MEDIUM"
+  }
+}

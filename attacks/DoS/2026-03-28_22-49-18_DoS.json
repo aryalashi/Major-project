@@ -1,0 +1,23 @@
+{
+  "alert": {
+    "type": "DoS",
+    "rule_name": "TCP RST Flood",
+    "protocol": "TCP",
+    "severity": "HIGH",
+    "source": "192.168.1.77",
+    "target": "140.82.112.22",
+    "dst_port": 443,
+    "packet_count": 231,
+    "window": 10,
+    "threshold": 45,
+    "algorithm": "Signature-based threshold tuning",
+    "timestamp": 1774717458.6584082
+  },
+  "metadata": {
+    "logged_at": "2026-03-28T22:49:18.662072",
+    "attack_type": "DoS",
+    "source": "192.168.1.77",
+    "target": "140.82.112.22",
+    "severity": "HIGH"
+  }
+}

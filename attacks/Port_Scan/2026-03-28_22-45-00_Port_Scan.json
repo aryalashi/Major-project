@@ -1,0 +1,23 @@
+{
+  "alert": {
+    "type": "Port Scan",
+    "rule_name": "TCP SYN Port Scan",
+    "protocol": "TCP",
+    "severity": "MEDIUM",
+    "source": "192.168.1.77",
+    "target": "192.168.1.74",
+    "dst_port": 443,
+    "packet_count": 12,
+    "window": 5,
+    "threshold": 11,
+    "algorithm": "Signature-based threshold tuning",
+    "timestamp": 1774717200.774382
+  },
+  "metadata": {
+    "logged_at": "2026-03-28T22:45:00.789567",
+    "attack_type": "Port_Scan",
+    "source": "192.168.1.77",
+    "target": "192.168.1.74",
+    "severity": "MEDIUM"
+  }
+}

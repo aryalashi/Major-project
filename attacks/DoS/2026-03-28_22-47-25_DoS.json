@@ -1,0 +1,23 @@
+{
+  "alert": {
+    "type": "DoS",
+    "rule_name": "TCP SYN Flood",
+    "protocol": "TCP",
+    "severity": "HIGH",
+    "source": "192.168.1.74",
+    "target": "192.168.1.77",
+    "dst_port": 1433,
+    "packet_count": 45,
+    "window": 10,
+    "threshold": 45,
+    "algorithm": "Signature-based threshold tuning",
+    "timestamp": 1774717345.8447917
+  },
+  "metadata": {
+    "logged_at": "2026-03-28T22:47:25.848312",
+    "attack_type": "DoS",
+    "source": "192.168.1.74",
+    "target": "192.168.1.77",
+    "severity": "HIGH"
+  }
+}

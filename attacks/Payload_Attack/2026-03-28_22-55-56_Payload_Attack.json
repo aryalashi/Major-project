@@ -1,0 +1,27 @@
+{
+  "alert": {
+    "type": "Payload Attack",
+    "rule_name": "Payload Signature: TCP PSH-ACK Flood",
+    "protocol": "TCP",
+    "severity": "HIGH",
+    "source": "192.168.1.74",
+    "target": "192.168.1.77",
+    "dst_port": 80,
+    "packet_count": 1,
+    "window": 1,
+    "threshold": 1,
+    "timestamp": 1774717856.3574574,
+    "category": "Shellcode",
+    "matched_signatures": [
+      "NOP_Sled_Shellcode"
+    ],
+    "confidence": 0.85
+  },
+  "metadata": {
+    "logged_at": "2026-03-28T22:55:56.953870",
+    "attack_type": "Payload_Attack",
+    "source": "192.168.1.74",
+    "target": "192.168.1.77",
+    "severity": "HIGH"
+  }
+}

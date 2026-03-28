@@ -16,6 +16,7 @@ Date: March 28, 2026
 
 import logging
 import threading
+import re
 from typing import Dict, Optional
 from datetime import datetime
 
@@ -27,7 +28,16 @@ try:
     PLYER_AVAILABLE = True
 except ImportError:
     PLYER_AVAILABLE = False
-    logger.warning("⚠️ Plyer not available - desktop notifications disabled")
+
+# Windows fallback: win10toast
+try:
+    from win10toast import ToastNotifier
+    WIN10TOAST_AVAILABLE = True
+except ImportError:
+    WIN10TOAST_AVAILABLE = False
+
+if not PLYER_AVAILABLE and not WIN10TOAST_AVAILABLE:
+    logger.warning("Desktop notifications disabled (plyer/win10toast not available)")
 
 
 class NotificationManager:
@@ -73,14 +83,24 @@ class NotificationManager:
             app_name: Application name for notifications
         """
         self.app_name = app_name
-        self.enabled = PLYER_AVAILABLE
+        self.enabled = PLYER_AVAILABLE or WIN10TOAST_AVAILABLE
+        self._toast = ToastNotifier() if WIN10TOAST_AVAILABLE else None
         self.notification_thread = None
         self.lock = threading.Lock()
         
         if self.enabled:
-            logger.info("✓ Desktop Notifications: ENABLED (Plyer)")
+            backend = "plyer" if PLYER_AVAILABLE else "win10toast"
+            logger.info(f"Desktop Notifications: ENABLED ({backend})")
         else:
-            logger.warning("✗ Desktop Notifications: DISABLED (Plyer not available)")
+            logger.warning("Desktop Notifications: DISABLED")
+
+    @staticmethod
+    def _normalize_text(text: str) -> str:
+        """Keep popup text Windows-friendly by stripping emoji/symbol-only chars."""
+        safe = text or ""
+        safe = re.sub(r"[^\x20-\x7E\n\r\t]", "", safe)
+        safe = re.sub(r"\s+", " ", safe).strip()
+        return safe
     
     def notify_alert(
         self,
@@ -218,7 +238,7 @@ class NotificationManager:
         timeout: int = 10
     ) -> bool:
         """
-        Send a desktop notification using Plyer.
+        Send a desktop notification using available backend.
         
         Args:
             title: Notification title
@@ -228,22 +248,51 @@ class NotificationManager:
         Returns:
             True if notification was sent successfully
         """
-        if not PLYER_AVAILABLE:
+        if not self.enabled:
             return False
+
+        safe_title = self._normalize_text(title)[:64] or "NIDS Alert"
+        safe_message = self._normalize_text(message)[:240] or "Security event detected"
         
         try:
             with self.lock:
-                notification.notify(
-                    title=title,
-                    message=message,
-                    app_name=self.app_name,
-                    timeout=timeout
-                )
-            logger.debug(f"[NOTIFY] {title}: {message}")
-            return True
+                if PLYER_AVAILABLE:
+                    notification.notify(
+                        title=safe_title,
+                        message=safe_message,
+                        app_name=self.app_name,
+                        timeout=timeout
+                    )
+                    logger.debug(f"[NOTIFY] {safe_title}: {safe_message}")
+                    return True
+
+                if self._toast is not None:
+                    # duration in win10toast is seconds; threaded avoids blocking.
+                    self._toast.show_toast(
+                        safe_title,
+                        safe_message,
+                        duration=max(3, min(int(timeout), 15)),
+                        threaded=True,
+                    )
+                    logger.debug(f"[NOTIFY] {safe_title}: {safe_message}")
+                    return True
+
+            return False
         
         except Exception as e:
-            logger.error(f"Plyer notification error: {e}")
+            logger.debug(f"Notification backend error: {e}")
+            # Fallback attempt if plyer failed at runtime and win10toast exists.
+            if self._toast is not None:
+                try:
+                    self._toast.show_toast(
+                        safe_title,
+                        safe_message,
+                        duration=max(3, min(int(timeout), 15)),
+                        threaded=True,
+                    )
+                    return True
+                except Exception as inner_e:
+                    logger.debug(f"win10toast fallback error: {inner_e}")
             return False
     
     def test_notification(self) -> bool:

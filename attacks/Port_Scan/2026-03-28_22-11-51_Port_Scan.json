@@ -1,0 +1,23 @@
+{
+  "alert": {
+    "type": "Port Scan",
+    "rule_name": "UDP Port Scan",
+    "protocol": "UDP",
+    "severity": "LOW",
+    "source": "192.168.1.74",
+    "target": "192.168.1.77",
+    "dst_port": 12,
+    "packet_count": 12,
+    "window": 5,
+    "threshold": 11,
+    "algorithm": "Signature-based threshold tuning",
+    "timestamp": 1774715211.3544586
+  },
+  "metadata": {
+    "logged_at": "2026-03-28T22:11:51.359946",
+    "attack_type": "Port_Scan",
+    "source": "192.168.1.74",
+    "target": "192.168.1.77",
+    "severity": "LOW"
+  }
+}

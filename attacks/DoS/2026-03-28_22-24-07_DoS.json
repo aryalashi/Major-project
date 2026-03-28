@@ -1,0 +1,23 @@
+{
+  "alert": {
+    "type": "DoS",
+    "rule_name": "PostgreSQL Brute Force",
+    "protocol": "TCP",
+    "severity": "HIGH",
+    "source": "192.168.1.74",
+    "target": "192.168.1.77",
+    "dst_port": 5432,
+    "packet_count": 15,
+    "window": 10,
+    "threshold": 15,
+    "algorithm": "Signature-based threshold tuning",
+    "timestamp": 1774715947.1706326
+  },
+  "metadata": {
+    "logged_at": "2026-03-28T22:24:07.173236",
+    "attack_type": "DoS",
+    "source": "192.168.1.74",
+    "target": "192.168.1.77",
+    "severity": "HIGH"
+  }
+}

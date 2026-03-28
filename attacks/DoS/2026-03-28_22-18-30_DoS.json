@@ -1,0 +1,23 @@
+{
+  "alert": {
+    "type": "DoS",
+    "rule_name": "SMTP Flood",
+    "protocol": "TCP",
+    "severity": "MEDIUM",
+    "source": "192.168.1.74",
+    "target": "192.168.1.77",
+    "dst_port": 25,
+    "packet_count": 18,
+    "window": 10,
+    "threshold": 18,
+    "algorithm": "Signature-based threshold tuning",
+    "timestamp": 1774715610.4802332
+  },
+  "metadata": {
+    "logged_at": "2026-03-28T22:18:30.486606",
+    "attack_type": "DoS",
+    "source": "192.168.1.74",
+    "target": "192.168.1.77",
+    "severity": "MEDIUM"
+  }
+}

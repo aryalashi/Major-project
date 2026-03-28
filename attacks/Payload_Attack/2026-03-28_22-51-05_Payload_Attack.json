@@ -1,0 +1,27 @@
+{
+  "alert": {
+    "type": "Payload Attack",
+    "rule_name": "Payload Signature: TCP payload on port 45667",
+    "protocol": "TCP",
+    "severity": "HIGH",
+    "source": "103.186.197.76",
+    "target": "192.168.1.77",
+    "dst_port": 45667,
+    "packet_count": 1,
+    "window": 1,
+    "threshold": 1,
+    "timestamp": 1774717565.143531,
+    "category": "Command Injection",
+    "matched_signatures": [
+      "CMD_Injection_Backtick_ID"
+    ],
+    "confidence": 0.86
+  },
+  "metadata": {
+    "logged_at": "2026-03-28T22:51:05.821737",
+    "attack_type": "Payload_Attack",
+    "source": "103.186.197.76",
+    "target": "192.168.1.77",
+    "severity": "HIGH"
+  }
+}

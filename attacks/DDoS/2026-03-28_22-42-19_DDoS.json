@@ -1,0 +1,30 @@
+{
+  "alert": {
+    "type": "DDoS",
+    "rule_name": "DDoS Multi-Source",
+    "protocol": "TCP",
+    "severity": "CRITICAL",
+    "source": "20 unique IPs",
+    "target": "192.168.1.77",
+    "dst_port": 38355,
+    "packet_count": 932,
+    "unique_sources": 20,
+    "top_attackers": [
+      "163.70.145.10",
+      "103.186.196.17",
+      "163.70.145.20",
+      "57.144.40.1",
+      "149.154.167.99"
+    ],
+    "threshold": 12,
+    "algorithm": "Signature-based threshold tuning",
+    "timestamp": 1774717039.9119742
+  },
+  "metadata": {
+    "logged_at": "2026-03-28T22:42:19.921184",
+    "attack_type": "DDoS",
+    "source": "20 unique IPs",
+    "target": "192.168.1.77",
+    "severity": "CRITICAL"
+  }
+}

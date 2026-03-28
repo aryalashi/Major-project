@@ -19,8 +19,6 @@ win10toast>=1.0.0
 # Desktop notifications (offline fallback)
 plyer>=2.1.0
 
-# Performance monitoring (Educational Tools)
-psutil>=5.0.0
 
 # Nmap vulnerability scanning
 python-libnmap>=0.7.2

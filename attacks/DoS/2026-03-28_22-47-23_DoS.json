@@ -1,0 +1,23 @@
+{
+  "alert": {
+    "type": "DoS",
+    "rule_name": "MSSQL Brute Force",
+    "protocol": "TCP",
+    "severity": "HIGH",
+    "source": "192.168.1.74",
+    "target": "192.168.1.77",
+    "dst_port": 1433,
+    "packet_count": 15,
+    "window": 10,
+    "threshold": 15,
+    "algorithm": "Signature-based threshold tuning",
+    "timestamp": 1774717343.9050014
+  },
+  "metadata": {
+    "logged_at": "2026-03-28T22:47:23.908708",
+    "attack_type": "DoS",
+    "source": "192.168.1.74",
+    "target": "192.168.1.77",
+    "severity": "HIGH"
+  }
+}

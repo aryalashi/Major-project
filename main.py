@@ -15,6 +15,7 @@ import logging
 import threading
 import os
 import json
+import re
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -118,13 +119,60 @@ class _SafeStreamHandler(logging.StreamHandler):
                 pass
         self.flush()
 
+
+class _RedactSecretsFilter(logging.Filter):
+    """Redacts sensitive env-derived secrets from all log records."""
+
+    _KEY_PATTERN = re.compile(r"(?i)(key|token|apikey|api_key|password)=([^&\s]+)")
+
+    def __init__(self):
+        super().__init__()
+        self._secret_values = []
+        secret_env_names = [
+            "TELEGRAM_BOT_TOKEN",
+            "TELEGRAM_CHAT_ID",
+            "EMAIL_PASSWORD",
+            "DISCORD_WEBHOOK_URL",
+            "SLACK_WEBHOOK_URL",
+            "CALLMEBOT_APIKEY",
+            "WHATSAPP_APIKEY",
+            "GEMINI_API_KEY",
+        ]
+        for name in secret_env_names:
+            value = os.getenv(name, "")
+            if value and len(value) >= 6:
+                self._secret_values.append(value)
+
+    def _redact_text(self, text: str) -> str:
+        if not text:
+            return text
+        redacted = text
+        for secret in self._secret_values:
+            redacted = redacted.replace(secret, "***REDACTED***")
+        redacted = self._KEY_PATTERN.sub(lambda m: f"{m.group(1)}=***REDACTED***", redacted)
+        return redacted
+
+    def filter(self, record: logging.LogRecord) -> bool:
+        try:
+            original_message = record.getMessage()
+            redacted_message = self._redact_text(original_message)
+            if redacted_message != original_message:
+                record.msg = redacted_message
+                record.args = ()
+        except Exception:
+            pass
+        return True
+
 _file_handler   = _FlushFileHandler("logs/nids.log", encoding="utf-8")
 _stream_handler = _SafeStreamHandler(sys.stdout)
+_redact_filter  = _RedactSecretsFilter()
 _formatter      = logging.Formatter(
     "%(asctime)s [%(name)s] %(levelname)s: %(message)s"
 )
 _file_handler.setFormatter(_formatter)
 _stream_handler.setFormatter(_formatter)
+_file_handler.addFilter(_redact_filter)
+_stream_handler.addFilter(_redact_filter)
 logging.basicConfig(
     level    = logging.INFO,
     handlers = [_file_handler, _stream_handler]

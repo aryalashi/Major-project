@@ -1,0 +1,27 @@
+{
+  "alert": {
+    "type": "Payload Attack",
+    "rule_name": "Payload Signature: TCP PSH-ACK Flood",
+    "protocol": "TCP",
+    "severity": "CRITICAL",
+    "source": "192.168.1.74",
+    "target": "192.168.1.77",
+    "dst_port": 80,
+    "packet_count": 1,
+    "window": 1,
+    "threshold": 1,
+    "timestamp": 1774717750.9094706,
+    "category": "SQL Injection",
+    "matched_signatures": [
+      "SQLi_DROP_TABLE"
+    ],
+    "confidence": 0.9
+  },
+  "metadata": {
+    "logged_at": "2026-03-28T22:54:10.939271",
+    "attack_type": "Payload_Attack",
+    "source": "192.168.1.74",
+    "target": "192.168.1.77",
+    "severity": "CRITICAL"
+  }
+}

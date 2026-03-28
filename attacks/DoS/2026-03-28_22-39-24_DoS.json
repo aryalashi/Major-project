@@ -1,0 +1,23 @@
+{
+  "alert": {
+    "type": "DoS",
+    "rule_name": "Telnet Brute Force",
+    "protocol": "TCP",
+    "severity": "HIGH",
+    "source": "192.168.1.74",
+    "target": "192.168.1.77",
+    "dst_port": 23,
+    "packet_count": 15,
+    "window": 10,
+    "threshold": 15,
+    "algorithm": "Signature-based threshold tuning",
+    "timestamp": 1774716864.4917128
+  },
+  "metadata": {
+    "logged_at": "2026-03-28T22:39:24.495262",
+    "attack_type": "DoS",
+    "source": "192.168.1.74",
+    "target": "192.168.1.77",
+    "severity": "HIGH"
+  }
+}
