@@ -24432,3 +24432,9 @@ Auto-Tuner: Signature-based threshold tuning
 2026-03-28 21:10:44,959 [AlertEngine] INFO: [PCAP] Saved: attacks\DoS\2026-03-28_21-10-44_DoS.pcap
 2026-03-28 21:10:45,747 [AlertEngine] INFO: ✓ Alert sent to Telegram
 2026-03-28 21:10:47,364 [AlertEngine] INFO: ✓ Alert sent to Discord
+2026-03-28 21:15:54,556 [DetectionEngine] INFO: [DETECTION] TCP ACK Flood | src=127.0.0.1 -> dst=127.0.0.1 | count=45/45 in 10s
+2026-03-28 21:15:54,558 [NIDS] WARNING: [ALERT] TCP ACK Flood | DoS | src=127.0.0.1 -> dst=127.0.0.1 | severity=MEDIUM
+2026-03-28 21:15:54,563 [AlertEngine] INFO: [EVIDENCE] Saved: attacks\DoS\2026-03-28_21-15-54_DoS.json
+2026-03-28 21:15:54,653 [AlertEngine] INFO: [PCAP] Saved: attacks\DoS\2026-03-28_21-15-54_DoS.pcap
+2026-03-28 21:15:55,266 [AlertEngine] INFO: ✓ Alert sent to Discord
+2026-03-28 21:15:55,394 [AlertEngine] INFO: ✓ Alert sent to Telegram
