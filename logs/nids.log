@@ -24438,3 +24438,43 @@ Auto-Tuner: Signature-based threshold tuning
 2026-03-28 21:15:54,653 [AlertEngine] INFO: [PCAP] Saved: attacks\DoS\2026-03-28_21-15-54_DoS.pcap
 2026-03-28 21:15:55,266 [AlertEngine] INFO: ✓ Alert sent to Discord
 2026-03-28 21:15:55,394 [AlertEngine] INFO: ✓ Alert sent to Telegram
+2026-03-28 21:18:09,133 [DetectionEngine] INFO: [DETECTION] Heartbleed Attack | src=127.0.0.1 -> dst=127.0.0.1 | count=19/19 in 5s
+2026-03-28 21:18:09,134 [NIDS] WARNING: [ALERT] Heartbleed Attack | DoS | src=127.0.0.1 -> dst=127.0.0.1 | severity=CRITICAL
+2026-03-28 21:18:09,139 [AlertEngine] INFO: [EVIDENCE] Saved: attacks\DoS\2026-03-28_21-18-09_DoS.json
+2026-03-28 21:18:09,218 [AlertEngine] INFO: [PCAP] Saved: attacks\DoS\2026-03-28_21-18-09_DoS.pcap
+2026-03-28 21:18:09,219 [vuln_scanner] INFO: [SCAN] Triggering vulnerability scan on 127.0.0.1 (severity=CRITICAL)
+2026-03-28 21:18:09,225 [vuln_scanner] INFO: [AutoScanner] Starting scan workflow for 127.0.0.1
+2026-03-28 21:18:09,226 [vuln_scanner] INFO: Parsed 1 targets
+2026-03-28 21:18:09,227 [vuln_scanner] INFO: Scanning 1 target(s)...
+2026-03-28 21:18:09,230 [vuln_scanner] INFO: Running Nmap command: nmap -T4 -sV -sC --script=banner,vulners -iL C:\Users\ashish\AppData\Local\Temp\tmpnh8nc8lz.txt -oX C:\Users\ashish\AppData\Local\Temp\tmp6ggcj0xu.xml -p 21,22,23,25,53,80,135,139,443,445,902,1433,3268,3306,3389,5432,5985,5986,8080,8443
+2026-03-28 21:18:09,595 [DetectionEngine] INFO: [DETECTION] TCP SYN Flood | src=127.0.0.1 -> dst=127.0.0.1 | count=33/33 in 10s
+2026-03-28 21:18:09,599 [DetectionEngine] INFO: [DETECTION] Port Scan | src=127.0.0.1 | 12 unique ports in 5s (thr=11)
+2026-03-28 21:18:09,602 [NIDS] WARNING: [ALERT] TCP SYN Flood | DoS | src=127.0.0.1 -> dst=127.0.0.1 | severity=HIGH
+2026-03-28 21:18:09,604 [AlertEngine] INFO: [EVIDENCE] Saved: attacks\DoS\2026-03-28_21-18-09_DoS.json
+2026-03-28 21:18:09,693 [AlertEngine] INFO: ✓ Alert sent to Discord
+2026-03-28 21:18:09,712 [AlertEngine] INFO: [PCAP] Saved: attacks\DoS\2026-03-28_21-18-09_DoS.pcap
+2026-03-28 21:18:09,713 [NIDS] WARNING: [ALERT] TCP SYN Port Scan | Port Scan | src=127.0.0.1 -> dst=127.0.0.1 | severity=MEDIUM
+2026-03-28 21:18:09,718 [AlertEngine] INFO: [EVIDENCE] Saved: attacks\Port_Scan\2026-03-28_21-18-09_Port_Scan.json
+2026-03-28 21:18:09,808 [AlertEngine] INFO: [PCAP] Saved: attacks\Port_Scan\2026-03-28_21-18-09_Port_Scan.pcap
+2026-03-28 21:18:10,016 [AlertEngine] INFO: ✓ Alert sent to Telegram
+2026-03-28 21:18:10,394 [AlertEngine] INFO: ✓ Alert sent to Discord
+2026-03-28 21:18:10,609 [AlertEngine] INFO: ✓ Alert sent to Telegram
+2026-03-28 21:18:13,775 [DetectionEngine] INFO: [DETECTION] HTTPS Flood | src=127.0.0.1 -> dst=127.0.0.1 | count=32/32 in 10s
+2026-03-28 21:18:13,777 [NIDS] WARNING: [ALERT] HTTPS Flood | DoS | src=127.0.0.1 -> dst=127.0.0.1 | severity=HIGH
+2026-03-28 21:18:13,779 [AlertEngine] INFO: [EVIDENCE] Saved: attacks\DoS\2026-03-28_21-18-13_DoS.json
+2026-03-28 21:18:13,847 [AlertEngine] INFO: [PCAP] Saved: attacks\DoS\2026-03-28_21-18-13_DoS.pcap
+2026-03-28 21:18:15,820 [DetectionEngine] INFO: [DETECTION] TCP ACK Flood | src=127.0.0.1 -> dst=127.0.0.1 | count=45/45 in 10s
+2026-03-28 21:18:15,821 [NIDS] WARNING: [ALERT] TCP ACK Flood | DoS | src=127.0.0.1 -> dst=127.0.0.1 | severity=MEDIUM
+2026-03-28 21:18:15,828 [AlertEngine] INFO: [EVIDENCE] Saved: attacks\DoS\2026-03-28_21-18-15_DoS.json
+2026-03-28 21:18:15,924 [AlertEngine] INFO: [PCAP] Saved: attacks\DoS\2026-03-28_21-18-15_DoS.pcap
+2026-03-28 21:18:30,901 [vuln_scanner] INFO: Processing host: 127.0.0.1
+2026-03-28 21:18:30,903 [vuln_scanner] INFO: Found service: msrpc unknown on 127.0.0.1:135
+2026-03-28 21:18:30,904 [vuln_scanner] INFO: Found service: microsoft-ds unknown on 127.0.0.1:445
+2026-03-28 21:18:30,906 [vuln_scanner] INFO: Found 2 services to analyze...
+2026-03-28 21:18:30,907 [vuln_scanner] INFO: Analyzing msrpc unknown on 127.0.0.1:135...
+2026-03-28 21:18:30,907 [vuln_scanner] INFO: Analyzing microsoft-ds unknown on 127.0.0.1:445...
+2026-03-28 21:18:30,908 [vuln_scanner] INFO: Analyzing service: msrpc unknown with banner: 
+2026-03-28 21:18:30,909 [vuln_scanner] INFO: Analyzing service: microsoft-ds unknown with banner: 
+2026-03-28 21:18:31,770 [vuln_scanner] ERROR: Gemini API error: 429 Client Error: Too Many Requests for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=AIzaSyASLjKdd1fM6m7eJ3AR4I7A-STgBsl9uPE
+2026-03-28 21:18:31,861 [vuln_scanner] ERROR: Gemini API error: 429 Client Error: Too Many Requests for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=AIzaSyASLjKdd1fM6m7eJ3AR4I7A-STgBsl9uPE
+2026-03-28 21:18:31,864 [vuln_scanner] ERROR: [AutoScanner] Scan failed for 127.0.0.1: 'charmap' codec can't encode characters in position 109-110: character maps to <undefined>
