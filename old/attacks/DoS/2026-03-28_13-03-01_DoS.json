@@ -1,0 +1,24 @@
+{
+  "alert": {
+    "type": "DoS",
+    "rule_name": "UDP Flood",
+    "protocol": "UDP",
+    "severity": "HIGH",
+    "source": "192.168.1.77",
+    "target": "192.168.1.77",
+    "dst_port": 13268,
+    "packet_count": 180,
+    "window": 10,
+    "threshold": 180,
+    "baseline_rps": 17.6,
+    "algorithm": "EWMA adaptive thresholding",
+    "timestamp": 1774682278.4079285
+  },
+  "metadata": {
+    "logged_at": "2026-03-28T13:03:01.629823",
+    "attack_type": "DoS",
+    "source": "192.168.1.77",
+    "target": "192.168.1.77",
+    "severity": "HIGH"
+  }
+}

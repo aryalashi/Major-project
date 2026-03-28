@@ -1,0 +1,908 @@
+2026-03-28 11:20:06,577 [NIDS] INFO: ============================================================
+2026-03-28 11:20:06,577 [NIDS] INFO: NIDS - Signature-Based Network Intrusion Detection System
+2026-03-28 11:20:06,577 [NIDS] INFO: ============================================================
+2026-03-28 11:20:06,577 [RuleEngine] INFO: Using 14 hardcoded default rules (rules.json not found)
+2026-03-28 11:20:06,577 [DetectionEngine] INFO: ======================================================================
+2026-03-28 11:20:06,577 [DetectionEngine] INFO: DetectionEngine Initialized
+2026-03-28 11:20:06,578 [DetectionEngine] INFO: ======================================================================
+2026-03-28 11:20:06,578 [DetectionEngine] INFO: Rules Loaded: 14
+2026-03-28 11:20:06,578 [DetectionEngine] INFO:   By Protocol: {'TCP': 11, 'UDP': 2, 'ICMP': 1}
+2026-03-28 11:20:06,578 [DetectionEngine] INFO:   By Severity: {'HIGH': 3, 'MEDIUM': 9, 'LOW': 1, 'CRITICAL': 1}
+2026-03-28 11:20:06,578 [DetectionEngine] INFO: 
+Auto-Tuner: EWMA adaptive thresholding
+2026-03-28 11:20:06,578 [DetectionEngine] INFO:   Alpha: 0.2
+2026-03-28 11:20:06,578 [DetectionEngine] INFO:   Headroom: 3.0x
+2026-03-28 11:20:06,578 [DetectionEngine] INFO: ======================================================================
+2026-03-28 11:20:06,579 [EvidenceLogger] INFO: Evidence Logger initialized. Directory: attacks
+2026-03-28 11:20:06,579 [EvidenceLogger] INFO: AlertEngine initialized (stub)
+2026-03-28 11:20:06,579 [NIDS] INFO: CaptureController initialized with 14 rules
+2026-03-28 11:20:06,579 [PacketCapture] INFO: PacketCapture initialized
+2026-03-28 11:23:25,462 [RuleEngine] INFO: Using 14 hardcoded default rules (rules.json not found)
+2026-03-28 11:23:25,462 [DetectionEngine] INFO: ======================================================================
+2026-03-28 11:23:25,463 [DetectionEngine] INFO: DetectionEngine Initialized
+2026-03-28 11:23:25,463 [DetectionEngine] INFO: ======================================================================
+2026-03-28 11:23:25,463 [DetectionEngine] INFO: Rules Loaded: 14
+2026-03-28 11:23:25,463 [DetectionEngine] INFO:   By Protocol: {'TCP': 11, 'UDP': 2, 'ICMP': 1}
+2026-03-28 11:23:25,463 [DetectionEngine] INFO:   By Severity: {'HIGH': 3, 'MEDIUM': 9, 'LOW': 1, 'CRITICAL': 1}
+2026-03-28 11:23:25,463 [DetectionEngine] INFO: 
+Auto-Tuner: EWMA adaptive thresholding
+2026-03-28 11:23:25,464 [DetectionEngine] INFO:   Alpha: 0.2
+2026-03-28 11:23:25,464 [DetectionEngine] INFO:   Headroom: 3.0x
+2026-03-28 11:23:25,464 [DetectionEngine] INFO: ======================================================================
+2026-03-28 11:23:25,464 [EvidenceLogger] INFO: Evidence Logger initialized. Directory: attacks
+2026-03-28 11:23:25,465 [EvidenceLogger] INFO: AlertEngine initialized (stub)
+2026-03-28 11:23:25,465 [NIDS] INFO: CaptureController initialized with 14 rules
+2026-03-28 11:25:36,502 [NIDS] INFO: ============================================================
+2026-03-28 11:25:36,502 [NIDS] INFO: NIDS - Signature-Based Network Intrusion Detection System
+2026-03-28 11:25:36,502 [NIDS] INFO: ============================================================
+2026-03-28 11:25:36,503 [RuleEngine] INFO: Using 14 hardcoded default rules (rules.json not found)
+2026-03-28 11:25:36,503 [DetectionEngine] INFO: ======================================================================
+2026-03-28 11:25:36,503 [DetectionEngine] INFO: DetectionEngine Initialized
+2026-03-28 11:25:36,504 [DetectionEngine] INFO: ======================================================================
+2026-03-28 11:25:36,504 [DetectionEngine] INFO: Rules Loaded: 14
+2026-03-28 11:25:36,504 [DetectionEngine] INFO:   By Protocol: {'TCP': 11, 'UDP': 2, 'ICMP': 1}
+2026-03-28 11:25:36,505 [DetectionEngine] INFO:   By Severity: {'HIGH': 3, 'MEDIUM': 9, 'LOW': 1, 'CRITICAL': 1}
+2026-03-28 11:25:36,505 [DetectionEngine] INFO: 
+Auto-Tuner: EWMA adaptive thresholding
+2026-03-28 11:25:36,505 [DetectionEngine] INFO:   Alpha: 0.2
+2026-03-28 11:25:36,505 [DetectionEngine] INFO:   Headroom: 3.0x
+2026-03-28 11:25:36,505 [DetectionEngine] INFO: ======================================================================
+2026-03-28 11:25:36,506 [EvidenceLogger] INFO: Evidence Logger initialized. Directory: attacks
+2026-03-28 11:25:36,506 [EvidenceLogger] INFO: AlertEngine initialized (stub)
+2026-03-28 11:25:36,506 [NIDS] INFO: CaptureController initialized with 14 rules
+2026-03-28 11:25:36,531 [PacketCapture] INFO: PacketCapture initialized
+2026-03-28 11:25:36,532 [PacketCapture] INFO: Starting capture on \Device\NPF_{A423811C-46C9-42F1-8D1C-C6CBA50973BE}
+2026-03-28 11:31:31,747 [NIDS] INFO: ============================================================
+2026-03-28 11:31:31,748 [NIDS] INFO: NIDS - Signature-Based Network Intrusion Detection System
+2026-03-28 11:31:31,748 [NIDS] INFO: ============================================================
+2026-03-28 11:31:31,772 [NIDS] INFO: Launching GUI...
+2026-03-28 11:31:52,251 [NIDS] INFO: ============================================================
+2026-03-28 11:31:52,252 [NIDS] INFO: NIDS Starting - Signature-Based Intrusion Detection System
+2026-03-28 11:31:52,252 [NIDS] INFO: ============================================================
+2026-03-28 11:31:52,252 [RuleEngine] INFO: Using 14 hardcoded default rules (rules.json not found)
+2026-03-28 11:31:52,252 [NIDS] INFO: Rules loaded: 14 total
+2026-03-28 11:31:52,253 [NIDS] INFO:   Protocols: {'TCP': 11, 'UDP': 2, 'ICMP': 1}
+2026-03-28 11:31:52,253 [NIDS] INFO:   Severity breakdown: {'HIGH': 3, 'MEDIUM': 9, 'LOW': 1, 'CRITICAL': 1}
+2026-03-28 11:31:52,253 [DetectionEngine] INFO: ======================================================================
+2026-03-28 11:31:52,253 [DetectionEngine] INFO: DetectionEngine Initialized
+2026-03-28 11:31:52,253 [DetectionEngine] INFO: ======================================================================
+2026-03-28 11:31:52,253 [DetectionEngine] INFO: Rules Loaded: 14
+2026-03-28 11:31:52,254 [DetectionEngine] INFO:   By Protocol: {'TCP': 11, 'UDP': 2, 'ICMP': 1}
+2026-03-28 11:31:52,254 [DetectionEngine] INFO:   By Severity: {'HIGH': 3, 'MEDIUM': 9, 'LOW': 1, 'CRITICAL': 1}
+2026-03-28 11:31:52,254 [DetectionEngine] INFO: 
+Auto-Tuner: EWMA adaptive thresholding
+2026-03-28 11:31:52,254 [DetectionEngine] INFO:   Alpha: 0.2
+2026-03-28 11:31:52,254 [DetectionEngine] INFO:   Headroom: 3.0x
+2026-03-28 11:31:52,254 [DetectionEngine] INFO: ======================================================================
+2026-03-28 11:31:52,254 [NIDS] INFO: Detection Engine initialized with EWMA-based adaptive thresholding
+2026-03-28 11:35:24,567 [NIDS] INFO: ============================================================
+2026-03-28 11:35:24,567 [NIDS] INFO: NIDS Starting - Signature-Based Intrusion Detection System
+2026-03-28 11:35:24,568 [NIDS] INFO: ============================================================
+2026-03-28 11:35:24,568 [RuleEngine] INFO: Using 14 hardcoded default rules (rules.json not found)
+2026-03-28 11:35:24,568 [NIDS] INFO: Rules loaded: 14 total
+2026-03-28 11:35:24,568 [NIDS] INFO:   Protocols: {'TCP': 11, 'UDP': 2, 'ICMP': 1}
+2026-03-28 11:35:24,568 [NIDS] INFO:   Severity breakdown: {'HIGH': 3, 'MEDIUM': 9, 'LOW': 1, 'CRITICAL': 1}
+2026-03-28 11:35:24,568 [DetectionEngine] INFO: ======================================================================
+2026-03-28 11:35:24,569 [DetectionEngine] INFO: DetectionEngine Initialized
+2026-03-28 11:35:24,569 [DetectionEngine] INFO: ======================================================================
+2026-03-28 11:35:24,569 [DetectionEngine] INFO: Rules Loaded: 14
+2026-03-28 11:35:24,569 [DetectionEngine] INFO:   By Protocol: {'TCP': 11, 'UDP': 2, 'ICMP': 1}
+2026-03-28 11:35:24,569 [DetectionEngine] INFO:   By Severity: {'HIGH': 3, 'MEDIUM': 9, 'LOW': 1, 'CRITICAL': 1}
+2026-03-28 11:35:24,569 [DetectionEngine] INFO: 
+Auto-Tuner: EWMA adaptive thresholding
+2026-03-28 11:35:24,569 [DetectionEngine] INFO:   Alpha: 0.2
+2026-03-28 11:35:24,569 [DetectionEngine] INFO:   Headroom: 3.0x
+2026-03-28 11:35:24,569 [DetectionEngine] INFO: ======================================================================
+2026-03-28 11:35:24,570 [NIDS] INFO: Detection Engine initialized with EWMA-based adaptive thresholding
+2026-03-28 11:35:24,570 [NIDS] INFO:   Tuner parameters: alpha=0.2, headroom=3.0x, max_mult=6.0x
+2026-03-28 11:35:24,570 [NIDS] INFO: Detection engine ready with 14 active rules
+2026-03-28 11:35:24,570 [NIDS] INFO: ------------------------------------------------------------
+2026-03-28 11:35:24,570 [EvidenceLogger] INFO: AlertEngine initialized (stub)
+2026-03-28 11:35:24,570 [EvidenceLogger] INFO: Evidence Logger initialized. Directory: attacks
+2026-03-28 11:35:24,571 [vuln_scanner] INFO: AutoScanner initialized (cooldown=60s)
+2026-03-28 11:35:24,571 [HotspotMonitor] INFO: HotspotMonitor initialized
+2026-03-28 11:36:08,714 [NIDS] INFO: ============================================================
+2026-03-28 11:36:08,714 [NIDS] INFO: NIDS Starting - Signature-Based Intrusion Detection System
+2026-03-28 11:36:08,714 [NIDS] INFO: ============================================================
+2026-03-28 11:36:08,714 [RuleEngine] INFO: Using 14 hardcoded default rules (rules.json not found)
+2026-03-28 11:36:08,714 [NIDS] INFO: Rules loaded: 14 total
+2026-03-28 11:36:08,714 [NIDS] INFO:   Protocols: {'TCP': 11, 'UDP': 2, 'ICMP': 1}
+2026-03-28 11:36:08,714 [NIDS] INFO:   Severity breakdown: {'HIGH': 3, 'MEDIUM': 9, 'LOW': 1, 'CRITICAL': 1}
+2026-03-28 11:36:08,715 [DetectionEngine] INFO: ======================================================================
+2026-03-28 11:36:08,715 [DetectionEngine] INFO: DetectionEngine Initialized
+2026-03-28 11:36:08,715 [DetectionEngine] INFO: ======================================================================
+2026-03-28 11:36:08,715 [DetectionEngine] INFO: Rules Loaded: 14
+2026-03-28 11:36:08,715 [DetectionEngine] INFO:   By Protocol: {'TCP': 11, 'UDP': 2, 'ICMP': 1}
+2026-03-28 11:36:08,715 [DetectionEngine] INFO:   By Severity: {'HIGH': 3, 'MEDIUM': 9, 'LOW': 1, 'CRITICAL': 1}
+2026-03-28 11:36:08,715 [DetectionEngine] INFO: 
+Auto-Tuner: EWMA adaptive thresholding
+2026-03-28 11:36:08,715 [DetectionEngine] INFO:   Alpha: 0.2
+2026-03-28 11:36:08,715 [DetectionEngine] INFO:   Headroom: 3.0x
+2026-03-28 11:36:08,715 [DetectionEngine] INFO: ======================================================================
+2026-03-28 11:36:08,715 [NIDS] INFO: Detection Engine initialized with EWMA-based adaptive thresholding
+2026-03-28 11:36:08,715 [NIDS] INFO:   Tuner parameters: alpha=0.2, headroom=3.0x, max_mult=6.0x
+2026-03-28 11:36:08,715 [NIDS] INFO: Detection engine ready with 14 active rules
+2026-03-28 11:36:08,715 [NIDS] INFO: ------------------------------------------------------------
+2026-03-28 11:36:08,715 [EvidenceLogger] INFO: AlertEngine initialized (stub)
+2026-03-28 11:36:08,716 [EvidenceLogger] INFO: Evidence Logger initialized. Directory: attacks
+2026-03-28 11:36:08,716 [vuln_scanner] INFO: AutoScanner initialized (cooldown=60s)
+2026-03-28 11:36:08,716 [HotspotMonitor] INFO: HotspotMonitor initialized
+2026-03-28 11:36:08,754 [NIDS] INFO: Available interfaces: ['[Unknown]  \\Device\\NPF_{A423811C-46C9-42F1-8D1C-C6CBA50973BE} (N/A)', '[Unknown]  \\Device\\NPF_{952C03EB-1FA3-4454-8294-F2B74BC50A67} (N/A)', '[Unknown]  \\Device\\NPF_{0341EC7D-2449-4A27-A56F-1A9CAC0698EA} (N/A)', '[Unknown]  \\Device\\NPF_{987610F9-9E02-404A-B0FE-637C80B0DE5D} (N/A)', '[Unknown]  \\Device\\NPF_{9D027F6C-3007-4EDD-9E79-062DB4648A15} (N/A)', '[Unknown]  \\Device\\NPF_{D8E75DCC-51C9-4C63-B0C3-01101D39D36B} (N/A)', '[Unknown]  \\Device\\NPF_{D00CE2EF-A43D-4E14-AE44-E7A26EAB3EBC} (N/A)', '[Loopback] \\Device\\NPF_Loopback (N/A)', '[Unknown]  \\Device\\NPF_{6BC1616E-85F7-4191-AF10-7E8DCAC4E930} (N/A)']
+2026-03-28 11:36:08,754 [NIDS] INFO: Best interface detected: \Device\NPF_{A423811C-46C9-42F1-8D1C-C6CBA50973BE}
+2026-03-28 11:36:08,754 [NIDS] INFO:   Interface: [Unknown]  \Device\NPF_{A423811C-46C9-42F1-8D1C-C6CBA50973BE} (N/A) -> \Device\NPF_{A423811C-46C9-42F1-8D1C-C6CBA50973BE}
+2026-03-28 11:36:08,754 [NIDS] INFO:   Interface: [Unknown]  \Device\NPF_{952C03EB-1FA3-4454-8294-F2B74BC50A67} (N/A) -> \Device\NPF_{952C03EB-1FA3-4454-8294-F2B74BC50A67}
+2026-03-28 11:36:08,754 [NIDS] INFO:   Interface: [Unknown]  \Device\NPF_{0341EC7D-2449-4A27-A56F-1A9CAC0698EA} (N/A) -> \Device\NPF_{0341EC7D-2449-4A27-A56F-1A9CAC0698EA}
+2026-03-28 11:36:08,754 [NIDS] INFO:   Interface: [Unknown]  \Device\NPF_{987610F9-9E02-404A-B0FE-637C80B0DE5D} (N/A) -> \Device\NPF_{987610F9-9E02-404A-B0FE-637C80B0DE5D}
+2026-03-28 11:36:08,754 [NIDS] INFO:   Interface: [Unknown]  \Device\NPF_{9D027F6C-3007-4EDD-9E79-062DB4648A15} (N/A) -> \Device\NPF_{9D027F6C-3007-4EDD-9E79-062DB4648A15}
+2026-03-28 11:36:08,754 [NIDS] INFO:   Interface: [Unknown]  \Device\NPF_{D8E75DCC-51C9-4C63-B0C3-01101D39D36B} (N/A) -> \Device\NPF_{D8E75DCC-51C9-4C63-B0C3-01101D39D36B}
+2026-03-28 11:36:08,755 [NIDS] INFO:   Interface: [Unknown]  \Device\NPF_{D00CE2EF-A43D-4E14-AE44-E7A26EAB3EBC} (N/A) -> \Device\NPF_{D00CE2EF-A43D-4E14-AE44-E7A26EAB3EBC}
+2026-03-28 11:36:08,755 [NIDS] INFO:   Interface: [Loopback] \Device\NPF_Loopback (N/A) -> \Device\NPF_Loopback
+2026-03-28 11:36:08,755 [NIDS] INFO:   Interface: [Unknown]  \Device\NPF_{6BC1616E-85F7-4191-AF10-7E8DCAC4E930} (N/A) -> \Device\NPF_{6BC1616E-85F7-4191-AF10-7E8DCAC4E930}
+2026-03-28 11:36:08,878 [NIDS] ERROR: GUI import failed: cannot import name 'launch_gui' from 'gui' (C:\Users\ashish\Desktop\DOS\nids_project\old\gui.py)
+2026-03-28 11:36:08,878 [NIDS] INFO: Running in headless mode (10 seconds)...
+2026-03-28 11:37:51,814 [NIDS] INFO: ============================================================
+2026-03-28 11:37:51,814 [NIDS] INFO: NIDS Starting - Signature-Based Intrusion Detection System
+2026-03-28 11:37:51,814 [NIDS] INFO: ============================================================
+2026-03-28 11:37:51,814 [RuleEngine] INFO: Using 14 hardcoded default rules (rules.json not found)
+2026-03-28 11:37:51,815 [NIDS] INFO: Rules loaded: 14 total
+2026-03-28 11:37:51,815 [NIDS] INFO:   Protocols: {'TCP': 11, 'UDP': 2, 'ICMP': 1}
+2026-03-28 11:37:51,815 [NIDS] INFO:   Severity breakdown: {'HIGH': 3, 'MEDIUM': 9, 'LOW': 1, 'CRITICAL': 1}
+2026-03-28 11:37:51,815 [DetectionEngine] INFO: ======================================================================
+2026-03-28 11:37:51,816 [DetectionEngine] INFO: DetectionEngine Initialized
+2026-03-28 11:37:51,816 [DetectionEngine] INFO: ======================================================================
+2026-03-28 11:37:51,816 [DetectionEngine] INFO: Rules Loaded: 14
+2026-03-28 11:37:51,816 [DetectionEngine] INFO:   By Protocol: {'TCP': 11, 'UDP': 2, 'ICMP': 1}
+2026-03-28 11:37:51,816 [DetectionEngine] INFO:   By Severity: {'HIGH': 3, 'MEDIUM': 9, 'LOW': 1, 'CRITICAL': 1}
+2026-03-28 11:37:51,816 [DetectionEngine] INFO: 
+Auto-Tuner: EWMA adaptive thresholding
+2026-03-28 11:37:51,817 [DetectionEngine] INFO:   Alpha: 0.2
+2026-03-28 11:37:51,817 [DetectionEngine] INFO:   Headroom: 3.0x
+2026-03-28 11:37:51,817 [DetectionEngine] INFO: ======================================================================
+2026-03-28 11:37:51,817 [NIDS] INFO: Detection Engine initialized with EWMA-based adaptive thresholding
+2026-03-28 11:37:51,817 [NIDS] INFO:   Tuner parameters: alpha=0.2, headroom=3.0x, max_mult=6.0x
+2026-03-28 11:37:51,817 [NIDS] INFO: Detection engine ready with 14 active rules
+2026-03-28 11:37:51,817 [NIDS] INFO: ------------------------------------------------------------
+2026-03-28 11:37:51,817 [EvidenceLogger] INFO: AlertEngine initialized (stub)
+2026-03-28 11:37:51,818 [EvidenceLogger] INFO: Evidence Logger initialized. Directory: attacks
+2026-03-28 11:37:51,818 [vuln_scanner] INFO: AutoScanner initialized (cooldown=60s)
+2026-03-28 11:37:51,818 [HotspotMonitor] INFO: HotspotMonitor initialized
+2026-03-28 11:37:51,843 [NIDS] INFO: Available interfaces: ['[Unknown]  \\Device\\NPF_{A423811C-46C9-42F1-8D1C-C6CBA50973BE} (N/A)', '[Unknown]  \\Device\\NPF_{952C03EB-1FA3-4454-8294-F2B74BC50A67} (N/A)', '[Unknown]  \\Device\\NPF_{0341EC7D-2449-4A27-A56F-1A9CAC0698EA} (N/A)', '[Unknown]  \\Device\\NPF_{987610F9-9E02-404A-B0FE-637C80B0DE5D} (N/A)', '[Unknown]  \\Device\\NPF_{9D027F6C-3007-4EDD-9E79-062DB4648A15} (N/A)', '[Unknown]  \\Device\\NPF_{D8E75DCC-51C9-4C63-B0C3-01101D39D36B} (N/A)', '[Unknown]  \\Device\\NPF_{D00CE2EF-A43D-4E14-AE44-E7A26EAB3EBC} (N/A)', '[Loopback] \\Device\\NPF_Loopback (N/A)', '[Unknown]  \\Device\\NPF_{6BC1616E-85F7-4191-AF10-7E8DCAC4E930} (N/A)']
+2026-03-28 11:37:51,843 [NIDS] INFO: Best interface detected: \Device\NPF_{A423811C-46C9-42F1-8D1C-C6CBA50973BE}
+2026-03-28 11:37:51,843 [NIDS] INFO:   Interface: [Unknown]  \Device\NPF_{A423811C-46C9-42F1-8D1C-C6CBA50973BE} (N/A) -> \Device\NPF_{A423811C-46C9-42F1-8D1C-C6CBA50973BE}
+2026-03-28 11:37:51,843 [NIDS] INFO:   Interface: [Unknown]  \Device\NPF_{952C03EB-1FA3-4454-8294-F2B74BC50A67} (N/A) -> \Device\NPF_{952C03EB-1FA3-4454-8294-F2B74BC50A67}
+2026-03-28 11:37:51,844 [NIDS] INFO:   Interface: [Unknown]  \Device\NPF_{0341EC7D-2449-4A27-A56F-1A9CAC0698EA} (N/A) -> \Device\NPF_{0341EC7D-2449-4A27-A56F-1A9CAC0698EA}
+2026-03-28 11:37:51,844 [NIDS] INFO:   Interface: [Unknown]  \Device\NPF_{987610F9-9E02-404A-B0FE-637C80B0DE5D} (N/A) -> \Device\NPF_{987610F9-9E02-404A-B0FE-637C80B0DE5D}
+2026-03-28 11:37:51,844 [NIDS] INFO:   Interface: [Unknown]  \Device\NPF_{9D027F6C-3007-4EDD-9E79-062DB4648A15} (N/A) -> \Device\NPF_{9D027F6C-3007-4EDD-9E79-062DB4648A15}
+2026-03-28 11:37:51,844 [NIDS] INFO:   Interface: [Unknown]  \Device\NPF_{D8E75DCC-51C9-4C63-B0C3-01101D39D36B} (N/A) -> \Device\NPF_{D8E75DCC-51C9-4C63-B0C3-01101D39D36B}
+2026-03-28 11:37:51,844 [NIDS] INFO:   Interface: [Unknown]  \Device\NPF_{D00CE2EF-A43D-4E14-AE44-E7A26EAB3EBC} (N/A) -> \Device\NPF_{D00CE2EF-A43D-4E14-AE44-E7A26EAB3EBC}
+2026-03-28 11:37:51,845 [NIDS] INFO:   Interface: [Loopback] \Device\NPF_Loopback (N/A) -> \Device\NPF_Loopback
+2026-03-28 11:37:51,845 [NIDS] INFO:   Interface: [Unknown]  \Device\NPF_{6BC1616E-85F7-4191-AF10-7E8DCAC4E930} (N/A) -> \Device\NPF_{6BC1616E-85F7-4191-AF10-7E8DCAC4E930}
+2026-03-28 11:41:00,451 [NIDS] INFO: ============================================================
+2026-03-28 11:41:00,451 [NIDS] INFO: NIDS Starting - Signature-Based Intrusion Detection System
+2026-03-28 11:41:00,451 [NIDS] INFO: ============================================================
+2026-03-28 11:41:00,452 [RuleEngine] INFO: Using 14 hardcoded default rules (rules.json not found)
+2026-03-28 11:41:00,452 [NIDS] INFO: Rules loaded: 14 total
+2026-03-28 11:41:00,452 [NIDS] INFO:   Protocols: {'TCP': 11, 'UDP': 2, 'ICMP': 1}
+2026-03-28 11:41:00,452 [NIDS] INFO:   Severity breakdown: {'HIGH': 3, 'MEDIUM': 9, 'LOW': 1, 'CRITICAL': 1}
+2026-03-28 11:41:00,452 [DetectionEngine] INFO: ======================================================================
+2026-03-28 11:41:00,452 [DetectionEngine] INFO: DetectionEngine Initialized
+2026-03-28 11:41:00,452 [DetectionEngine] INFO: ======================================================================
+2026-03-28 11:41:00,452 [DetectionEngine] INFO: Rules Loaded: 14
+2026-03-28 11:41:00,452 [DetectionEngine] INFO:   By Protocol: {'TCP': 11, 'UDP': 2, 'ICMP': 1}
+2026-03-28 11:41:00,452 [DetectionEngine] INFO:   By Severity: {'HIGH': 3, 'MEDIUM': 9, 'LOW': 1, 'CRITICAL': 1}
+2026-03-28 11:41:00,452 [DetectionEngine] INFO: 
+Auto-Tuner: EWMA adaptive thresholding
+2026-03-28 11:41:00,452 [DetectionEngine] INFO:   Alpha: 0.2
+2026-03-28 11:41:00,452 [DetectionEngine] INFO:   Headroom: 3.0x
+2026-03-28 11:41:00,452 [DetectionEngine] INFO: ======================================================================
+2026-03-28 11:41:00,452 [NIDS] INFO: Detection Engine initialized with EWMA-based adaptive thresholding
+2026-03-28 11:41:00,452 [NIDS] INFO:   Tuner parameters: alpha=0.2, headroom=3.0x, max_mult=6.0x
+2026-03-28 11:41:00,452 [NIDS] INFO: Detection engine ready with 14 active rules
+2026-03-28 11:41:00,452 [NIDS] INFO: ------------------------------------------------------------
+2026-03-28 11:41:00,452 [EvidenceLogger] INFO: AlertEngine initialized (stub)
+2026-03-28 11:41:00,453 [EvidenceLogger] INFO: Evidence Logger initialized. Directory: attacks
+2026-03-28 11:41:00,453 [vuln_scanner] INFO: AutoScanner initialized (cooldown=60s)
+2026-03-28 11:41:00,453 [HotspotMonitor] INFO: HotspotMonitor initialized
+2026-03-28 11:41:00,477 [NIDS] INFO: Available interfaces: ['[Unknown]  \\Device\\NPF_{A423811C-46C9-42F1-8D1C-C6CBA50973BE} (N/A)', '[Unknown]  \\Device\\NPF_{952C03EB-1FA3-4454-8294-F2B74BC50A67} (N/A)', '[Unknown]  \\Device\\NPF_{0341EC7D-2449-4A27-A56F-1A9CAC0698EA} (N/A)', '[Unknown]  \\Device\\NPF_{987610F9-9E02-404A-B0FE-637C80B0DE5D} (N/A)', '[Unknown]  \\Device\\NPF_{9D027F6C-3007-4EDD-9E79-062DB4648A15} (N/A)', '[Unknown]  \\Device\\NPF_{D8E75DCC-51C9-4C63-B0C3-01101D39D36B} (N/A)', '[Unknown]  \\Device\\NPF_{D00CE2EF-A43D-4E14-AE44-E7A26EAB3EBC} (N/A)', '[Loopback] \\Device\\NPF_Loopback (N/A)', '[Unknown]  \\Device\\NPF_{6BC1616E-85F7-4191-AF10-7E8DCAC4E930} (N/A)']
+2026-03-28 11:41:00,477 [NIDS] INFO: Best interface detected: \Device\NPF_{A423811C-46C9-42F1-8D1C-C6CBA50973BE}
+2026-03-28 11:41:00,477 [NIDS] INFO:   Interface: [Unknown]  \Device\NPF_{A423811C-46C9-42F1-8D1C-C6CBA50973BE} (N/A) -> \Device\NPF_{A423811C-46C9-42F1-8D1C-C6CBA50973BE}
+2026-03-28 11:41:00,477 [NIDS] INFO:   Interface: [Unknown]  \Device\NPF_{952C03EB-1FA3-4454-8294-F2B74BC50A67} (N/A) -> \Device\NPF_{952C03EB-1FA3-4454-8294-F2B74BC50A67}
+2026-03-28 11:41:00,477 [NIDS] INFO:   Interface: [Unknown]  \Device\NPF_{0341EC7D-2449-4A27-A56F-1A9CAC0698EA} (N/A) -> \Device\NPF_{0341EC7D-2449-4A27-A56F-1A9CAC0698EA}
+2026-03-28 11:41:00,477 [NIDS] INFO:   Interface: [Unknown]  \Device\NPF_{987610F9-9E02-404A-B0FE-637C80B0DE5D} (N/A) -> \Device\NPF_{987610F9-9E02-404A-B0FE-637C80B0DE5D}
+2026-03-28 11:41:00,478 [NIDS] INFO:   Interface: [Unknown]  \Device\NPF_{9D027F6C-3007-4EDD-9E79-062DB4648A15} (N/A) -> \Device\NPF_{9D027F6C-3007-4EDD-9E79-062DB4648A15}
+2026-03-28 11:41:00,478 [NIDS] INFO:   Interface: [Unknown]  \Device\NPF_{D8E75DCC-51C9-4C63-B0C3-01101D39D36B} (N/A) -> \Device\NPF_{D8E75DCC-51C9-4C63-B0C3-01101D39D36B}
+2026-03-28 11:41:00,478 [NIDS] INFO:   Interface: [Unknown]  \Device\NPF_{D00CE2EF-A43D-4E14-AE44-E7A26EAB3EBC} (N/A) -> \Device\NPF_{D00CE2EF-A43D-4E14-AE44-E7A26EAB3EBC}
+2026-03-28 11:41:00,478 [NIDS] INFO:   Interface: [Loopback] \Device\NPF_Loopback (N/A) -> \Device\NPF_Loopback
+2026-03-28 11:41:00,478 [NIDS] INFO:   Interface: [Unknown]  \Device\NPF_{6BC1616E-85F7-4191-AF10-7E8DCAC4E930} (N/A) -> \Device\NPF_{6BC1616E-85F7-4191-AF10-7E8DCAC4E930}
+2026-03-28 11:41:28,093 [NIDS] INFO: ============================================================
+2026-03-28 11:41:28,093 [NIDS] INFO: NIDS Starting - Signature-Based Intrusion Detection System
+2026-03-28 11:41:28,093 [NIDS] INFO: ============================================================
+2026-03-28 11:41:28,094 [RuleEngine] INFO: Using 14 hardcoded default rules (rules.json not found)
+2026-03-28 11:41:28,094 [NIDS] INFO: Rules loaded: 14 total
+2026-03-28 11:41:28,094 [NIDS] INFO:   Protocols: {'TCP': 11, 'UDP': 2, 'ICMP': 1}
+2026-03-28 11:41:28,094 [NIDS] INFO:   Severity breakdown: {'HIGH': 3, 'MEDIUM': 9, 'LOW': 1, 'CRITICAL': 1}
+2026-03-28 11:41:28,095 [DetectionEngine] INFO: ======================================================================
+2026-03-28 11:41:28,095 [DetectionEngine] INFO: DetectionEngine Initialized
+2026-03-28 11:41:28,095 [DetectionEngine] INFO: ======================================================================
+2026-03-28 11:41:28,095 [DetectionEngine] INFO: Rules Loaded: 14
+2026-03-28 11:41:28,095 [DetectionEngine] INFO:   By Protocol: {'TCP': 11, 'UDP': 2, 'ICMP': 1}
+2026-03-28 11:41:28,095 [DetectionEngine] INFO:   By Severity: {'HIGH': 3, 'MEDIUM': 9, 'LOW': 1, 'CRITICAL': 1}
+2026-03-28 11:41:28,095 [DetectionEngine] INFO: 
+Auto-Tuner: EWMA adaptive thresholding
+2026-03-28 11:41:28,095 [DetectionEngine] INFO:   Alpha: 0.2
+2026-03-28 11:41:28,096 [DetectionEngine] INFO:   Headroom: 3.0x
+2026-03-28 11:41:28,096 [DetectionEngine] INFO: ======================================================================
+2026-03-28 11:41:28,096 [NIDS] INFO: Detection Engine initialized with EWMA-based adaptive thresholding
+2026-03-28 11:41:28,096 [NIDS] INFO:   Tuner parameters: alpha=0.2, headroom=3.0x, max_mult=6.0x
+2026-03-28 11:41:28,097 [NIDS] INFO: Detection engine ready with 14 active rules
+2026-03-28 11:41:28,097 [NIDS] INFO: ------------------------------------------------------------
+2026-03-28 11:41:28,097 [EvidenceLogger] INFO: AlertEngine initialized (stub)
+2026-03-28 11:41:28,097 [EvidenceLogger] INFO: Evidence Logger initialized. Directory: attacks
+2026-03-28 11:41:28,098 [vuln_scanner] INFO: AutoScanner initialized (cooldown=60s)
+2026-03-28 11:41:28,098 [HotspotMonitor] INFO: HotspotMonitor initialized
+2026-03-28 11:41:28,129 [NIDS] INFO: Available interfaces: ['[Unknown]  \\Device\\NPF_{A423811C-46C9-42F1-8D1C-C6CBA50973BE} (N/A)', '[Unknown]  \\Device\\NPF_{952C03EB-1FA3-4454-8294-F2B74BC50A67} (N/A)', '[Unknown]  \\Device\\NPF_{0341EC7D-2449-4A27-A56F-1A9CAC0698EA} (N/A)', '[Unknown]  \\Device\\NPF_{987610F9-9E02-404A-B0FE-637C80B0DE5D} (N/A)', '[Unknown]  \\Device\\NPF_{9D027F6C-3007-4EDD-9E79-062DB4648A15} (N/A)', '[Unknown]  \\Device\\NPF_{D8E75DCC-51C9-4C63-B0C3-01101D39D36B} (N/A)', '[Unknown]  \\Device\\NPF_{D00CE2EF-A43D-4E14-AE44-E7A26EAB3EBC} (N/A)', '[Loopback] \\Device\\NPF_Loopback (N/A)', '[Unknown]  \\Device\\NPF_{6BC1616E-85F7-4191-AF10-7E8DCAC4E930} (N/A)']
+2026-03-28 11:41:28,130 [NIDS] INFO: Best interface detected: \Device\NPF_{A423811C-46C9-42F1-8D1C-C6CBA50973BE}
+2026-03-28 11:41:28,130 [NIDS] INFO:   Interface: [Unknown]  \Device\NPF_{A423811C-46C9-42F1-8D1C-C6CBA50973BE} (N/A) -> \Device\NPF_{A423811C-46C9-42F1-8D1C-C6CBA50973BE}
+2026-03-28 11:41:28,130 [NIDS] INFO:   Interface: [Unknown]  \Device\NPF_{952C03EB-1FA3-4454-8294-F2B74BC50A67} (N/A) -> \Device\NPF_{952C03EB-1FA3-4454-8294-F2B74BC50A67}
+2026-03-28 11:41:28,130 [NIDS] INFO:   Interface: [Unknown]  \Device\NPF_{0341EC7D-2449-4A27-A56F-1A9CAC0698EA} (N/A) -> \Device\NPF_{0341EC7D-2449-4A27-A56F-1A9CAC0698EA}
+2026-03-28 11:41:28,130 [NIDS] INFO:   Interface: [Unknown]  \Device\NPF_{987610F9-9E02-404A-B0FE-637C80B0DE5D} (N/A) -> \Device\NPF_{987610F9-9E02-404A-B0FE-637C80B0DE5D}
+2026-03-28 11:41:28,130 [NIDS] INFO:   Interface: [Unknown]  \Device\NPF_{9D027F6C-3007-4EDD-9E79-062DB4648A15} (N/A) -> \Device\NPF_{9D027F6C-3007-4EDD-9E79-062DB4648A15}
+2026-03-28 11:41:28,130 [NIDS] INFO:   Interface: [Unknown]  \Device\NPF_{D8E75DCC-51C9-4C63-B0C3-01101D39D36B} (N/A) -> \Device\NPF_{D8E75DCC-51C9-4C63-B0C3-01101D39D36B}
+2026-03-28 11:41:28,131 [NIDS] INFO:   Interface: [Unknown]  \Device\NPF_{D00CE2EF-A43D-4E14-AE44-E7A26EAB3EBC} (N/A) -> \Device\NPF_{D00CE2EF-A43D-4E14-AE44-E7A26EAB3EBC}
+2026-03-28 11:41:28,131 [NIDS] INFO:   Interface: [Loopback] \Device\NPF_Loopback (N/A) -> \Device\NPF_Loopback
+2026-03-28 11:41:28,131 [NIDS] INFO:   Interface: [Unknown]  \Device\NPF_{6BC1616E-85F7-4191-AF10-7E8DCAC4E930} (N/A) -> \Device\NPF_{6BC1616E-85F7-4191-AF10-7E8DCAC4E930}
+2026-03-28 11:42:47,782 [NIDS] INFO: ============================================================
+2026-03-28 11:42:47,782 [NIDS] INFO: NIDS Starting - Signature-Based Intrusion Detection System
+2026-03-28 11:42:47,783 [NIDS] INFO: ============================================================
+2026-03-28 11:42:47,783 [RuleEngine] INFO: Using 14 hardcoded default rules (rules.json not found)
+2026-03-28 11:42:47,783 [NIDS] INFO: Rules loaded: 14 total
+2026-03-28 11:42:47,783 [NIDS] INFO:   Protocols: {'TCP': 11, 'UDP': 2, 'ICMP': 1}
+2026-03-28 11:42:47,784 [NIDS] INFO:   Severity breakdown: {'HIGH': 3, 'MEDIUM': 9, 'LOW': 1, 'CRITICAL': 1}
+2026-03-28 11:42:47,784 [DetectionEngine] INFO: ======================================================================
+2026-03-28 11:42:47,784 [DetectionEngine] INFO: DetectionEngine Initialized
+2026-03-28 11:42:47,784 [DetectionEngine] INFO: ======================================================================
+2026-03-28 11:42:47,784 [DetectionEngine] INFO: Rules Loaded: 14
+2026-03-28 11:42:47,785 [DetectionEngine] INFO:   By Protocol: {'TCP': 11, 'UDP': 2, 'ICMP': 1}
+2026-03-28 11:42:47,785 [DetectionEngine] INFO:   By Severity: {'HIGH': 3, 'MEDIUM': 9, 'LOW': 1, 'CRITICAL': 1}
+2026-03-28 11:42:47,785 [DetectionEngine] INFO: 
+Auto-Tuner: EWMA adaptive thresholding
+2026-03-28 11:42:47,785 [DetectionEngine] INFO:   Alpha: 0.2
+2026-03-28 11:42:47,785 [DetectionEngine] INFO:   Headroom: 3.0x
+2026-03-28 11:42:47,785 [DetectionEngine] INFO: ======================================================================
+2026-03-28 11:42:47,786 [NIDS] INFO: Detection Engine initialized with EWMA-based adaptive thresholding
+2026-03-28 11:42:47,786 [NIDS] INFO:   Tuner parameters: alpha=0.2, headroom=3.0x, max_mult=6.0x
+2026-03-28 11:42:47,786 [NIDS] INFO: Detection engine ready with 14 active rules
+2026-03-28 11:42:47,786 [NIDS] INFO: ------------------------------------------------------------
+2026-03-28 11:42:47,786 [EvidenceLogger] INFO: AlertEngine initialized (stub)
+2026-03-28 11:42:47,786 [EvidenceLogger] INFO: Evidence Logger initialized. Directory: attacks
+2026-03-28 11:42:47,786 [vuln_scanner] INFO: AutoScanner initialized (cooldown=60s)
+2026-03-28 11:42:47,787 [HotspotMonitor] INFO: HotspotMonitor initialized
+2026-03-28 11:42:47,815 [NIDS] INFO: Available interfaces: ['[Unknown]  \\Device\\NPF_{A423811C-46C9-42F1-8D1C-C6CBA50973BE} (N/A)', '[Unknown]  \\Device\\NPF_{952C03EB-1FA3-4454-8294-F2B74BC50A67} (N/A)', '[Unknown]  \\Device\\NPF_{0341EC7D-2449-4A27-A56F-1A9CAC0698EA} (N/A)', '[Unknown]  \\Device\\NPF_{987610F9-9E02-404A-B0FE-637C80B0DE5D} (N/A)', '[Unknown]  \\Device\\NPF_{9D027F6C-3007-4EDD-9E79-062DB4648A15} (N/A)', '[Unknown]  \\Device\\NPF_{D8E75DCC-51C9-4C63-B0C3-01101D39D36B} (N/A)', '[Unknown]  \\Device\\NPF_{D00CE2EF-A43D-4E14-AE44-E7A26EAB3EBC} (N/A)', '[Loopback] \\Device\\NPF_Loopback (N/A)', '[Unknown]  \\Device\\NPF_{6BC1616E-85F7-4191-AF10-7E8DCAC4E930} (N/A)']
+2026-03-28 11:42:47,815 [NIDS] INFO: Best interface detected: \Device\NPF_{A423811C-46C9-42F1-8D1C-C6CBA50973BE}
+2026-03-28 11:42:47,815 [NIDS] INFO:   Interface: [Unknown]  \Device\NPF_{A423811C-46C9-42F1-8D1C-C6CBA50973BE} (N/A) -> \Device\NPF_{A423811C-46C9-42F1-8D1C-C6CBA50973BE}
+2026-03-28 11:42:47,815 [NIDS] INFO:   Interface: [Unknown]  \Device\NPF_{952C03EB-1FA3-4454-8294-F2B74BC50A67} (N/A) -> \Device\NPF_{952C03EB-1FA3-4454-8294-F2B74BC50A67}
+2026-03-28 11:42:47,816 [NIDS] INFO:   Interface: [Unknown]  \Device\NPF_{0341EC7D-2449-4A27-A56F-1A9CAC0698EA} (N/A) -> \Device\NPF_{0341EC7D-2449-4A27-A56F-1A9CAC0698EA}
+2026-03-28 11:42:47,816 [NIDS] INFO:   Interface: [Unknown]  \Device\NPF_{987610F9-9E02-404A-B0FE-637C80B0DE5D} (N/A) -> \Device\NPF_{987610F9-9E02-404A-B0FE-637C80B0DE5D}
+2026-03-28 11:42:47,816 [NIDS] INFO:   Interface: [Unknown]  \Device\NPF_{9D027F6C-3007-4EDD-9E79-062DB4648A15} (N/A) -> \Device\NPF_{9D027F6C-3007-4EDD-9E79-062DB4648A15}
+2026-03-28 11:42:47,816 [NIDS] INFO:   Interface: [Unknown]  \Device\NPF_{D8E75DCC-51C9-4C63-B0C3-01101D39D36B} (N/A) -> \Device\NPF_{D8E75DCC-51C9-4C63-B0C3-01101D39D36B}
+2026-03-28 11:42:47,816 [NIDS] INFO:   Interface: [Unknown]  \Device\NPF_{D00CE2EF-A43D-4E14-AE44-E7A26EAB3EBC} (N/A) -> \Device\NPF_{D00CE2EF-A43D-4E14-AE44-E7A26EAB3EBC}
+2026-03-28 11:42:47,816 [NIDS] INFO:   Interface: [Loopback] \Device\NPF_Loopback (N/A) -> \Device\NPF_Loopback
+2026-03-28 11:42:47,816 [NIDS] INFO:   Interface: [Unknown]  \Device\NPF_{6BC1616E-85F7-4191-AF10-7E8DCAC4E930} (N/A) -> \Device\NPF_{6BC1616E-85F7-4191-AF10-7E8DCAC4E930}
+2026-03-28 11:42:49,897 [PacketCapture] INFO: PacketCapture initialized
+2026-03-28 11:42:49,898 [PacketCapture] INFO: Starting capture on \Device\NPF_{A423811C-46C9-42F1-8D1C-C6CBA50973BE}
+2026-03-28 11:57:38,724 [NIDS] INFO: ============================================================
+2026-03-28 11:57:38,724 [NIDS] INFO: NIDS Starting - Signature-Based Intrusion Detection System
+2026-03-28 11:57:38,724 [NIDS] INFO: ============================================================
+2026-03-28 11:57:38,725 [RuleEngine] INFO: Using 14 hardcoded default rules (rules.json not found)
+2026-03-28 11:57:38,725 [NIDS] INFO: Rules loaded: 14 total
+2026-03-28 11:57:38,725 [NIDS] INFO:   Protocols: {'TCP': 11, 'UDP': 2, 'ICMP': 1}
+2026-03-28 11:57:38,725 [NIDS] INFO:   Severity breakdown: {'HIGH': 3, 'MEDIUM': 9, 'LOW': 1, 'CRITICAL': 1}
+2026-03-28 11:57:38,725 [DetectionEngine] INFO: ======================================================================
+2026-03-28 11:57:38,725 [DetectionEngine] INFO: DetectionEngine Initialized
+2026-03-28 11:57:38,725 [DetectionEngine] INFO: ======================================================================
+2026-03-28 11:57:38,725 [DetectionEngine] INFO: Rules Loaded: 14
+2026-03-28 11:57:38,725 [DetectionEngine] INFO:   By Protocol: {'TCP': 11, 'UDP': 2, 'ICMP': 1}
+2026-03-28 11:57:38,725 [DetectionEngine] INFO:   By Severity: {'HIGH': 3, 'MEDIUM': 9, 'LOW': 1, 'CRITICAL': 1}
+2026-03-28 11:57:38,725 [DetectionEngine] INFO: 
+Auto-Tuner: EWMA adaptive thresholding
+2026-03-28 11:57:38,725 [DetectionEngine] INFO:   Alpha: 0.2
+2026-03-28 11:57:38,725 [DetectionEngine] INFO:   Headroom: 3.0x
+2026-03-28 11:57:38,725 [DetectionEngine] INFO: ======================================================================
+2026-03-28 11:57:38,725 [NIDS] INFO: Detection Engine initialized with EWMA-based adaptive thresholding
+2026-03-28 11:57:38,725 [NIDS] INFO:   Tuner parameters: alpha=0.2, headroom=3.0x, max_mult=6.0x
+2026-03-28 11:57:38,725 [NIDS] INFO: Detection engine ready with 14 active rules
+2026-03-28 11:57:38,725 [NIDS] INFO: ------------------------------------------------------------
+2026-03-28 11:57:38,726 [AlertEngine] INFO: AlertEngine initialized
+2026-03-28 11:57:38,726 [AlertEngine] INFO:   Enabled channels: telegram, discord
+2026-03-28 11:57:38,726 [AlertEngine] INFO: Evidence Logger initialized. Directory: attacks
+2026-03-28 11:57:38,726 [vuln_scanner] INFO: AutoScanner initialized (cooldown=60s)
+2026-03-28 11:57:38,726 [HotspotMonitor] INFO: HotspotMonitor initialized
+2026-03-28 11:57:38,751 [NIDS] INFO: Available interfaces: ['[Unknown]  \\Device\\NPF_{A423811C-46C9-42F1-8D1C-C6CBA50973BE} (N/A)', '[Unknown]  \\Device\\NPF_{952C03EB-1FA3-4454-8294-F2B74BC50A67} (N/A)', '[Unknown]  \\Device\\NPF_{0341EC7D-2449-4A27-A56F-1A9CAC0698EA} (N/A)', '[Unknown]  \\Device\\NPF_{987610F9-9E02-404A-B0FE-637C80B0DE5D} (N/A)', '[Unknown]  \\Device\\NPF_{9D027F6C-3007-4EDD-9E79-062DB4648A15} (N/A)', '[Unknown]  \\Device\\NPF_{D8E75DCC-51C9-4C63-B0C3-01101D39D36B} (N/A)', '[Unknown]  \\Device\\NPF_{D00CE2EF-A43D-4E14-AE44-E7A26EAB3EBC} (N/A)', '[Loopback] \\Device\\NPF_Loopback (N/A)', '[Unknown]  \\Device\\NPF_{6BC1616E-85F7-4191-AF10-7E8DCAC4E930} (N/A)']
+2026-03-28 11:57:38,751 [NIDS] INFO: Best interface detected: \Device\NPF_{A423811C-46C9-42F1-8D1C-C6CBA50973BE}
+2026-03-28 11:57:38,751 [NIDS] INFO:   Interface: [Unknown]  \Device\NPF_{A423811C-46C9-42F1-8D1C-C6CBA50973BE} (N/A) -> \Device\NPF_{A423811C-46C9-42F1-8D1C-C6CBA50973BE}
+2026-03-28 11:57:38,751 [NIDS] INFO:   Interface: [Unknown]  \Device\NPF_{952C03EB-1FA3-4454-8294-F2B74BC50A67} (N/A) -> \Device\NPF_{952C03EB-1FA3-4454-8294-F2B74BC50A67}
+2026-03-28 11:57:38,751 [NIDS] INFO:   Interface: [Unknown]  \Device\NPF_{0341EC7D-2449-4A27-A56F-1A9CAC0698EA} (N/A) -> \Device\NPF_{0341EC7D-2449-4A27-A56F-1A9CAC0698EA}
+2026-03-28 11:57:38,751 [NIDS] INFO:   Interface: [Unknown]  \Device\NPF_{987610F9-9E02-404A-B0FE-637C80B0DE5D} (N/A) -> \Device\NPF_{987610F9-9E02-404A-B0FE-637C80B0DE5D}
+2026-03-28 11:57:38,751 [NIDS] INFO:   Interface: [Unknown]  \Device\NPF_{9D027F6C-3007-4EDD-9E79-062DB4648A15} (N/A) -> \Device\NPF_{9D027F6C-3007-4EDD-9E79-062DB4648A15}
+2026-03-28 11:57:38,751 [NIDS] INFO:   Interface: [Unknown]  \Device\NPF_{D8E75DCC-51C9-4C63-B0C3-01101D39D36B} (N/A) -> \Device\NPF_{D8E75DCC-51C9-4C63-B0C3-01101D39D36B}
+2026-03-28 11:57:38,751 [NIDS] INFO:   Interface: [Unknown]  \Device\NPF_{D00CE2EF-A43D-4E14-AE44-E7A26EAB3EBC} (N/A) -> \Device\NPF_{D00CE2EF-A43D-4E14-AE44-E7A26EAB3EBC}
+2026-03-28 11:57:38,751 [NIDS] INFO:   Interface: [Loopback] \Device\NPF_Loopback (N/A) -> \Device\NPF_Loopback
+2026-03-28 11:57:38,751 [NIDS] INFO:   Interface: [Unknown]  \Device\NPF_{6BC1616E-85F7-4191-AF10-7E8DCAC4E930} (N/A) -> \Device\NPF_{6BC1616E-85F7-4191-AF10-7E8DCAC4E930}
+2026-03-28 11:57:52,340 [NIDS] INFO: ============================================================
+2026-03-28 11:57:52,341 [NIDS] INFO: NIDS Starting - Signature-Based Intrusion Detection System
+2026-03-28 11:57:52,341 [NIDS] INFO: ============================================================
+2026-03-28 11:57:52,341 [RuleEngine] INFO: Using 14 hardcoded default rules (rules.json not found)
+2026-03-28 11:57:52,341 [NIDS] INFO: Rules loaded: 14 total
+2026-03-28 11:57:52,341 [NIDS] INFO:   Protocols: {'TCP': 11, 'UDP': 2, 'ICMP': 1}
+2026-03-28 11:57:52,341 [NIDS] INFO:   Severity breakdown: {'HIGH': 3, 'MEDIUM': 9, 'LOW': 1, 'CRITICAL': 1}
+2026-03-28 11:57:52,341 [DetectionEngine] INFO: ======================================================================
+2026-03-28 11:57:52,341 [DetectionEngine] INFO: DetectionEngine Initialized
+2026-03-28 11:57:52,341 [DetectionEngine] INFO: ======================================================================
+2026-03-28 11:57:52,341 [DetectionEngine] INFO: Rules Loaded: 14
+2026-03-28 11:57:52,341 [DetectionEngine] INFO:   By Protocol: {'TCP': 11, 'UDP': 2, 'ICMP': 1}
+2026-03-28 11:57:52,341 [DetectionEngine] INFO:   By Severity: {'HIGH': 3, 'MEDIUM': 9, 'LOW': 1, 'CRITICAL': 1}
+2026-03-28 11:57:52,342 [DetectionEngine] INFO: 
+Auto-Tuner: EWMA adaptive thresholding
+2026-03-28 11:57:52,342 [DetectionEngine] INFO:   Alpha: 0.2
+2026-03-28 11:57:52,342 [DetectionEngine] INFO:   Headroom: 3.0x
+2026-03-28 11:57:52,342 [DetectionEngine] INFO: ======================================================================
+2026-03-28 11:57:52,342 [NIDS] INFO: Detection Engine initialized with EWMA-based adaptive thresholding
+2026-03-28 11:57:52,342 [NIDS] INFO:   Tuner parameters: alpha=0.2, headroom=3.0x, max_mult=6.0x
+2026-03-28 11:57:52,342 [NIDS] INFO: Detection engine ready with 14 active rules
+2026-03-28 11:57:52,342 [NIDS] INFO: ------------------------------------------------------------
+2026-03-28 11:57:52,342 [AlertEngine] INFO: AlertEngine initialized
+2026-03-28 11:57:52,342 [AlertEngine] INFO:   Enabled channels: telegram, discord
+2026-03-28 11:57:52,342 [AlertEngine] INFO: Evidence Logger initialized. Directory: attacks
+2026-03-28 11:57:52,342 [vuln_scanner] INFO: AutoScanner initialized (cooldown=60s)
+2026-03-28 11:57:52,343 [HotspotMonitor] INFO: HotspotMonitor initialized
+2026-03-28 11:57:52,369 [NIDS] INFO: Available interfaces: ['[Unknown]  \\Device\\NPF_{A423811C-46C9-42F1-8D1C-C6CBA50973BE} (N/A)', '[Unknown]  \\Device\\NPF_{952C03EB-1FA3-4454-8294-F2B74BC50A67} (N/A)', '[Unknown]  \\Device\\NPF_{0341EC7D-2449-4A27-A56F-1A9CAC0698EA} (N/A)', '[Unknown]  \\Device\\NPF_{987610F9-9E02-404A-B0FE-637C80B0DE5D} (N/A)', '[Unknown]  \\Device\\NPF_{9D027F6C-3007-4EDD-9E79-062DB4648A15} (N/A)', '[Unknown]  \\Device\\NPF_{D8E75DCC-51C9-4C63-B0C3-01101D39D36B} (N/A)', '[Unknown]  \\Device\\NPF_{D00CE2EF-A43D-4E14-AE44-E7A26EAB3EBC} (N/A)', '[Loopback] \\Device\\NPF_Loopback (N/A)', '[Unknown]  \\Device\\NPF_{6BC1616E-85F7-4191-AF10-7E8DCAC4E930} (N/A)']
+2026-03-28 11:57:52,369 [NIDS] INFO: Best interface detected: \Device\NPF_{A423811C-46C9-42F1-8D1C-C6CBA50973BE}
+2026-03-28 11:57:52,369 [NIDS] INFO:   Interface: [Unknown]  \Device\NPF_{A423811C-46C9-42F1-8D1C-C6CBA50973BE} (N/A) -> \Device\NPF_{A423811C-46C9-42F1-8D1C-C6CBA50973BE}
+2026-03-28 11:57:52,369 [NIDS] INFO:   Interface: [Unknown]  \Device\NPF_{952C03EB-1FA3-4454-8294-F2B74BC50A67} (N/A) -> \Device\NPF_{952C03EB-1FA3-4454-8294-F2B74BC50A67}
+2026-03-28 11:57:52,369 [NIDS] INFO:   Interface: [Unknown]  \Device\NPF_{0341EC7D-2449-4A27-A56F-1A9CAC0698EA} (N/A) -> \Device\NPF_{0341EC7D-2449-4A27-A56F-1A9CAC0698EA}
+2026-03-28 11:57:52,369 [NIDS] INFO:   Interface: [Unknown]  \Device\NPF_{987610F9-9E02-404A-B0FE-637C80B0DE5D} (N/A) -> \Device\NPF_{987610F9-9E02-404A-B0FE-637C80B0DE5D}
+2026-03-28 11:57:52,369 [NIDS] INFO:   Interface: [Unknown]  \Device\NPF_{9D027F6C-3007-4EDD-9E79-062DB4648A15} (N/A) -> \Device\NPF_{9D027F6C-3007-4EDD-9E79-062DB4648A15}
+2026-03-28 11:57:52,369 [NIDS] INFO:   Interface: [Unknown]  \Device\NPF_{D8E75DCC-51C9-4C63-B0C3-01101D39D36B} (N/A) -> \Device\NPF_{D8E75DCC-51C9-4C63-B0C3-01101D39D36B}
+2026-03-28 11:57:52,369 [NIDS] INFO:   Interface: [Unknown]  \Device\NPF_{D00CE2EF-A43D-4E14-AE44-E7A26EAB3EBC} (N/A) -> \Device\NPF_{D00CE2EF-A43D-4E14-AE44-E7A26EAB3EBC}
+2026-03-28 11:57:52,369 [NIDS] INFO:   Interface: [Loopback] \Device\NPF_Loopback (N/A) -> \Device\NPF_Loopback
+2026-03-28 11:57:52,369 [NIDS] INFO:   Interface: [Unknown]  \Device\NPF_{6BC1616E-85F7-4191-AF10-7E8DCAC4E930} (N/A) -> \Device\NPF_{6BC1616E-85F7-4191-AF10-7E8DCAC4E930}
+2026-03-28 12:06:18,346 [NIDS] INFO: ============================================================
+2026-03-28 12:06:18,347 [NIDS] INFO: NIDS Starting - Signature-Based Intrusion Detection System
+2026-03-28 12:06:18,347 [NIDS] INFO: ============================================================
+2026-03-28 12:06:18,347 [RuleEngine] INFO: Using 14 hardcoded default rules (rules.json not found)
+2026-03-28 12:06:18,347 [NIDS] INFO: Rules loaded: 14 total
+2026-03-28 12:06:18,347 [NIDS] INFO:   Protocols: {'TCP': 11, 'UDP': 2, 'ICMP': 1}
+2026-03-28 12:06:18,347 [NIDS] INFO:   Severity breakdown: {'HIGH': 3, 'MEDIUM': 9, 'LOW': 1, 'CRITICAL': 1}
+2026-03-28 12:06:18,348 [DetectionEngine] INFO: ======================================================================
+2026-03-28 12:06:18,348 [DetectionEngine] INFO: DetectionEngine Initialized
+2026-03-28 12:06:18,348 [DetectionEngine] INFO: ======================================================================
+2026-03-28 12:06:18,348 [DetectionEngine] INFO: Rules Loaded: 14
+2026-03-28 12:06:18,348 [DetectionEngine] INFO:   By Protocol: {'TCP': 11, 'UDP': 2, 'ICMP': 1}
+2026-03-28 12:06:18,348 [DetectionEngine] INFO:   By Severity: {'HIGH': 3, 'MEDIUM': 9, 'LOW': 1, 'CRITICAL': 1}
+2026-03-28 12:06:18,348 [DetectionEngine] INFO: 
+Auto-Tuner: EWMA adaptive thresholding
+2026-03-28 12:06:18,348 [DetectionEngine] INFO:   Alpha: 0.2
+2026-03-28 12:06:18,348 [DetectionEngine] INFO:   Headroom: 3.0x
+2026-03-28 12:06:18,348 [DetectionEngine] INFO: ======================================================================
+2026-03-28 12:06:18,348 [NIDS] INFO: Detection Engine initialized with EWMA-based adaptive thresholding
+2026-03-28 12:06:18,348 [NIDS] INFO:   Tuner parameters: alpha=0.2, headroom=3.0x, max_mult=6.0x
+2026-03-28 12:06:18,349 [NIDS] INFO: Detection engine ready with 14 active rules
+2026-03-28 12:06:18,349 [NIDS] INFO: ------------------------------------------------------------
+2026-03-28 12:06:18,349 [AlertEngine] INFO: AlertEngine initialized
+2026-03-28 12:06:18,349 [AlertEngine] INFO:   Enabled channels: telegram, discord
+2026-03-28 12:06:18,349 [AlertEngine] INFO: Evidence Logger initialized. Directory: attacks
+2026-03-28 12:06:18,350 [vuln_scanner] INFO: AutoScanner initialized (cooldown=60s)
+2026-03-28 12:06:18,350 [HotspotMonitor] INFO: HotspotMonitor initialized
+2026-03-28 12:06:18,376 [NIDS] INFO: Available interfaces: ['[Hotspot]  Local Area Connection* 10', '[Hotspot]  Local Area Connection* 9', '[Hotspot]  Local Area Connection* 8', '[WiFi]     WiFi (192.168.1.77)', '[Hotspot]  Local Area Connection* 2', '[Hotspot]  Local Area Connection* 1', '[Ethernet] Ethernet 2 (169.254.14.166)', '[Loopback] Npcap Loopback Adapter (127.0.0.1)', '[Ethernet] Ethernet (169.254.14.166)']
+2026-03-28 12:06:18,376 [NIDS] INFO: Best interface detected: \Device\NPF_{A423811C-46C9-42F1-8D1C-C6CBA50973BE}
+2026-03-28 12:06:18,376 [NIDS] INFO:   Interface: [Hotspot]  Local Area Connection* 10 -> \Device\NPF_{A423811C-46C9-42F1-8D1C-C6CBA50973BE}
+2026-03-28 12:06:18,376 [NIDS] INFO:   Interface: [Hotspot]  Local Area Connection* 9 -> \Device\NPF_{952C03EB-1FA3-4454-8294-F2B74BC50A67}
+2026-03-28 12:06:18,376 [NIDS] INFO:   Interface: [Hotspot]  Local Area Connection* 8 -> \Device\NPF_{0341EC7D-2449-4A27-A56F-1A9CAC0698EA}
+2026-03-28 12:06:18,377 [NIDS] INFO:   Interface: [WiFi]     WiFi (192.168.1.77) -> \Device\NPF_{987610F9-9E02-404A-B0FE-637C80B0DE5D}
+2026-03-28 12:06:18,377 [NIDS] INFO:   Interface: [Hotspot]  Local Area Connection* 2 -> \Device\NPF_{9D027F6C-3007-4EDD-9E79-062DB4648A15}
+2026-03-28 12:06:18,377 [NIDS] INFO:   Interface: [Hotspot]  Local Area Connection* 1 -> \Device\NPF_{D8E75DCC-51C9-4C63-B0C3-01101D39D36B}
+2026-03-28 12:06:18,377 [NIDS] INFO:   Interface: [Ethernet] Ethernet 2 (169.254.14.166) -> \Device\NPF_{D00CE2EF-A43D-4E14-AE44-E7A26EAB3EBC}
+2026-03-28 12:06:18,377 [NIDS] INFO:   Interface: [Loopback] Npcap Loopback Adapter (127.0.0.1) -> \Device\NPF_Loopback
+2026-03-28 12:06:18,377 [NIDS] INFO:   Interface: [Ethernet] Ethernet (169.254.14.166) -> \Device\NPF_{6BC1616E-85F7-4191-AF10-7E8DCAC4E930}
+2026-03-28 12:06:20,389 [PacketCapture] INFO: PacketCapture initialized
+2026-03-28 12:06:20,389 [PacketCapture] INFO: Starting capture on \Device\NPF_{987610F9-9E02-404A-B0FE-637C80B0DE5D}
+2026-03-28 12:13:44,243 [NIDS] INFO: ============================================================
+2026-03-28 12:13:44,243 [NIDS] INFO: NIDS Starting - Signature-Based Intrusion Detection System
+2026-03-28 12:13:44,243 [NIDS] INFO: ============================================================
+2026-03-28 12:13:44,243 [RuleEngine] INFO: Using 14 hardcoded default rules (rules.json not found)
+2026-03-28 12:13:44,244 [NIDS] INFO: Rules loaded: 14 total
+2026-03-28 12:13:44,244 [NIDS] INFO:   Protocols: {'TCP': 11, 'UDP': 2, 'ICMP': 1}
+2026-03-28 12:13:44,244 [NIDS] INFO:   Severity breakdown: {'HIGH': 3, 'MEDIUM': 9, 'LOW': 1, 'CRITICAL': 1}
+2026-03-28 12:13:44,244 [DetectionEngine] INFO: ======================================================================
+2026-03-28 12:13:44,244 [DetectionEngine] INFO: DetectionEngine Initialized
+2026-03-28 12:13:44,245 [DetectionEngine] INFO: ======================================================================
+2026-03-28 12:13:44,245 [DetectionEngine] INFO: Rules Loaded: 14
+2026-03-28 12:13:44,245 [DetectionEngine] INFO:   By Protocol: {'TCP': 11, 'UDP': 2, 'ICMP': 1}
+2026-03-28 12:13:44,245 [DetectionEngine] INFO:   By Severity: {'HIGH': 3, 'MEDIUM': 9, 'LOW': 1, 'CRITICAL': 1}
+2026-03-28 12:13:44,246 [DetectionEngine] INFO: 
+Auto-Tuner: EWMA adaptive thresholding
+2026-03-28 12:13:44,246 [DetectionEngine] INFO:   Alpha: 0.2
+2026-03-28 12:13:44,246 [DetectionEngine] INFO:   Headroom: 3.0x
+2026-03-28 12:13:44,246 [DetectionEngine] INFO: ======================================================================
+2026-03-28 12:13:44,246 [NIDS] INFO: Detection Engine initialized with EWMA-based adaptive thresholding
+2026-03-28 12:13:44,246 [NIDS] INFO:   Tuner parameters: alpha=0.2, headroom=3.0x, max_mult=6.0x
+2026-03-28 12:13:44,246 [NIDS] INFO: Detection engine ready with 14 active rules
+2026-03-28 12:13:44,247 [NIDS] INFO: ------------------------------------------------------------
+2026-03-28 12:13:44,247 [AlertEngine] INFO: AlertEngine initialized
+2026-03-28 12:13:44,247 [AlertEngine] INFO:   Enabled channels: telegram, discord
+2026-03-28 12:13:44,247 [AlertEngine] INFO: Evidence Logger initialized. Directory: attacks
+2026-03-28 12:13:44,247 [vuln_scanner] INFO: AutoScanner initialized (cooldown=60s)
+2026-03-28 12:13:44,247 [HotspotMonitor] INFO: HotspotMonitor initialized
+2026-03-28 12:13:44,276 [NIDS] INFO: Available interfaces: ['[Hotspot]  Local Area Connection* 10', '[Hotspot]  Local Area Connection* 9', '[Hotspot]  Local Area Connection* 8', '[WiFi]     WiFi (192.168.1.77)', '[Hotspot]  Local Area Connection* 2', '[Hotspot]  Local Area Connection* 1', '[Ethernet] Ethernet 2 (169.254.14.166)', '[Loopback] Npcap Loopback Adapter (127.0.0.1)', '[Ethernet] Ethernet (169.254.14.166)']
+2026-03-28 12:13:44,276 [NIDS] INFO: Best interface detected: [Hotspot]  Local Area Connection* 10
+2026-03-28 12:13:44,276 [NIDS] INFO:   Interface: [Hotspot]  Local Area Connection* 10 -> \Device\NPF_{A423811C-46C9-42F1-8D1C-C6CBA50973BE}
+2026-03-28 12:13:44,276 [NIDS] INFO:   Interface: [Hotspot]  Local Area Connection* 9 -> \Device\NPF_{952C03EB-1FA3-4454-8294-F2B74BC50A67}
+2026-03-28 12:13:44,276 [NIDS] INFO:   Interface: [Hotspot]  Local Area Connection* 8 -> \Device\NPF_{0341EC7D-2449-4A27-A56F-1A9CAC0698EA}
+2026-03-28 12:13:44,277 [NIDS] INFO:   Interface: [WiFi]     WiFi (192.168.1.77) -> \Device\NPF_{987610F9-9E02-404A-B0FE-637C80B0DE5D}
+2026-03-28 12:13:44,277 [NIDS] INFO:   Interface: [Hotspot]  Local Area Connection* 2 -> \Device\NPF_{9D027F6C-3007-4EDD-9E79-062DB4648A15}
+2026-03-28 12:13:44,277 [NIDS] INFO:   Interface: [Hotspot]  Local Area Connection* 1 -> \Device\NPF_{D8E75DCC-51C9-4C63-B0C3-01101D39D36B}
+2026-03-28 12:13:44,277 [NIDS] INFO:   Interface: [Ethernet] Ethernet 2 (169.254.14.166) -> \Device\NPF_{D00CE2EF-A43D-4E14-AE44-E7A26EAB3EBC}
+2026-03-28 12:13:44,277 [NIDS] INFO:   Interface: [Loopback] Npcap Loopback Adapter (127.0.0.1) -> \Device\NPF_Loopback
+2026-03-28 12:13:44,277 [NIDS] INFO:   Interface: [Ethernet] Ethernet (169.254.14.166) -> \Device\NPF_{6BC1616E-85F7-4191-AF10-7E8DCAC4E930}
+2026-03-28 12:13:48,195 [PacketCapture] INFO: PacketCapture initialized
+2026-03-28 12:13:48,196 [PacketCapture] INFO: Sniff loop starting on \Device\NPF_{987610F9-9E02-404A-B0FE-637C80B0DE5D}
+2026-03-28 12:13:48,196 [PacketCapture] INFO: Capture thread started on \Device\NPF_{987610F9-9E02-404A-B0FE-637C80B0DE5D}
+2026-03-28 12:13:48,198 [NIDS] INFO: Capture started on interface: \Device\NPF_{987610F9-9E02-404A-B0FE-637C80B0DE5D}
+2026-03-28 12:20:53,772 [NIDS] INFO: ============================================================
+2026-03-28 12:20:53,772 [NIDS] INFO: NIDS Starting - Signature-Based Intrusion Detection System
+2026-03-28 12:20:53,773 [NIDS] INFO: ============================================================
+2026-03-28 12:20:53,773 [RuleEngine] INFO: Using 14 hardcoded default rules (rules.json not found)
+2026-03-28 12:20:53,773 [NIDS] INFO: Rules loaded: 14 total
+2026-03-28 12:20:53,773 [NIDS] INFO:   Protocols: {'TCP': 11, 'UDP': 2, 'ICMP': 1}
+2026-03-28 12:20:53,774 [NIDS] INFO:   Severity breakdown: {'HIGH': 3, 'MEDIUM': 9, 'LOW': 1, 'CRITICAL': 1}
+2026-03-28 12:20:53,774 [DetectionEngine] INFO: ======================================================================
+2026-03-28 12:20:53,774 [DetectionEngine] INFO: DetectionEngine Initialized
+2026-03-28 12:20:53,774 [DetectionEngine] INFO: ======================================================================
+2026-03-28 12:20:53,775 [DetectionEngine] INFO: Rules Loaded: 14
+2026-03-28 12:20:53,775 [DetectionEngine] INFO:   By Protocol: {'TCP': 11, 'UDP': 2, 'ICMP': 1}
+2026-03-28 12:20:53,775 [DetectionEngine] INFO:   By Severity: {'HIGH': 3, 'MEDIUM': 9, 'LOW': 1, 'CRITICAL': 1}
+2026-03-28 12:20:53,775 [DetectionEngine] INFO: 
+Auto-Tuner: EWMA adaptive thresholding
+2026-03-28 12:20:53,775 [DetectionEngine] INFO:   Alpha: 0.2
+2026-03-28 12:20:53,775 [DetectionEngine] INFO:   Headroom: 3.0x
+2026-03-28 12:20:53,775 [DetectionEngine] INFO: ======================================================================
+2026-03-28 12:20:53,775 [NIDS] INFO: Detection Engine initialized with EWMA-based adaptive thresholding
+2026-03-28 12:20:53,776 [NIDS] INFO:   Tuner parameters: alpha=0.2, headroom=3.0x, max_mult=6.0x
+2026-03-28 12:20:53,776 [NIDS] INFO: Detection engine ready with 14 active rules
+2026-03-28 12:20:53,776 [NIDS] INFO: ------------------------------------------------------------
+2026-03-28 12:20:53,776 [AlertEngine] INFO: AlertEngine initialized
+2026-03-28 12:20:53,776 [AlertEngine] INFO:   Enabled channels: telegram, discord
+2026-03-28 12:20:53,776 [AlertEngine] INFO: Evidence Logger initialized. Directory: attacks
+2026-03-28 12:20:53,777 [vuln_scanner] INFO: AutoScanner initialized (cooldown=60s)
+2026-03-28 12:20:53,777 [HotspotMonitor] INFO: HotspotMonitor initialized
+2026-03-28 12:20:53,804 [NIDS] INFO: Available interfaces: ['[Hotspot]  Local Area Connection* 10', '[Hotspot]  Local Area Connection* 9', '[Hotspot]  Local Area Connection* 8', '[WiFi]     WiFi (192.168.1.77)', '[Hotspot]  Local Area Connection* 2', '[Hotspot]  Local Area Connection* 1', '[Ethernet] Ethernet 2 (169.254.14.166)', '[Loopback] Npcap Loopback Adapter (127.0.0.1)', '[Ethernet] Ethernet (169.254.14.166)']
+2026-03-28 12:20:53,805 [NIDS] INFO: Best interface detected: [Hotspot]  Local Area Connection* 10
+2026-03-28 12:20:53,805 [NIDS] INFO:   Interface: [Hotspot]  Local Area Connection* 10 -> \Device\NPF_{A423811C-46C9-42F1-8D1C-C6CBA50973BE}
+2026-03-28 12:20:53,805 [NIDS] INFO:   Interface: [Hotspot]  Local Area Connection* 9 -> \Device\NPF_{952C03EB-1FA3-4454-8294-F2B74BC50A67}
+2026-03-28 12:20:53,805 [NIDS] INFO:   Interface: [Hotspot]  Local Area Connection* 8 -> \Device\NPF_{0341EC7D-2449-4A27-A56F-1A9CAC0698EA}
+2026-03-28 12:20:53,805 [NIDS] INFO:   Interface: [WiFi]     WiFi (192.168.1.77) -> \Device\NPF_{987610F9-9E02-404A-B0FE-637C80B0DE5D}
+2026-03-28 12:20:53,806 [NIDS] INFO:   Interface: [Hotspot]  Local Area Connection* 2 -> \Device\NPF_{9D027F6C-3007-4EDD-9E79-062DB4648A15}
+2026-03-28 12:20:53,806 [NIDS] INFO:   Interface: [Hotspot]  Local Area Connection* 1 -> \Device\NPF_{D8E75DCC-51C9-4C63-B0C3-01101D39D36B}
+2026-03-28 12:20:53,806 [NIDS] INFO:   Interface: [Ethernet] Ethernet 2 (169.254.14.166) -> \Device\NPF_{D00CE2EF-A43D-4E14-AE44-E7A26EAB3EBC}
+2026-03-28 12:20:53,806 [NIDS] INFO:   Interface: [Loopback] Npcap Loopback Adapter (127.0.0.1) -> \Device\NPF_Loopback
+2026-03-28 12:20:53,806 [NIDS] INFO:   Interface: [Ethernet] Ethernet (169.254.14.166) -> \Device\NPF_{6BC1616E-85F7-4191-AF10-7E8DCAC4E930}
+2026-03-28 12:20:56,884 [NetworkScanner] INFO: Starting scan on 192.168.1.0/24
+2026-03-28 12:21:18,555 [PacketCapture] INFO: PacketCapture initialized
+2026-03-28 12:21:18,556 [PacketCapture] INFO: Sniff loop starting on \Device\NPF_{987610F9-9E02-404A-B0FE-637C80B0DE5D}
+2026-03-28 12:21:18,556 [PacketCapture] INFO: Capture thread started on \Device\NPF_{987610F9-9E02-404A-B0FE-637C80B0DE5D}
+2026-03-28 12:21:18,557 [NIDS] INFO: Capture started on interface: \Device\NPF_{987610F9-9E02-404A-B0FE-637C80B0DE5D}
+2026-03-28 12:21:21,399 [DetectionEngine] INFO: [DETECTION] TCP ACK Flood | src=103.186.196.17 -> dst=192.168.1.77 | count=150/150 in 10s
+2026-03-28 12:21:21,400 [NIDS] WARNING: [ALERT] TCP ACK Flood | DoS | src=103.186.196.17 -> dst=192.168.1.77 | severity=MEDIUM
+2026-03-28 12:21:22,087 [NetworkScanner] INFO: Scan stopped
+2026-03-28 12:21:22,650 [AlertEngine] INFO: ✓ Alert sent to Telegram
+2026-03-28 12:21:23,437 [AlertEngine] INFO: ✓ Alert sent to Discord
+2026-03-28 12:21:23,439 [AlertEngine] INFO: [EVIDENCE] Saved: attacks\DoS\2026-03-28_12-21-23_DoS.json
+2026-03-28 12:21:23,439 [AlertEngine] ERROR: [ERROR] Failed to log evidence: a bytes-like object is required, not 'list'
+2026-03-28 12:21:23,441 [DetectionEngine] INFO: [DETECTION] TCP ACK Flood | src=192.168.1.77 -> dst=103.186.196.17 | count=150/150 in 10s
+2026-03-28 12:21:23,441 [NIDS] WARNING: [ALERT] TCP ACK Flood | DoS | src=192.168.1.77 -> dst=103.186.196.17 | severity=MEDIUM
+2026-03-28 12:21:23,446 [AlertEngine] INFO: [EVIDENCE] Saved: attacks\DoS\2026-03-28_12-21-23_DoS.json
+2026-03-28 12:21:23,448 [AlertEngine] ERROR: [ERROR] Failed to log evidence: a bytes-like object is required, not 'list'
+2026-03-28 12:21:30,899 [NetworkScanner] INFO: Starting scan on 192.168.1.1/24
+2026-03-28 12:22:26,315 [DetectionEngine] INFO: [DETECTION] TCP ACK Flood | src=103.186.196.17 -> dst=192.168.1.77 | count=150/150 in 10s
+2026-03-28 12:22:26,323 [NIDS] WARNING: [ALERT] TCP ACK Flood | DoS | src=103.186.196.17 -> dst=192.168.1.77 | severity=MEDIUM
+2026-03-28 12:22:27,354 [AlertEngine] INFO: ✓ Alert sent to Telegram
+2026-03-28 12:22:28,112 [AlertEngine] INFO: ✓ Alert sent to Discord
+2026-03-28 12:22:28,114 [AlertEngine] INFO: [EVIDENCE] Saved: attacks\DoS\2026-03-28_12-22-28_DoS.json
+2026-03-28 12:22:28,115 [AlertEngine] ERROR: [ERROR] Failed to log evidence: a bytes-like object is required, not 'list'
+2026-03-28 12:22:28,118 [DetectionEngine] INFO: [DETECTION] TCP ACK Flood | src=192.168.1.77 -> dst=103.186.196.17 | count=150/150 in 10s
+2026-03-28 12:22:28,126 [NIDS] WARNING: [ALERT] TCP ACK Flood | DoS | src=192.168.1.77 -> dst=103.186.196.17 | severity=MEDIUM
+2026-03-28 12:22:28,151 [AlertEngine] INFO: [EVIDENCE] Saved: attacks\DoS\2026-03-28_12-22-28_DoS.json
+2026-03-28 12:22:28,151 [AlertEngine] ERROR: [ERROR] Failed to log evidence: a bytes-like object is required, not 'list'
+2026-03-28 12:22:46,240 [DetectionEngine] INFO: [DETECTION] TCP ACK Flood | src=103.186.196.17 -> dst=192.168.1.77 | count=150/150 in 10s
+2026-03-28 12:22:46,246 [NIDS] WARNING: [ALERT] TCP ACK Flood | DoS | src=103.186.196.17 -> dst=192.168.1.77 | severity=MEDIUM
+2026-03-28 12:22:47,436 [AlertEngine] INFO: ✓ Alert sent to Telegram
+2026-03-28 12:22:48,437 [AlertEngine] INFO: ✓ Alert sent to Discord
+2026-03-28 12:22:48,438 [AlertEngine] INFO: [EVIDENCE] Saved: attacks\DoS\2026-03-28_12-22-48_DoS.json
+2026-03-28 12:22:48,440 [AlertEngine] ERROR: [ERROR] Failed to log evidence: a bytes-like object is required, not 'list'
+2026-03-28 12:22:48,442 [DetectionEngine] INFO: [DETECTION] TCP ACK Flood | src=192.168.1.77 -> dst=103.186.196.17 | count=150/150 in 10s
+2026-03-28 12:22:48,442 [NIDS] WARNING: [ALERT] TCP ACK Flood | DoS | src=192.168.1.77 -> dst=103.186.196.17 | severity=MEDIUM
+2026-03-28 12:22:48,445 [AlertEngine] INFO: [EVIDENCE] Saved: attacks\DoS\2026-03-28_12-22-48_DoS.json
+2026-03-28 12:22:48,446 [AlertEngine] ERROR: [ERROR] Failed to log evidence: a bytes-like object is required, not 'list'
+2026-03-28 12:23:01,283 [DetectionEngine] INFO: [DETECTION] TCP ACK Flood | src=103.186.196.17 -> dst=192.168.1.77 | count=232/150 in 10s
+2026-03-28 12:23:01,287 [NIDS] WARNING: [ALERT] TCP ACK Flood | DoS | src=103.186.196.17 -> dst=192.168.1.77 | severity=MEDIUM
+2026-03-28 12:23:02,402 [AlertEngine] INFO: ✓ Alert sent to Telegram
+2026-03-28 12:23:03,135 [AlertEngine] INFO: ✓ Alert sent to Discord
+2026-03-28 12:23:03,136 [AlertEngine] INFO: [EVIDENCE] Saved: attacks\DoS\2026-03-28_12-23-03_DoS.json
+2026-03-28 12:23:03,138 [AlertEngine] ERROR: [ERROR] Failed to log evidence: a bytes-like object is required, not 'list'
+2026-03-28 12:23:03,138 [DetectionEngine] INFO: [DETECTION] TCP ACK Flood | src=192.168.1.77 -> dst=103.186.196.17 | count=205/150 in 10s
+2026-03-28 12:23:03,141 [NIDS] WARNING: [ALERT] TCP ACK Flood | DoS | src=192.168.1.77 -> dst=103.186.196.17 | severity=MEDIUM
+2026-03-28 12:23:03,143 [AlertEngine] INFO: [EVIDENCE] Saved: attacks\DoS\2026-03-28_12-23-03_DoS.json
+2026-03-28 12:23:03,143 [AlertEngine] ERROR: [ERROR] Failed to log evidence: a bytes-like object is required, not 'list'
+2026-03-28 12:23:31,218 [DetectionEngine] INFO: [DETECTION] TCP ACK Flood | src=103.186.196.17 -> dst=192.168.1.77 | count=150/150 in 10s
+2026-03-28 12:23:31,229 [NIDS] WARNING: [ALERT] TCP ACK Flood | DoS | src=103.186.196.17 -> dst=192.168.1.77 | severity=MEDIUM
+2026-03-28 12:23:32,341 [AlertEngine] INFO: ✓ Alert sent to Telegram
+2026-03-28 12:23:33,231 [AlertEngine] INFO: ✓ Alert sent to Discord
+2026-03-28 12:23:33,233 [AlertEngine] INFO: [EVIDENCE] Saved: attacks\DoS\2026-03-28_12-23-33_DoS.json
+2026-03-28 12:23:33,233 [AlertEngine] ERROR: [ERROR] Failed to log evidence: a bytes-like object is required, not 'list'
+2026-03-28 12:23:49,999 [NetworkScanner] INFO: Scan stopped
+2026-03-28 12:23:57,114 [PacketCapture] INFO: Stopping capture...
+2026-03-28 12:23:57,717 [PacketCapture] INFO: Sniff loop ended
+2026-03-28 12:23:57,718 [PacketCapture] INFO: Capture stopped. Total packets: 6412
+2026-03-28 12:23:57,718 [NIDS] INFO: Capture stopped.
+2026-03-28 12:30:33,780 [NIDS] INFO: ============================================================
+2026-03-28 12:30:33,780 [NIDS] INFO: NIDS Starting - Signature-Based Intrusion Detection System
+2026-03-28 12:30:33,781 [NIDS] INFO: ============================================================
+2026-03-28 12:30:33,781 [RuleEngine] INFO: Using 14 hardcoded default rules (rules.json not found)
+2026-03-28 12:30:33,781 [NIDS] INFO: Rules loaded: 14 total
+2026-03-28 12:30:33,781 [NIDS] INFO:   Protocols: {'TCP': 11, 'UDP': 2, 'ICMP': 1}
+2026-03-28 12:30:33,782 [NIDS] INFO:   Severity breakdown: {'HIGH': 3, 'MEDIUM': 9, 'LOW': 1, 'CRITICAL': 1}
+2026-03-28 12:30:33,782 [DetectionEngine] INFO: ======================================================================
+2026-03-28 12:30:33,782 [DetectionEngine] INFO: DetectionEngine Initialized
+2026-03-28 12:30:33,782 [DetectionEngine] INFO: ======================================================================
+2026-03-28 12:30:33,782 [DetectionEngine] INFO: Rules Loaded: 14
+2026-03-28 12:30:33,783 [DetectionEngine] INFO:   By Protocol: {'TCP': 11, 'UDP': 2, 'ICMP': 1}
+2026-03-28 12:30:33,783 [DetectionEngine] INFO:   By Severity: {'HIGH': 3, 'MEDIUM': 9, 'LOW': 1, 'CRITICAL': 1}
+2026-03-28 12:30:33,783 [DetectionEngine] INFO: 
+Auto-Tuner: EWMA adaptive thresholding
+2026-03-28 12:30:33,783 [DetectionEngine] INFO:   Alpha: 0.2
+2026-03-28 12:30:33,783 [DetectionEngine] INFO:   Headroom: 3.0x
+2026-03-28 12:30:33,783 [DetectionEngine] INFO: ======================================================================
+2026-03-28 12:30:33,784 [NIDS] INFO: Detection Engine initialized with EWMA-based adaptive thresholding
+2026-03-28 12:30:33,784 [NIDS] INFO:   Tuner parameters: alpha=0.2, headroom=3.0x, max_mult=6.0x
+2026-03-28 12:30:33,784 [NIDS] INFO: Detection engine ready with 14 active rules
+2026-03-28 12:30:33,784 [NIDS] INFO: ------------------------------------------------------------
+2026-03-28 12:30:33,784 [AlertEngine] INFO: AlertEngine initialized
+2026-03-28 12:30:33,784 [AlertEngine] INFO:   Enabled channels: telegram, discord
+2026-03-28 12:30:33,785 [AlertEngine] INFO: Evidence Logger initialized. Directory: attacks
+2026-03-28 12:30:33,785 [vuln_scanner] INFO: AutoScanner initialized (cooldown=60s)
+2026-03-28 12:30:33,786 [HotspotMonitor] INFO: HotspotMonitor initialized
+2026-03-28 12:30:33,814 [NIDS] INFO: Available interfaces: ['[Hotspot]  Local Area Connection* 10', '[Hotspot]  Local Area Connection* 9', '[Hotspot]  Local Area Connection* 8', '[WiFi]     WiFi (192.168.1.77)', '[Hotspot]  Local Area Connection* 2', '[Hotspot]  Local Area Connection* 1', '[Ethernet] Ethernet 2 (169.254.14.166)', '[Loopback] Npcap Loopback Adapter (127.0.0.1)', '[Ethernet] Ethernet (169.254.14.166)']
+2026-03-28 12:30:33,814 [NIDS] INFO: Best interface detected: [Hotspot]  Local Area Connection* 10
+2026-03-28 12:30:33,814 [NIDS] INFO:   Interface: [Hotspot]  Local Area Connection* 10 -> \Device\NPF_{A423811C-46C9-42F1-8D1C-C6CBA50973BE}
+2026-03-28 12:30:33,815 [NIDS] INFO:   Interface: [Hotspot]  Local Area Connection* 9 -> \Device\NPF_{952C03EB-1FA3-4454-8294-F2B74BC50A67}
+2026-03-28 12:30:33,815 [NIDS] INFO:   Interface: [Hotspot]  Local Area Connection* 8 -> \Device\NPF_{0341EC7D-2449-4A27-A56F-1A9CAC0698EA}
+2026-03-28 12:30:33,815 [NIDS] INFO:   Interface: [WiFi]     WiFi (192.168.1.77) -> \Device\NPF_{987610F9-9E02-404A-B0FE-637C80B0DE5D}
+2026-03-28 12:30:33,815 [NIDS] INFO:   Interface: [Hotspot]  Local Area Connection* 2 -> \Device\NPF_{9D027F6C-3007-4EDD-9E79-062DB4648A15}
+2026-03-28 12:30:33,815 [NIDS] INFO:   Interface: [Hotspot]  Local Area Connection* 1 -> \Device\NPF_{D8E75DCC-51C9-4C63-B0C3-01101D39D36B}
+2026-03-28 12:30:33,816 [NIDS] INFO:   Interface: [Ethernet] Ethernet 2 (169.254.14.166) -> \Device\NPF_{D00CE2EF-A43D-4E14-AE44-E7A26EAB3EBC}
+2026-03-28 12:30:33,816 [NIDS] INFO:   Interface: [Loopback] Npcap Loopback Adapter (127.0.0.1) -> \Device\NPF_Loopback
+2026-03-28 12:30:33,816 [NIDS] INFO:   Interface: [Ethernet] Ethernet (169.254.14.166) -> \Device\NPF_{6BC1616E-85F7-4191-AF10-7E8DCAC4E930}
+2026-03-28 12:30:38,337 [NetworkScanner] INFO: Starting scan on 192.168.1.0/24
+2026-03-28 12:31:43,408 [PacketCapture] INFO: PacketCapture initialized
+2026-03-28 12:31:43,409 [PacketCapture] INFO: Sniff loop starting on \Device\NPF_{987610F9-9E02-404A-B0FE-637C80B0DE5D}
+2026-03-28 12:31:43,409 [PacketCapture] INFO: Capture thread started on \Device\NPF_{987610F9-9E02-404A-B0FE-637C80B0DE5D}
+2026-03-28 12:31:43,410 [NIDS] INFO: Capture started on interface: \Device\NPF_{987610F9-9E02-404A-B0FE-637C80B0DE5D}
+2026-03-28 12:32:10,543 [DetectionEngine] INFO: [DETECTION] TCP ACK Flood | src=192.168.1.77 -> dst=103.186.196.17 | count=150/150 in 10s
+2026-03-28 12:32:10,549 [NIDS] WARNING: [ALERT] TCP ACK Flood | DoS | src=192.168.1.77 -> dst=103.186.196.17 | severity=MEDIUM
+2026-03-28 12:32:13,022 [AlertEngine] INFO: ✓ Alert sent to Telegram
+2026-03-28 12:32:13,831 [AlertEngine] INFO: ✓ Alert sent to Discord
+2026-03-28 12:32:13,837 [AlertEngine] INFO: [EVIDENCE] Saved: attacks\DoS\2026-03-28_12-32-13_DoS.json
+2026-03-28 12:32:13,839 [AlertEngine] ERROR: [ERROR] Failed to log evidence: a bytes-like object is required, not 'list'
+2026-03-28 12:32:13,839 [DetectionEngine] INFO: [DETECTION] TCP ACK Flood | src=103.186.196.17 -> dst=192.168.1.77 | count=150/150 in 10s
+2026-03-28 12:32:13,840 [NIDS] WARNING: [ALERT] TCP ACK Flood | DoS | src=103.186.196.17 -> dst=192.168.1.77 | severity=MEDIUM
+2026-03-28 12:32:13,842 [AlertEngine] INFO: [EVIDENCE] Saved: attacks\DoS\2026-03-28_12-32-13_DoS.json
+2026-03-28 12:32:13,843 [AlertEngine] ERROR: [ERROR] Failed to log evidence: a bytes-like object is required, not 'list'
+2026-03-28 12:32:39,153 [DetectionEngine] INFO: [DETECTION] TCP ACK Flood | src=103.186.196.17 -> dst=192.168.1.77 | count=150/150 in 10s
+2026-03-28 12:32:39,173 [NIDS] WARNING: [ALERT] TCP ACK Flood | DoS | src=103.186.196.17 -> dst=192.168.1.77 | severity=MEDIUM
+2026-03-28 12:32:40,364 [AlertEngine] INFO: ✓ Alert sent to Telegram
+2026-03-28 12:32:41,062 [AlertEngine] INFO: ✓ Alert sent to Discord
+2026-03-28 12:32:41,064 [AlertEngine] INFO: [EVIDENCE] Saved: attacks\DoS\2026-03-28_12-32-41_DoS.json
+2026-03-28 12:32:41,064 [AlertEngine] ERROR: [ERROR] Failed to log evidence: a bytes-like object is required, not 'list'
+2026-03-28 12:38:55,453 [NIDS] INFO: ============================================================
+2026-03-28 12:38:55,453 [NIDS] INFO: NIDS Starting - Signature-Based Intrusion Detection System
+2026-03-28 12:38:55,453 [NIDS] INFO: ============================================================
+2026-03-28 12:38:55,454 [RuleEngine] INFO: Using 14 hardcoded default rules (rules.json not found)
+2026-03-28 12:38:55,454 [NIDS] INFO: Rules loaded: 14 total
+2026-03-28 12:38:55,454 [NIDS] INFO:   Protocols: {'TCP': 11, 'UDP': 2, 'ICMP': 1}
+2026-03-28 12:38:55,454 [NIDS] INFO:   Severity breakdown: {'HIGH': 3, 'MEDIUM': 9, 'LOW': 1, 'CRITICAL': 1}
+2026-03-28 12:38:55,454 [DetectionEngine] INFO: ======================================================================
+2026-03-28 12:38:55,455 [DetectionEngine] INFO: DetectionEngine Initialized
+2026-03-28 12:38:55,455 [DetectionEngine] INFO: ======================================================================
+2026-03-28 12:38:55,455 [DetectionEngine] INFO: Rules Loaded: 14
+2026-03-28 12:38:55,455 [DetectionEngine] INFO:   By Protocol: {'TCP': 11, 'UDP': 2, 'ICMP': 1}
+2026-03-28 12:38:55,455 [DetectionEngine] INFO:   By Severity: {'HIGH': 3, 'MEDIUM': 9, 'LOW': 1, 'CRITICAL': 1}
+2026-03-28 12:38:55,455 [DetectionEngine] INFO: 
+Auto-Tuner: EWMA adaptive thresholding
+2026-03-28 12:38:55,456 [DetectionEngine] INFO:   Alpha: 0.2
+2026-03-28 12:38:55,456 [DetectionEngine] INFO:   Headroom: 3.0x
+2026-03-28 12:38:55,456 [DetectionEngine] INFO: ======================================================================
+2026-03-28 12:38:55,456 [NIDS] INFO: Detection Engine initialized with EWMA-based adaptive thresholding
+2026-03-28 12:38:55,456 [NIDS] INFO:   Tuner parameters: alpha=0.2, headroom=3.0x, max_mult=6.0x
+2026-03-28 12:38:55,456 [NIDS] INFO: Detection engine ready with 14 active rules
+2026-03-28 12:38:55,457 [NIDS] INFO: ------------------------------------------------------------
+2026-03-28 12:38:55,457 [AlertEngine] INFO: AlertEngine initialized
+2026-03-28 12:38:55,457 [AlertEngine] INFO:   Enabled channels: telegram, discord
+2026-03-28 12:38:55,457 [AlertEngine] INFO: Evidence Logger initialized. Directory: attacks
+2026-03-28 12:38:55,458 [vuln_scanner] INFO: AutoScanner initialized (cooldown=60s)
+2026-03-28 12:38:55,458 [HotspotMonitor] INFO: HotspotMonitor initialized
+2026-03-28 12:38:55,486 [NIDS] INFO: Available interfaces: ['[Hotspot]  Local Area Connection* 10', '[Hotspot]  Local Area Connection* 9', '[Hotspot]  Local Area Connection* 8', '[WiFi]     WiFi (192.168.1.77)', '[Hotspot]  Local Area Connection* 2', '[Hotspot]  Local Area Connection* 1', '[Ethernet] Ethernet 2 (169.254.14.166)', '[Loopback] Npcap Loopback Adapter (127.0.0.1)', '[Ethernet] Ethernet (169.254.14.166)']
+2026-03-28 12:38:55,486 [NIDS] INFO: Best interface detected: [Hotspot]  Local Area Connection* 10
+2026-03-28 12:38:55,486 [NIDS] INFO:   Interface: [Hotspot]  Local Area Connection* 10 -> \Device\NPF_{A423811C-46C9-42F1-8D1C-C6CBA50973BE}
+2026-03-28 12:38:55,487 [NIDS] INFO:   Interface: [Hotspot]  Local Area Connection* 9 -> \Device\NPF_{952C03EB-1FA3-4454-8294-F2B74BC50A67}
+2026-03-28 12:38:55,487 [NIDS] INFO:   Interface: [Hotspot]  Local Area Connection* 8 -> \Device\NPF_{0341EC7D-2449-4A27-A56F-1A9CAC0698EA}
+2026-03-28 12:38:55,487 [NIDS] INFO:   Interface: [WiFi]     WiFi (192.168.1.77) -> \Device\NPF_{987610F9-9E02-404A-B0FE-637C80B0DE5D}
+2026-03-28 12:38:55,487 [NIDS] INFO:   Interface: [Hotspot]  Local Area Connection* 2 -> \Device\NPF_{9D027F6C-3007-4EDD-9E79-062DB4648A15}
+2026-03-28 12:38:55,487 [NIDS] INFO:   Interface: [Hotspot]  Local Area Connection* 1 -> \Device\NPF_{D8E75DCC-51C9-4C63-B0C3-01101D39D36B}
+2026-03-28 12:38:55,487 [NIDS] INFO:   Interface: [Ethernet] Ethernet 2 (169.254.14.166) -> \Device\NPF_{D00CE2EF-A43D-4E14-AE44-E7A26EAB3EBC}
+2026-03-28 12:38:55,487 [NIDS] INFO:   Interface: [Loopback] Npcap Loopback Adapter (127.0.0.1) -> \Device\NPF_Loopback
+2026-03-28 12:38:55,488 [NIDS] INFO:   Interface: [Ethernet] Ethernet (169.254.14.166) -> \Device\NPF_{6BC1616E-85F7-4191-AF10-7E8DCAC4E930}
+2026-03-28 12:38:59,455 [PacketCapture] INFO: PacketCapture initialized
+2026-03-28 12:38:59,456 [PacketCapture] INFO: Sniff loop starting on \Device\NPF_{987610F9-9E02-404A-B0FE-637C80B0DE5D}
+2026-03-28 12:38:59,456 [PacketCapture] INFO: Capture thread started on \Device\NPF_{987610F9-9E02-404A-B0FE-637C80B0DE5D}
+2026-03-28 12:38:59,457 [NIDS] INFO: Capture started on interface: \Device\NPF_{987610F9-9E02-404A-B0FE-637C80B0DE5D}
+2026-03-28 12:39:03,186 [DetectionEngine] INFO: [DETECTION] UDP Flood | src=57.144.43.135 -> dst=192.168.1.77 | count=180/180 in 10s
+2026-03-28 12:39:03,187 [NIDS] WARNING: [ALERT] UDP Flood | DoS | src=57.144.43.135 -> dst=192.168.1.77 | severity=HIGH
+2026-03-28 12:39:04,413 [AlertEngine] INFO: ✓ Alert sent to Telegram
+2026-03-28 12:39:05,136 [NetworkScanner] INFO: Starting scan on 192.168.1.0/24
+2026-03-28 12:39:05,427 [AlertEngine] INFO: ✓ Alert sent to Discord
+2026-03-28 12:39:05,428 [AlertEngine] INFO: [EVIDENCE] Saved: attacks\DoS\2026-03-28_12-39-05_DoS.json
+2026-03-28 12:39:05,513 [AlertEngine] INFO: [PCAP] Saved: attacks\DoS\2026-03-28_12-39-05_DoS.pcap
+2026-03-28 12:39:05,513 [vuln_scanner] INFO: [SCAN] Triggering vulnerability scan on 192.168.1.77 (severity=HIGH)
+2026-03-28 12:39:06,920 [DetectionEngine] INFO: [DETECTION] UDP Flood | src=192.168.1.77 -> dst=57.144.43.135 | count=180/180 in 10s
+2026-03-28 12:39:06,920 [NIDS] WARNING: [ALERT] UDP Flood | DoS | src=192.168.1.77 -> dst=57.144.43.135 | severity=HIGH
+2026-03-28 12:39:06,922 [AlertEngine] INFO: [EVIDENCE] Saved: attacks\DoS\2026-03-28_12-39-06_DoS.json
+2026-03-28 12:39:07,008 [AlertEngine] INFO: [PCAP] Saved: attacks\DoS\2026-03-28_12-39-06_DoS.pcap
+2026-03-28 12:39:07,009 [vuln_scanner] INFO: [SCAN] Triggering vulnerability scan on 57.144.43.135 (severity=HIGH)
+2026-03-28 12:39:18,203 [DetectionEngine] INFO: [DETECTION] UDP Flood | src=57.144.43.135 -> dst=192.168.1.77 | count=453/180 in 10s
+2026-03-28 12:39:18,203 [NIDS] WARNING: [ALERT] UDP Flood | DoS | src=57.144.43.135 -> dst=192.168.1.77 | severity=HIGH
+2026-03-28 12:39:19,315 [AlertEngine] INFO: ✓ Alert sent to Telegram
+2026-03-28 12:39:20,130 [AlertEngine] INFO: ✓ Alert sent to Discord
+2026-03-28 12:39:20,132 [AlertEngine] INFO: [EVIDENCE] Saved: attacks\DoS\2026-03-28_12-39-20_DoS.json
+2026-03-28 12:39:20,213 [AlertEngine] INFO: [PCAP] Saved: attacks\DoS\2026-03-28_12-39-20_DoS.pcap
+2026-03-28 12:39:21,981 [DetectionEngine] INFO: [DETECTION] UDP Flood | src=192.168.1.77 -> dst=57.144.43.135 | count=250/180 in 10s
+2026-03-28 12:39:21,982 [NIDS] WARNING: [ALERT] UDP Flood | DoS | src=192.168.1.77 -> dst=57.144.43.135 | severity=HIGH
+2026-03-28 12:39:21,984 [AlertEngine] INFO: [EVIDENCE] Saved: attacks\DoS\2026-03-28_12-39-21_DoS.json
+2026-03-28 12:39:22,068 [AlertEngine] INFO: [PCAP] Saved: attacks\DoS\2026-03-28_12-39-21_DoS.pcap
+2026-03-28 12:39:33,208 [DetectionEngine] INFO: [DETECTION] UDP Flood | src=57.144.43.135 -> dst=192.168.1.77 | count=433/180 in 10s
+2026-03-28 12:39:33,209 [NIDS] WARNING: [ALERT] UDP Flood | DoS | src=57.144.43.135 -> dst=192.168.1.77 | severity=HIGH
+2026-03-28 12:39:34,175 [AlertEngine] INFO: ✓ Alert sent to Telegram
+2026-03-28 12:39:34,852 [AlertEngine] INFO: ✓ Alert sent to Discord
+2026-03-28 12:39:34,854 [AlertEngine] INFO: [EVIDENCE] Saved: attacks\DoS\2026-03-28_12-39-34_DoS.json
+2026-03-28 12:39:34,936 [AlertEngine] INFO: [PCAP] Saved: attacks\DoS\2026-03-28_12-39-34_DoS.pcap
+2026-03-28 12:39:37,111 [DetectionEngine] INFO: [DETECTION] UDP Flood | src=192.168.1.77 -> dst=57.144.43.135 | count=361/180 in 10s
+2026-03-28 12:39:37,112 [NIDS] WARNING: [ALERT] UDP Flood | DoS | src=192.168.1.77 -> dst=57.144.43.135 | severity=HIGH
+2026-03-28 12:39:37,114 [AlertEngine] INFO: [EVIDENCE] Saved: attacks\DoS\2026-03-28_12-39-37_DoS.json
+2026-03-28 12:39:37,196 [AlertEngine] INFO: [PCAP] Saved: attacks\DoS\2026-03-28_12-39-37_DoS.pcap
+2026-03-28 12:39:48,214 [DetectionEngine] INFO: [DETECTION] UDP Flood | src=57.144.43.135 -> dst=192.168.1.77 | count=409/180 in 10s
+2026-03-28 12:39:48,214 [NIDS] WARNING: [ALERT] UDP Flood | DoS | src=57.144.43.135 -> dst=192.168.1.77 | severity=HIGH
+2026-03-28 12:39:49,379 [AlertEngine] INFO: ✓ Alert sent to Telegram
+2026-03-28 12:39:50,286 [AlertEngine] INFO: ✓ Alert sent to Discord
+2026-03-28 12:39:50,287 [AlertEngine] INFO: [EVIDENCE] Saved: attacks\DoS\2026-03-28_12-39-50_DoS.json
+2026-03-28 12:39:50,381 [AlertEngine] INFO: [PCAP] Saved: attacks\DoS\2026-03-28_12-39-50_DoS.pcap
+2026-03-28 12:39:52,137 [DetectionEngine] INFO: [DETECTION] UDP Flood | src=192.168.1.77 -> dst=57.144.43.135 | count=187/180 in 10s
+2026-03-28 12:39:52,138 [NIDS] WARNING: [ALERT] UDP Flood | DoS | src=192.168.1.77 -> dst=57.144.43.135 | severity=HIGH
+2026-03-28 12:39:52,139 [AlertEngine] INFO: [EVIDENCE] Saved: attacks\DoS\2026-03-28_12-39-52_DoS.json
+2026-03-28 12:39:52,247 [AlertEngine] INFO: [PCAP] Saved: attacks\DoS\2026-03-28_12-39-52_DoS.pcap
+2026-03-28 12:39:55,156 [DetectionEngine] INFO: [DETECTION] TCP ACK Flood | src=192.168.1.77 -> dst=142.250.182.1 | count=150/150 in 10s
+2026-03-28 12:39:55,158 [NIDS] WARNING: [ALERT] TCP ACK Flood | DoS | src=192.168.1.77 -> dst=142.250.182.1 | severity=MEDIUM
+2026-03-28 12:39:55,185 [AlertEngine] INFO: [EVIDENCE] Saved: attacks\DoS\2026-03-28_12-39-55_DoS.json
+2026-03-28 12:39:55,448 [AlertEngine] INFO: [PCAP] Saved: attacks\DoS\2026-03-28_12-39-55_DoS.pcap
+2026-03-28 12:39:55,690 [DetectionEngine] INFO: [DETECTION] DDoS Multi-Source | dst=192.168.1.77 | 20 unique sources in 10s
+2026-03-28 12:39:55,690 [NIDS] WARNING: [ALERT] DDoS Multi-Source | DDoS | src=20 unique IPs -> dst=192.168.1.77 | severity=CRITICAL
+2026-03-28 12:39:56,873 [AlertEngine] INFO: ✓ Alert sent to Telegram
+2026-03-28 12:39:57,647 [AlertEngine] INFO: ✓ Alert sent to Discord
+2026-03-28 12:39:57,649 [AlertEngine] INFO: [EVIDENCE] Saved: attacks\DDoS\2026-03-28_12-39-57_DDoS.json
+2026-03-28 12:39:57,746 [AlertEngine] INFO: [PCAP] Saved: attacks\DDoS\2026-03-28_12-39-57_DDoS.pcap
+2026-03-28 12:42:00,905 [DetectionEngine] INFO: [DETECTION] TCP ACK Flood | src=172.64.155.209 -> dst=192.168.1.77 | count=150/150 in 10s
+2026-03-28 12:42:00,913 [NIDS] WARNING: [ALERT] TCP ACK Flood | DoS | src=172.64.155.209 -> dst=192.168.1.77 | severity=MEDIUM
+2026-03-28 12:42:02,102 [AlertEngine] INFO: ✓ Alert sent to Telegram
+2026-03-28 12:42:03,001 [AlertEngine] INFO: ✓ Alert sent to Discord
+2026-03-28 12:42:03,006 [AlertEngine] INFO: [EVIDENCE] Saved: attacks\DoS\2026-03-28_12-42-03_DoS.json
+2026-03-28 12:42:03,222 [AlertEngine] INFO: [PCAP] Saved: attacks\DoS\2026-03-28_12-42-03_DoS.pcap
+2026-03-28 12:42:03,315 [DetectionEngine] INFO: [DETECTION] TCP ACK Flood | src=192.168.1.77 -> dst=172.64.155.209 | count=150/150 in 10s
+2026-03-28 12:42:03,333 [NIDS] WARNING: [ALERT] TCP ACK Flood | DoS | src=192.168.1.77 -> dst=172.64.155.209 | severity=MEDIUM
+2026-03-28 12:42:03,344 [AlertEngine] INFO: [EVIDENCE] Saved: attacks\DoS\2026-03-28_12-42-03_DoS.json
+2026-03-28 12:42:03,724 [AlertEngine] INFO: [PCAP] Saved: attacks\DoS\2026-03-28_12-42-03_DoS.pcap
+2026-03-28 12:42:21,874 [DetectionEngine] INFO: [DETECTION] TCP ACK Flood | src=192.168.1.77 -> dst=172.64.155.209 | count=66/63 in 10s
+2026-03-28 12:42:21,874 [NIDS] WARNING: [ALERT] TCP ACK Flood | DoS | src=192.168.1.77 -> dst=172.64.155.209 | severity=MEDIUM
+2026-03-28 12:42:22,998 [AlertEngine] INFO: ✓ Alert sent to Telegram
+2026-03-28 12:42:23,684 [AlertEngine] INFO: ✓ Alert sent to Discord
+2026-03-28 12:42:23,686 [AlertEngine] INFO: [EVIDENCE] Saved: attacks\DoS\2026-03-28_12-42-23_DoS.json
+2026-03-28 12:42:23,767 [AlertEngine] INFO: [PCAP] Saved: attacks\DoS\2026-03-28_12-42-23_DoS.pcap
+2026-03-28 13:00:03,220 [NIDS] INFO: ============================================================
+2026-03-28 13:00:03,220 [NIDS] INFO: NIDS Starting - Signature-Based Intrusion Detection System
+2026-03-28 13:00:03,221 [NIDS] INFO: ============================================================
+2026-03-28 13:00:03,221 [RuleEngine] INFO: Using 14 hardcoded default rules (rules.json not found)
+2026-03-28 13:00:03,221 [NIDS] INFO: Rules loaded: 14 total
+2026-03-28 13:00:03,221 [NIDS] INFO:   Protocols: {'TCP': 11, 'UDP': 2, 'ICMP': 1}
+2026-03-28 13:00:03,222 [NIDS] INFO:   Severity breakdown: {'HIGH': 3, 'MEDIUM': 9, 'LOW': 1, 'CRITICAL': 1}
+2026-03-28 13:00:03,222 [DetectionEngine] INFO: ======================================================================
+2026-03-28 13:00:03,222 [DetectionEngine] INFO: DetectionEngine Initialized
+2026-03-28 13:00:03,222 [DetectionEngine] INFO: ======================================================================
+2026-03-28 13:00:03,222 [DetectionEngine] INFO: Rules Loaded: 14
+2026-03-28 13:00:03,223 [DetectionEngine] INFO:   By Protocol: {'TCP': 11, 'UDP': 2, 'ICMP': 1}
+2026-03-28 13:00:03,223 [DetectionEngine] INFO:   By Severity: {'HIGH': 3, 'MEDIUM': 9, 'LOW': 1, 'CRITICAL': 1}
+2026-03-28 13:00:03,223 [DetectionEngine] INFO: 
+Auto-Tuner: EWMA adaptive thresholding
+2026-03-28 13:00:03,223 [DetectionEngine] INFO:   Alpha: 0.2
+2026-03-28 13:00:03,223 [DetectionEngine] INFO:   Headroom: 3.0x
+2026-03-28 13:00:03,223 [DetectionEngine] INFO: ======================================================================
+2026-03-28 13:00:03,224 [NIDS] INFO: Detection Engine initialized with EWMA-based adaptive thresholding
+2026-03-28 13:00:03,224 [NIDS] INFO:   Tuner parameters: alpha=0.2, headroom=3.0x, max_mult=6.0x
+2026-03-28 13:00:03,224 [NIDS] INFO: Detection engine ready with 14 active rules
+2026-03-28 13:00:03,225 [NIDS] INFO: ------------------------------------------------------------
+2026-03-28 13:00:03,225 [AlertEngine] INFO: AlertEngine initialized
+2026-03-28 13:00:03,225 [AlertEngine] INFO:   Enabled channels: telegram, discord
+2026-03-28 13:00:03,226 [AlertEngine] INFO: Evidence Logger initialized. Directory: attacks
+2026-03-28 13:00:03,226 [vuln_scanner] INFO: AutoScanner initialized (cooldown=60s)
+2026-03-28 13:00:03,226 [HotspotMonitor] INFO: HotspotMonitor initialized
+2026-03-28 13:00:03,261 [NIDS] INFO: Available interfaces: ['[Hotspot]  Local Area Connection* 10', '[Hotspot]  Local Area Connection* 9', '[Hotspot]  Local Area Connection* 8', '[WiFi]     WiFi (192.168.1.77)', '[Hotspot]  Local Area Connection* 2', '[Hotspot]  Local Area Connection* 1', '[Ethernet] Ethernet 2 (169.254.14.166)', '[Loopback] Npcap Loopback Adapter (127.0.0.1)', '[Ethernet] Ethernet (169.254.14.166)']
+2026-03-28 13:00:03,261 [NIDS] INFO: Best interface detected: [Hotspot]  Local Area Connection* 10
+2026-03-28 13:00:03,261 [NIDS] INFO:   Interface: [Hotspot]  Local Area Connection* 10 -> \Device\NPF_{A423811C-46C9-42F1-8D1C-C6CBA50973BE}
+2026-03-28 13:00:03,262 [NIDS] INFO:   Interface: [Hotspot]  Local Area Connection* 9 -> \Device\NPF_{952C03EB-1FA3-4454-8294-F2B74BC50A67}
+2026-03-28 13:00:03,262 [NIDS] INFO:   Interface: [Hotspot]  Local Area Connection* 8 -> \Device\NPF_{0341EC7D-2449-4A27-A56F-1A9CAC0698EA}
+2026-03-28 13:00:03,262 [NIDS] INFO:   Interface: [WiFi]     WiFi (192.168.1.77) -> \Device\NPF_{987610F9-9E02-404A-B0FE-637C80B0DE5D}
+2026-03-28 13:00:03,262 [NIDS] INFO:   Interface: [Hotspot]  Local Area Connection* 2 -> \Device\NPF_{9D027F6C-3007-4EDD-9E79-062DB4648A15}
+2026-03-28 13:00:03,263 [NIDS] INFO:   Interface: [Hotspot]  Local Area Connection* 1 -> \Device\NPF_{D8E75DCC-51C9-4C63-B0C3-01101D39D36B}
+2026-03-28 13:00:03,263 [NIDS] INFO:   Interface: [Ethernet] Ethernet 2 (169.254.14.166) -> \Device\NPF_{D00CE2EF-A43D-4E14-AE44-E7A26EAB3EBC}
+2026-03-28 13:00:03,263 [NIDS] INFO:   Interface: [Loopback] Npcap Loopback Adapter (127.0.0.1) -> \Device\NPF_Loopback
+2026-03-28 13:00:03,263 [NIDS] INFO:   Interface: [Ethernet] Ethernet (169.254.14.166) -> \Device\NPF_{6BC1616E-85F7-4191-AF10-7E8DCAC4E930}
+2026-03-28 13:00:06,419 [PacketCapture] INFO: PacketCapture initialized
+2026-03-28 13:00:06,420 [PacketCapture] INFO: Sniff loop starting on \Device\NPF_{987610F9-9E02-404A-B0FE-637C80B0DE5D}
+2026-03-28 13:00:06,420 [PacketCapture] INFO: Capture thread started on \Device\NPF_{987610F9-9E02-404A-B0FE-637C80B0DE5D}
+2026-03-28 13:00:06,421 [NIDS] INFO: Capture started on interface: \Device\NPF_{987610F9-9E02-404A-B0FE-637C80B0DE5D}
+2026-03-28 13:00:11,390 [DetectionEngine] INFO: [DETECTION] UDP Flood | src=192.168.1.77 -> dst=57.144.243.137 | count=180/180 in 10s
+2026-03-28 13:00:11,391 [NIDS] WARNING: [ALERT] UDP Flood | DoS | src=192.168.1.77 -> dst=57.144.243.137 | severity=HIGH
+2026-03-28 13:00:12,546 [AlertEngine] INFO: ✓ Alert sent to Telegram
+2026-03-28 13:00:13,375 [AlertEngine] INFO: ✓ Alert sent to Discord
+2026-03-28 13:00:13,376 [AlertEngine] INFO: [EVIDENCE] Saved: attacks\DoS\2026-03-28_13-00-13_DoS.json
+2026-03-28 13:00:13,452 [AlertEngine] INFO: [PCAP] Saved: attacks\DoS\2026-03-28_13-00-13_DoS.pcap
+2026-03-28 13:00:13,453 [vuln_scanner] INFO: [SCAN] Triggering vulnerability scan on 57.144.243.137 (severity=HIGH)
+2026-03-28 13:00:13,455 [DetectionEngine] INFO: [DETECTION] UDP Flood | src=57.144.243.137 -> dst=192.168.1.77 | count=180/180 in 10s
+2026-03-28 13:00:13,455 [NIDS] WARNING: [ALERT] UDP Flood | DoS | src=57.144.243.137 -> dst=192.168.1.77 | severity=HIGH
+2026-03-28 13:00:13,457 [AlertEngine] INFO: [EVIDENCE] Saved: attacks\DoS\2026-03-28_13-00-13_DoS.json
+2026-03-28 13:00:13,557 [AlertEngine] INFO: [PCAP] Saved: attacks\DoS\2026-03-28_13-00-13_DoS.pcap
+2026-03-28 13:00:13,557 [vuln_scanner] INFO: [SCAN] Triggering vulnerability scan on 192.168.1.77 (severity=HIGH)
+2026-03-28 13:00:26,406 [DetectionEngine] INFO: [DETECTION] UDP Flood | src=192.168.1.77 -> dst=57.144.243.137 | count=452/180 in 10s
+2026-03-28 13:00:26,407 [NIDS] WARNING: [ALERT] UDP Flood | DoS | src=192.168.1.77 -> dst=57.144.243.137 | severity=HIGH
+2026-03-28 13:00:27,441 [AlertEngine] INFO: ✓ Alert sent to Telegram
+2026-03-28 13:00:28,142 [AlertEngine] INFO: ✓ Alert sent to Discord
+2026-03-28 13:00:28,143 [AlertEngine] INFO: [EVIDENCE] Saved: attacks\DoS\2026-03-28_13-00-28_DoS.json
+2026-03-28 13:00:28,213 [AlertEngine] INFO: [PCAP] Saved: attacks\DoS\2026-03-28_13-00-28_DoS.pcap
+2026-03-28 13:00:28,217 [DetectionEngine] INFO: [DETECTION] UDP Flood | src=57.144.243.137 -> dst=192.168.1.77 | count=357/180 in 10s
+2026-03-28 13:00:28,219 [NIDS] WARNING: [ALERT] UDP Flood | DoS | src=57.144.243.137 -> dst=192.168.1.77 | severity=HIGH
+2026-03-28 13:00:28,220 [AlertEngine] INFO: [EVIDENCE] Saved: attacks\DoS\2026-03-28_13-00-28_DoS.json
+2026-03-28 13:00:28,317 [AlertEngine] INFO: [PCAP] Saved: attacks\DoS\2026-03-28_13-00-28_DoS.pcap
+2026-03-28 13:00:41,494 [DetectionEngine] INFO: [DETECTION] UDP Flood | src=192.168.1.77 -> dst=57.144.243.137 | count=561/180 in 10s
+2026-03-28 13:00:41,495 [NIDS] WARNING: [ALERT] UDP Flood | DoS | src=192.168.1.77 -> dst=57.144.243.137 | severity=HIGH
+2026-03-28 13:00:42,497 [AlertEngine] INFO: ✓ Alert sent to Telegram
+2026-03-28 13:00:43,237 [AlertEngine] INFO: ✓ Alert sent to Discord
+2026-03-28 13:00:43,238 [AlertEngine] INFO: [EVIDENCE] Saved: attacks\DoS\2026-03-28_13-00-43_DoS.json
+2026-03-28 13:00:43,309 [AlertEngine] INFO: [PCAP] Saved: attacks\DoS\2026-03-28_13-00-43_DoS.pcap
+2026-03-28 13:00:43,312 [DetectionEngine] INFO: [DETECTION] UDP Flood | src=57.144.243.137 -> dst=192.168.1.77 | count=311/180 in 10s
+2026-03-28 13:00:43,312 [NIDS] WARNING: [ALERT] UDP Flood | DoS | src=57.144.243.137 -> dst=192.168.1.77 | severity=HIGH
+2026-03-28 13:00:43,329 [AlertEngine] INFO: [EVIDENCE] Saved: attacks\DoS\2026-03-28_13-00-43_DoS.json
+2026-03-28 13:00:43,407 [AlertEngine] INFO: [PCAP] Saved: attacks\DoS\2026-03-28_13-00-43_DoS.pcap
+2026-03-28 13:00:56,536 [DetectionEngine] INFO: [DETECTION] UDP Flood | src=192.168.1.77 -> dst=57.144.243.137 | count=496/180 in 10s
+2026-03-28 13:00:56,536 [NIDS] WARNING: [ALERT] UDP Flood | DoS | src=192.168.1.77 -> dst=57.144.243.137 | severity=HIGH
+2026-03-28 13:00:57,632 [AlertEngine] INFO: ✓ Alert sent to Telegram
+2026-03-28 13:00:58,391 [AlertEngine] INFO: ✓ Alert sent to Discord
+2026-03-28 13:00:58,393 [AlertEngine] INFO: [EVIDENCE] Saved: attacks\DoS\2026-03-28_13-00-58_DoS.json
+2026-03-28 13:00:58,473 [AlertEngine] INFO: [PCAP] Saved: attacks\DoS\2026-03-28_13-00-58_DoS.pcap
+2026-03-28 13:00:58,477 [DetectionEngine] INFO: [DETECTION] UDP Flood | src=57.144.243.137 -> dst=192.168.1.77 | count=429/180 in 10s
+2026-03-28 13:00:58,482 [NIDS] WARNING: [ALERT] UDP Flood | DoS | src=57.144.243.137 -> dst=192.168.1.77 | severity=HIGH
+2026-03-28 13:00:58,483 [AlertEngine] INFO: [EVIDENCE] Saved: attacks\DoS\2026-03-28_13-00-58_DoS.json
+2026-03-28 13:00:58,559 [AlertEngine] INFO: [PCAP] Saved: attacks\DoS\2026-03-28_13-00-58_DoS.pcap
+2026-03-28 13:01:11,560 [DetectionEngine] INFO: [DETECTION] UDP Flood | src=192.168.1.77 -> dst=57.144.243.137 | count=573/180 in 10s
+2026-03-28 13:01:11,562 [NIDS] WARNING: [ALERT] UDP Flood | DoS | src=192.168.1.77 -> dst=57.144.243.137 | severity=HIGH
+2026-03-28 13:01:12,715 [AlertEngine] INFO: ✓ Alert sent to Telegram
+2026-03-28 13:01:13,492 [AlertEngine] INFO: ✓ Alert sent to Discord
+2026-03-28 13:01:13,495 [AlertEngine] INFO: [EVIDENCE] Saved: attacks\DoS\2026-03-28_13-01-13_DoS.json
+2026-03-28 13:01:13,573 [AlertEngine] INFO: [PCAP] Saved: attacks\DoS\2026-03-28_13-01-13_DoS.pcap
+2026-03-28 13:01:13,573 [vuln_scanner] INFO: [SCAN] Triggering vulnerability scan on 57.144.243.137 (severity=HIGH)
+2026-03-28 13:01:13,579 [DetectionEngine] INFO: [DETECTION] UDP Flood | src=57.144.243.137 -> dst=192.168.1.77 | count=419/180 in 10s
+2026-03-28 13:01:13,580 [NIDS] WARNING: [ALERT] UDP Flood | DoS | src=57.144.243.137 -> dst=192.168.1.77 | severity=HIGH
+2026-03-28 13:01:13,585 [AlertEngine] INFO: [EVIDENCE] Saved: attacks\DoS\2026-03-28_13-01-13_DoS.json
+2026-03-28 13:01:13,714 [AlertEngine] INFO: [PCAP] Saved: attacks\DoS\2026-03-28_13-01-13_DoS.pcap
+2026-03-28 13:01:13,714 [vuln_scanner] INFO: [SCAN] Triggering vulnerability scan on 192.168.1.77 (severity=HIGH)
+2026-03-28 13:01:13,722 [DetectionEngine] INFO: [DETECTION] DDoS Multi-Source | dst=192.168.1.77 | 20 unique sources in 10s
+2026-03-28 13:01:13,723 [NIDS] WARNING: [ALERT] DDoS Multi-Source | DDoS | src=20 unique IPs -> dst=192.168.1.77 | severity=CRITICAL
+2026-03-28 13:01:14,885 [AlertEngine] INFO: ✓ Alert sent to Telegram
+2026-03-28 13:01:15,651 [AlertEngine] INFO: ✓ Alert sent to Discord
+2026-03-28 13:01:15,653 [AlertEngine] INFO: [EVIDENCE] Saved: attacks\DDoS\2026-03-28_13-01-15_DDoS.json
+2026-03-28 13:01:15,743 [AlertEngine] INFO: [PCAP] Saved: attacks\DDoS\2026-03-28_13-01-15_DDoS.pcap
+2026-03-28 13:01:26,561 [DetectionEngine] INFO: [DETECTION] UDP Flood | src=192.168.1.77 -> dst=57.144.243.137 | count=494/180 in 10s
+2026-03-28 13:01:26,562 [NIDS] WARNING: [ALERT] UDP Flood | DoS | src=192.168.1.77 -> dst=57.144.243.137 | severity=HIGH
+2026-03-28 13:01:27,746 [AlertEngine] INFO: ✓ Alert sent to Telegram
+2026-03-28 13:01:31,946 [AlertEngine] INFO: ✓ Alert sent to Discord
+2026-03-28 13:01:31,947 [AlertEngine] INFO: [EVIDENCE] Saved: attacks\DoS\2026-03-28_13-01-31_DoS.json
+2026-03-28 13:01:32,017 [AlertEngine] INFO: [PCAP] Saved: attacks\DoS\2026-03-28_13-01-31_DoS.pcap
+2026-03-28 13:01:32,020 [DetectionEngine] INFO: [DETECTION] UDP Flood | src=57.144.243.137 -> dst=192.168.1.77 | count=360/180 in 10s
+2026-03-28 13:01:32,022 [NIDS] WARNING: [ALERT] UDP Flood | DoS | src=57.144.243.137 -> dst=192.168.1.77 | severity=HIGH
+2026-03-28 13:01:32,024 [AlertEngine] INFO: [EVIDENCE] Saved: attacks\DoS\2026-03-28_13-01-32_DoS.json
+2026-03-28 13:01:32,120 [AlertEngine] INFO: [PCAP] Saved: attacks\DoS\2026-03-28_13-01-32_DoS.pcap
+2026-03-28 13:01:41,587 [DetectionEngine] INFO: [DETECTION] UDP Flood | src=192.168.1.77 -> dst=57.144.243.137 | count=550/180 in 10s
+2026-03-28 13:01:41,587 [NIDS] WARNING: [ALERT] UDP Flood | DoS | src=192.168.1.77 -> dst=57.144.243.137 | severity=HIGH
+2026-03-28 13:01:42,835 [AlertEngine] INFO: ✓ Alert sent to Telegram
+2026-03-28 13:01:43,721 [AlertEngine] INFO: ✓ Alert sent to Discord
+2026-03-28 13:01:43,723 [AlertEngine] INFO: [EVIDENCE] Saved: attacks\DoS\2026-03-28_13-01-43_DoS.json
+2026-03-28 13:01:43,792 [AlertEngine] INFO: [PCAP] Saved: attacks\DoS\2026-03-28_13-01-43_DoS.pcap
+2026-03-28 13:01:43,794 [DetectionEngine] INFO: [DETECTION] UDP Flood | src=57.144.243.137 -> dst=192.168.1.77 | count=324/180 in 10s
+2026-03-28 13:01:43,799 [NIDS] WARNING: [ALERT] UDP Flood | DoS | src=57.144.243.137 -> dst=192.168.1.77 | severity=HIGH
+2026-03-28 13:01:43,802 [AlertEngine] INFO: [EVIDENCE] Saved: attacks\DoS\2026-03-28_13-01-43_DoS.json
+2026-03-28 13:01:43,896 [AlertEngine] INFO: [PCAP] Saved: attacks\DoS\2026-03-28_13-01-43_DoS.pcap
+2026-03-28 13:01:54,177 [DetectionEngine] INFO: [DETECTION] TCP ACK Flood | src=163.70.145.13 -> dst=192.168.1.77 | count=55/54 in 10s
+2026-03-28 13:01:54,178 [NIDS] WARNING: [ALERT] TCP ACK Flood | DoS | src=163.70.145.13 -> dst=192.168.1.77 | severity=MEDIUM
+2026-03-28 13:01:54,181 [AlertEngine] INFO: [EVIDENCE] Saved: attacks\DoS\2026-03-28_13-01-54_DoS.json
+2026-03-28 13:01:54,262 [AlertEngine] INFO: [PCAP] Saved: attacks\DoS\2026-03-28_13-01-54_DoS.pcap
+2026-03-28 13:01:56,597 [DetectionEngine] INFO: [DETECTION] UDP Flood | src=192.168.1.77 -> dst=57.144.243.137 | count=457/180 in 10s
+2026-03-28 13:01:56,598 [NIDS] WARNING: [ALERT] UDP Flood | DoS | src=192.168.1.77 -> dst=57.144.243.137 | severity=HIGH
+2026-03-28 13:01:57,593 [AlertEngine] INFO: ✓ Alert sent to Telegram
+2026-03-28 13:01:58,348 [AlertEngine] INFO: ✓ Alert sent to Discord
+2026-03-28 13:01:58,350 [AlertEngine] INFO: [EVIDENCE] Saved: attacks\DoS\2026-03-28_13-01-58_DoS.json
+2026-03-28 13:01:58,422 [AlertEngine] INFO: [PCAP] Saved: attacks\DoS\2026-03-28_13-01-58_DoS.pcap
+2026-03-28 13:01:58,426 [DetectionEngine] INFO: [DETECTION] UDP Flood | src=57.144.243.137 -> dst=192.168.1.77 | count=414/180 in 10s
+2026-03-28 13:01:58,428 [NIDS] WARNING: [ALERT] UDP Flood | DoS | src=57.144.243.137 -> dst=192.168.1.77 | severity=HIGH
+2026-03-28 13:01:58,430 [AlertEngine] INFO: [EVIDENCE] Saved: attacks\DoS\2026-03-28_13-01-58_DoS.json
+2026-03-28 13:01:58,531 [AlertEngine] INFO: [PCAP] Saved: attacks\DoS\2026-03-28_13-01-58_DoS.pcap
+2026-03-28 13:02:11,621 [DetectionEngine] INFO: [DETECTION] UDP Flood | src=192.168.1.77 -> dst=57.144.243.137 | count=480/180 in 10s
+2026-03-28 13:02:11,622 [NIDS] WARNING: [ALERT] UDP Flood | DoS | src=192.168.1.77 -> dst=57.144.243.137 | severity=HIGH
+2026-03-28 13:02:12,665 [AlertEngine] INFO: ✓ Alert sent to Telegram
+2026-03-28 13:02:13,413 [AlertEngine] INFO: ✓ Alert sent to Discord
+2026-03-28 13:02:13,415 [AlertEngine] INFO: [EVIDENCE] Saved: attacks\DoS\2026-03-28_13-02-13_DoS.json
+2026-03-28 13:02:13,494 [AlertEngine] INFO: [PCAP] Saved: attacks\DoS\2026-03-28_13-02-13_DoS.pcap
+2026-03-28 13:02:13,497 [DetectionEngine] INFO: [DETECTION] UDP Flood | src=57.144.243.137 -> dst=192.168.1.77 | count=306/180 in 10s
+2026-03-28 13:02:13,500 [NIDS] WARNING: [ALERT] UDP Flood | DoS | src=57.144.243.137 -> dst=192.168.1.77 | severity=HIGH
+2026-03-28 13:02:13,502 [AlertEngine] INFO: [EVIDENCE] Saved: attacks\DoS\2026-03-28_13-02-13_DoS.json
+2026-03-28 13:02:13,591 [AlertEngine] INFO: [PCAP] Saved: attacks\DoS\2026-03-28_13-02-13_DoS.pcap
+2026-03-28 13:02:23,210 [PacketCapture] INFO: Stopping capture...
+2026-03-28 13:02:23,213 [PacketCapture] INFO: Sniff loop ended
+2026-03-28 13:02:23,213 [PacketCapture] INFO: Capture stopped. Total packets: 13518
+2026-03-28 13:02:23,214 [NIDS] INFO: Capture stopped.
+2026-03-28 13:02:27,811 [PacketCapture] INFO: PacketCapture initialized
+2026-03-28 13:02:27,811 [PacketCapture] INFO: Sniff loop starting on \Device\NPF_Loopback
+2026-03-28 13:02:27,811 [PacketCapture] INFO: Capture thread started on \Device\NPF_Loopback
+2026-03-28 13:02:27,812 [NIDS] INFO: Capture started on interface: \Device\NPF_Loopback
+2026-03-28 13:02:57,318 [DetectionEngine] INFO: [DETECTION] Port Scan | src=192.168.1.77 | 72 unique ports in 5s (thr=72)
+2026-03-28 13:02:57,319 [NIDS] WARNING: [ALERT] UDP Port Scan | Port Scan | src=192.168.1.77 -> dst=192.168.1.77 | severity=LOW
+2026-03-28 13:02:58,650 [AlertEngine] INFO: ✓ Alert sent to Telegram
+2026-03-28 13:02:59,609 [AlertEngine] INFO: ✓ Alert sent to Discord
+2026-03-28 13:02:59,612 [AlertEngine] INFO: [EVIDENCE] Saved: attacks\Port_Scan\2026-03-28_13-02-59_Port_Scan.json
+2026-03-28 13:02:59,791 [AlertEngine] INFO: [PCAP] Saved: attacks\Port_Scan\2026-03-28_13-02-59_Port_Scan.pcap
+2026-03-28 13:02:59,797 [DetectionEngine] INFO: [DETECTION] UDP Flood | src=192.168.1.77 -> dst=192.168.1.77 | count=180/180 in 10s
+2026-03-28 13:02:59,799 [NIDS] WARNING: [ALERT] UDP Flood | DoS | src=192.168.1.77 -> dst=192.168.1.77 | severity=HIGH
+2026-03-28 13:03:00,821 [AlertEngine] INFO: ✓ Alert sent to Telegram
+2026-03-28 13:03:01,628 [AlertEngine] INFO: ✓ Alert sent to Discord
+2026-03-28 13:03:01,630 [AlertEngine] INFO: [EVIDENCE] Saved: attacks\DoS\2026-03-28_13-03-01_DoS.json
+2026-03-28 13:03:01,740 [AlertEngine] INFO: [PCAP] Saved: attacks\DoS\2026-03-28_13-03-01_DoS.pcap
+2026-03-28 13:03:01,740 [vuln_scanner] INFO: [SCAN] Triggering vulnerability scan on 192.168.1.77 (severity=HIGH)
+2026-03-28 13:03:46,478 [DetectionEngine] INFO: [DETECTION] ICMP Ping Flood | src=192.168.1.77 -> dst=192.168.1.77 | count=240/240 in 10s
+2026-03-28 13:03:46,479 [NIDS] WARNING: [ALERT] ICMP Ping Flood | DoS | src=192.168.1.77 -> dst=192.168.1.77 | severity=MEDIUM
+2026-03-28 13:03:47,566 [AlertEngine] INFO: ✓ Alert sent to Telegram
+2026-03-28 13:03:48,414 [AlertEngine] INFO: ✓ Alert sent to Discord
+2026-03-28 13:03:48,417 [AlertEngine] INFO: [EVIDENCE] Saved: attacks\DoS\2026-03-28_13-03-48_DoS.json
+2026-03-28 13:03:48,574 [AlertEngine] INFO: [PCAP] Saved: attacks\DoS\2026-03-28_13-03-48_DoS.pcap
+2026-03-28 13:03:52,835 [NetworkScanner] INFO: Starting scan on 192.168.1.1/24
+2026-03-28 13:04:43,254 [NetworkScanner] INFO: Scan stopped
+2026-03-28 13:04:44,075 [DetectionEngine] INFO: [DETECTION] TCP RST Flood | src=192.168.1.77 -> dst=192.168.1.77 | count=120/120 in 10s
+2026-03-28 13:04:44,076 [NIDS] WARNING: [ALERT] TCP RST Flood | DoS | src=192.168.1.77 -> dst=192.168.1.77 | severity=HIGH
+2026-03-28 13:04:45,070 [AlertEngine] INFO: ✓ Alert sent to Telegram
+2026-03-28 13:04:45,809 [AlertEngine] INFO: ✓ Alert sent to Discord
+2026-03-28 13:04:45,810 [AlertEngine] INFO: [EVIDENCE] Saved: attacks\DoS\2026-03-28_13-04-45_DoS.json
+2026-03-28 13:04:45,887 [AlertEngine] INFO: [PCAP] Saved: attacks\DoS\2026-03-28_13-04-45_DoS.pcap
+2026-03-28 13:04:45,887 [vuln_scanner] INFO: [SCAN] Triggering vulnerability scan on 192.168.1.77 (severity=HIGH)
+2026-03-28 13:04:45,889 [DetectionEngine] INFO: [DETECTION] TCP ACK Flood | src=192.168.1.77 -> dst=192.168.1.77 | count=150/150 in 10s
+2026-03-28 13:04:45,890 [NIDS] WARNING: [ALERT] TCP ACK Flood | DoS | src=192.168.1.77 -> dst=192.168.1.77 | severity=MEDIUM
+2026-03-28 13:04:45,891 [AlertEngine] INFO: [EVIDENCE] Saved: attacks\DoS\2026-03-28_13-04-45_DoS.json
+2026-03-28 13:04:46,014 [AlertEngine] INFO: [PCAP] Saved: attacks\DoS\2026-03-28_13-04-45_DoS.pcap
+2026-03-28 13:05:32,135 [DetectionEngine] INFO: [DETECTION] TCP RST Flood | src=192.168.1.77 -> dst=192.168.1.77 | count=120/120 in 10s
+2026-03-28 13:05:32,136 [NIDS] WARNING: [ALERT] TCP RST Flood | DoS | src=192.168.1.77 -> dst=192.168.1.77 | severity=HIGH
+2026-03-28 13:05:33,374 [AlertEngine] INFO: ✓ Alert sent to Telegram
+2026-03-28 13:05:34,132 [AlertEngine] INFO: ✓ Alert sent to Discord
+2026-03-28 13:05:34,133 [AlertEngine] INFO: [EVIDENCE] Saved: attacks\DoS\2026-03-28_13-05-34_DoS.json
+2026-03-28 13:05:34,204 [AlertEngine] INFO: [PCAP] Saved: attacks\DoS\2026-03-28_13-05-34_DoS.pcap
